@@ -5,6 +5,19 @@ name = "agentic-ir-copilot"
 version = "0.0.1"
 description = "Agentic incident-response copilot for Kubernetes production systems (CMPE 295)"
 requires-python = ">=3.11"
+# The root is a virtual project (not itself built/installed; see [tool.uv]
+# package = false). It depends on every workspace member so a plain
+# `uv sync` installs them all into one shared environment -- this is what
+# makes `uv run pytest` work in CI without extra flags.
+dependencies = [
+    "copilot-common",
+    "telemetry-gateway",
+    "correlation-engine",
+    "rca-agent",
+]
+
+[tool.uv]
+package = false
 
 [tool.uv.workspace]
 members = [
@@ -13,6 +26,12 @@ members = [
     "services/correlation-engine",
     "services/rca-agent",
 ]
+
+[tool.uv.sources]
+copilot-common = { workspace = true }
+telemetry-gateway = { workspace = true }
+correlation-engine = { workspace = true }
+rca-agent = { workspace = true }
 
 [dependency-groups]
 dev = [

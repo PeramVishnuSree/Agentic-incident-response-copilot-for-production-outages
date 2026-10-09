@@ -20,6 +20,12 @@ members = [
 name = "agentic-ir-copilot"
 version = "0.0.1"
 source = { virtual = "." }
+dependencies = [
+    { name = "copilot-common" },
+    { name = "correlation-engine" },
+    { name = "rca-agent" },
+    { name = "telemetry-gateway" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -31,6 +37,12 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [
+    { name = "copilot-common", editable = "libs/common" },
+    { name = "correlation-engine", editable = "services/correlation-engine" },
+    { name = "rca-agent", editable = "services/rca-agent" },
+    { name = "telemetry-gateway", editable = "services/telemetry-gateway" },
+]
 
 [package.metadata.requires-dev]
 dev = [
