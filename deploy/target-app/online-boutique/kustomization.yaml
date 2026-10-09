@@ -1,0 +1,12 @@
+# Deploys Google's Online Boutique (microservices-demo) into the
+# 'online-boutique' namespace as the realistic target application.
+# Apply with: kubectl apply -k deploy/target-app/online-boutique
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: online-boutique
+
+resources:
+  - namespace.yaml
+  # Upstream release manifest (pinned). Review before first use.
+  - https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/v0.10.2/release/kubernetes-manifests.yaml

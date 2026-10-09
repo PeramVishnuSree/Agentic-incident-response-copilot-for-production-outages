@@ -1,0 +1,15 @@
+# Alertmanager routing (S1 baseline). Routes all alerts to a webhook receiver
+# that the telemetry gateway will expose in S2 to turn alerts into Events (E1).
+route:
+  receiver: copilot-gateway
+  group_by: ["namespace", "alertname"]
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+
+receivers:
+  - name: copilot-gateway
+    webhook_configs:
+      # TODO(S2): point at the telemetry-gateway alert ingest endpoint.
+      - url: http://telemetry-gateway.copilot.svc.cluster.local:8000/ingest/alert
+        send_resolved: true

@@ -1,0 +1,19 @@
+# Local Kubernetes cluster for development and fault injection (S1).
+# Create with: kind create cluster --config deploy/kind/kind-cluster.yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: copilot
+nodes:
+  - role: control-plane
+    extraPortMappings:
+      # Prometheus
+      - containerPort: 30090
+        hostPort: 9090
+      # Alertmanager
+      - containerPort: 30093
+        hostPort: 9093
+      # Online Boutique frontend
+      - containerPort: 30080
+        hostPort: 8080
+  - role: worker
+  - role: worker

@@ -1,0 +1,40 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- uv ----
+# keep uv.lock committed; ignore local caches only
+
+# ---- Environment / secrets ----
+.env
+*.local
+kubeconfig
+*.kubeconfig
+
+# ---- Node / console web ----
+node_modules/
+console/web/dist/
+console/web/.vite/
+
+# ---- Evaluation data (large / regenerated) ----
+eval/runs/
+*.sqlite
+*.db
+
+# ---- OS / editor ----
+.DS_Store
+.idea/
+.vscode/
+*.swp

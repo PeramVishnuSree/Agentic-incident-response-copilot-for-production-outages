@@ -1,0 +1,18 @@
+# Fault scenario registry. Each entry maps a scenario id to its injection spec
+# and the KNOWN GROUND TRUTH used to score diagnoses (E11, US6).
+# The suite is frozen at the end of Sprint 9 (workbook §4.3).
+version: 1
+scenarios:
+  pod-crash:
+    description: "Repeatedly kill a core service pod to trigger restarts and cascading errors."
+    owner: Peram
+    sprint: S1
+    inject: scenarios/pod-crash/experiment.yaml
+    ground_truth: scenarios/pod-crash/ground_truth.yaml
+    target_namespace: online-boutique
+    status: active
+  # cpu-stress:        S2
+  # ingestion-lag:     S3
+  # memory-pressure:   S6
+  # network-latency:   S6
+  # bad-deployment:    S6

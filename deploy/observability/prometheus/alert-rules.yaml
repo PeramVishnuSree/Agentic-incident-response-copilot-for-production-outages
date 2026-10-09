@@ -1,0 +1,27 @@
+# Starter alert rules for Online Boutique. These alerts become `alert`-type
+# Events in the incident store (E1). Expand per fault scenario in S2+.
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: online-boutique-alerts
+  namespace: monitoring
+  labels:
+    release: kube-prometheus
+spec:
+  groups:
+    - name: online-boutique.rules
+      rules:
+        - alert: HighPodRestartRate
+          expr: increase(kube_pod_container_status_restarts_total{namespace="online-boutique"}[5m]) > 2
+          for: 1m
+          labels:
+            severity: warning
+          annotations:
+            summary: "Pod {{ $labels.pod }} is restarting frequently"
+        - alert: HighErrorLatency
+          expr: histogram_quantile(0.95, sum(rate(request_duration_seconds_bucket{namespace="online-boutique"}[5m])) by (le, service)) > 1
+          for: 2m
+          labels:
+            severity: critical
+          annotations:
+            summary: "p95 latency high for {{ $labels.service }}"

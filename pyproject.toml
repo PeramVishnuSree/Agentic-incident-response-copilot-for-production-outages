@@ -1,0 +1,39 @@
+# Root of the uv workspace. Shared dev tooling + lint/test config live here;
+# each service/lib under services/* and libs/* is its own workspace member.
+[project]
+name = "agentic-ir-copilot"
+version = "0.0.1"
+description = "Agentic incident-response copilot for Kubernetes production systems (CMPE 295)"
+requires-python = ">=3.11"
+
+[tool.uv.workspace]
+members = [
+    "libs/common",
+    "services/telemetry-gateway",
+    "services/correlation-engine",
+    "services/rca-agent",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "httpx>=0.27",   # required by fastapi.testclient
+    "pyyaml>=6.0",   # scenario runner / registry parsing
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["libs", "services", "tests"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true

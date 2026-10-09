@@ -1,0 +1,19 @@
+[project]
+name = "correlation-engine"
+version = "0.0.1"
+description = "Deterministic signal correlation and candidate ranking (E3, E4, E5)"
+requires-python = ">=3.11"
+dependencies = [
+    "copilot-common",
+    "networkx>=3.3",
+]
+
+[tool.uv.sources]
+copilot-common = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["correlation_engine"]

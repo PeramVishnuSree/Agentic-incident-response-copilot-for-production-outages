@@ -1,0 +1,22 @@
+# Known ground truth for the pod-crash scenario. The evaluation harness scores
+# the agent's ranked candidates against root_cause_service / fault_type (E12).
+scenario: pod-crash
+root_cause_service: checkoutservice
+root_cause_namespace: online-boutique
+fault_type: pod-kill
+# Services expected to emit secondary (cascading) symptoms. A correct diagnosis
+# must NOT name these as the root cause (tests incident grouping, E4).
+expected_cascade:
+  - frontend
+  - cartservice
+expected_signals:
+  - type: k8s_event
+    reason: Killing
+  - type: metric
+    name: kube_pod_container_status_restarts_total
+  - type: alert
+    name: HighPodRestartRate
+supported_remediation:
+  action: rollout-restart
+  target: deploy/checkoutservice
+  note: "Approved remediation for recovery check; executor runs only if a human approves."

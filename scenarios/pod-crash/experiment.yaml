@@ -1,0 +1,18 @@
+# Chaos Mesh PodChaos: kill the checkoutservice pod repeatedly.
+# This is the first end-to-end fault for the vertical prototype (S1/S5).
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: pod-crash-checkoutservice
+  namespace: online-boutique
+spec:
+  action: pod-kill
+  mode: one
+  selector:
+    namespaces:
+      - online-boutique
+    labelSelectors:
+      app: checkoutservice
+  # Re-kill on a schedule so the symptom persists long enough to observe.
+  scheduler:
+    cron: "@every 60s"

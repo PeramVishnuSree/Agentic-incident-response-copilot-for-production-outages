@@ -1,0 +1,29 @@
+# Helm values for kube-prometheus-stack (S1 baseline).
+# Minimal, kind-friendly footprint; expand retention/resources for evaluation.
+
+prometheus:
+  service:
+    type: NodePort
+    nodePort: 30090
+  prometheusSpec:
+    retention: 6h
+    scrapeInterval: 15s
+    resources:
+      requests:
+        cpu: 200m
+        memory: 512Mi
+
+alertmanager:
+  service:
+    type: NodePort
+    nodePort: 30093
+
+grafana:
+  enabled: true
+  defaultDashboardsEnabled: true
+
+# Keep the local footprint small on kind.
+kubeStateMetrics:
+  enabled: true
+nodeExporter:
+  enabled: true
