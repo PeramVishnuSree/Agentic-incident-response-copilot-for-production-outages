@@ -11,7 +11,14 @@ scenarios:
     ground_truth: scenarios/pod-crash/ground_truth.yaml
     target_namespace: online-boutique
     status: active
-  # cpu-stress:        S2
+  cpu-stress:
+    description: "Burn CPU on cartservice to create latency and cascading checkout/frontend errors."
+    owner: Peram
+    sprint: S2
+    inject: scenarios/cpu-stress/experiment.yaml
+    ground_truth: scenarios/cpu-stress/ground_truth.yaml
+    target_namespace: online-boutique
+    status: active
   # ingestion-lag:     S3
   # memory-pressure:   S6
   # network-latency:   S6

@@ -1,0 +1,26 @@
+# Online Boutique service dependency graph (requirement E3).
+# Directed edges: caller -> callee (request dependency).
+# Used by the correlation engine for grouping (E4) and ranking (E5).
+services:
+  frontend:
+    calls: [cartservice, productcatalogservice, checkoutservice, currencyservice, recommendationservice, adservice]
+  checkoutservice:
+    calls: [cartservice, paymentservice, emailservice, shippingservice, currencyservice, productcatalogservice]
+  cartservice:
+    calls: [redis-cart]
+  recommendationservice:
+    calls: [productcatalogservice]
+  currencyservice:
+    calls: []
+  productcatalogservice:
+    calls: []
+  paymentservice:
+    calls: []
+  emailservice:
+    calls: []
+  shippingservice:
+    calls: []
+  adservice:
+    calls: []
+  redis-cart:
+    calls: []

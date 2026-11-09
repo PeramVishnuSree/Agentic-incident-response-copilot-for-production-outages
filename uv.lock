@@ -345,12 +345,14 @@ dependencies = [
     { name = "copilot-common" },
     { name = "networkx", version = "3.6.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "networkx", version = "3.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "pyyaml" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "copilot-common", editable = "libs/common" },
     { name = "networkx", specifier = ">=3.3" },
+    { name = "pyyaml", specifier = ">=6.0" },
 ]
 
 [[package]]
@@ -1223,12 +1225,14 @@ version = "0.0.1"
 source = { editable = "services/rca-agent" }
 dependencies = [
     { name = "copilot-common" },
+    { name = "correlation-engine" },
     { name = "langgraph" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "copilot-common", editable = "libs/common" },
+    { name = "correlation-engine", editable = "services/correlation-engine" },
     { name = "langgraph", specifier = ">=0.2" },
 ]
 

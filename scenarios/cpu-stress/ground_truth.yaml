@@ -1,0 +1,19 @@
+# Known ground truth for the cpu-stress scenario (E11).
+scenario: cpu-stress
+root_cause_service: cartservice
+root_cause_namespace: online-boutique
+fault_type: cpu-stress
+expected_cascade:
+  - frontend
+  - checkoutservice
+expected_signals:
+  - type: metric
+    name: container_cpu_usage_seconds_total
+  - type: alert
+    name: HighCPUUsage
+  - type: log
+    name: request_latency
+supported_remediation:
+  action: rollout-restart
+  target: deploy/cartservice
+  note: "Approved remediation for recovery check; executor runs only if a human approves."
