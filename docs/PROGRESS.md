@@ -27,11 +27,13 @@ Early diagnosis pipeline is implemented in-repo: collectors, dependency-graph co
 | Learned GBT ranker (RE2-OB AC@1≈0.89) | `re2ob_ranker_summary.json` |
 | BARO baseline on 90 OB cases | `re2ob_baro_summary.json` (AC@1=0.30, AC@3=0.92) |
 | Full RCAEval all 9 suites (735 cases) | `make rcaeval-everything` → `ALL_SUITES_RESULTS.md` |
-| Baseline plan (BARO / HolmesGPT) | `docs/baselines.md` |
+| Metrics validation (baselines + bootstrap CIs + revised targets + study size) | `make rcaeval-metrics-validation` → `METRICS_VALIDATION.md` |
+| Baseline plan (BARO / N-Sigma / HolmesGPT) | `docs/baselines.md` |
 | Architecture notes | `docs/architecture.md` |
 
 **Tests:** `uv run pytest` → 16 passing.  
-**RCAEval report:** `eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`
+**RCAEval report:** `eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`  
+**Professor item #3 (metrics validated):** `eval/artifacts/rcaeval/METRICS_VALIDATION.md`
 
 ---
 
@@ -53,6 +55,7 @@ uv sync --dev
 uv run pytest
 make eda
 make rcaeval-everything
+make rcaeval-metrics-validation
 
 # optional live cluster
 make cluster-up && make target-app && make observability && make chaos-install

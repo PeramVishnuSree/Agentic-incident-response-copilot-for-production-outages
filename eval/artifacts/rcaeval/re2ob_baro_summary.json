@@ -1,5 +1,5 @@
 {
-  "method": "BARO",
+  "method": "baro",
   "suite": "re2ob",
   "n_cases": 90,
   "n_errors": 0,

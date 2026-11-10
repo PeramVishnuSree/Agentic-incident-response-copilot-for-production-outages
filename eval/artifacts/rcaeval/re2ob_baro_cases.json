@@ -3,6 +3,7 @@
     "case": "re2ob_checkoutservice_cpu_1",
     "truth": "checkoutservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "redis_diskio",
@@ -36,6 +37,7 @@
     "case": "re2ob_checkoutservice_cpu_2",
     "truth": "checkoutservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "checkoutservice_cpu",
@@ -69,6 +71,7 @@
     "case": "re2ob_checkoutservice_cpu_3",
     "truth": "checkoutservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "adservice_mem",
@@ -102,6 +105,7 @@
     "case": "re2ob_checkoutservice_delay_1",
     "truth": "checkoutservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_latency-90",
@@ -135,6 +139,7 @@
     "case": "re2ob_checkoutservice_delay_2",
     "truth": "checkoutservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "redis_diskio",
@@ -168,6 +173,7 @@
     "case": "re2ob_checkoutservice_delay_3",
     "truth": "checkoutservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "shippingservice_latency-90",
@@ -201,6 +207,7 @@
     "case": "re2ob_checkoutservice_disk_1",
     "truth": "checkoutservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "checkoutservice_mem",
@@ -234,6 +241,7 @@
     "case": "re2ob_checkoutservice_disk_2",
     "truth": "checkoutservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "checkoutservice_diskio",
       "redis_diskio",
@@ -267,6 +275,7 @@
     "case": "re2ob_checkoutservice_disk_3",
     "truth": "checkoutservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "checkoutservice_diskio",
       "redis_diskio",
@@ -300,6 +309,7 @@
     "case": "re2ob_checkoutservice_loss_1",
     "truth": "checkoutservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "checkoutservice_latency-50",
@@ -333,6 +343,7 @@
     "case": "re2ob_checkoutservice_loss_2",
     "truth": "checkoutservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_latency-90",
@@ -366,6 +377,7 @@
     "case": "re2ob_checkoutservice_loss_3",
     "truth": "checkoutservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "frontend_error",
@@ -399,6 +411,7 @@
     "case": "re2ob_checkoutservice_mem_1",
     "truth": "checkoutservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "checkoutservice_mem",
@@ -432,6 +445,7 @@
     "case": "re2ob_checkoutservice_mem_2",
     "truth": "checkoutservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "checkoutservice_mem",
@@ -465,6 +479,7 @@
     "case": "re2ob_checkoutservice_mem_3",
     "truth": "checkoutservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "checkoutservice_diskio",
       "redis_diskio",
@@ -498,6 +513,7 @@
     "case": "re2ob_checkoutservice_socket_1",
     "truth": "checkoutservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "checkoutservice_cpu",
@@ -531,6 +547,7 @@
     "case": "re2ob_checkoutservice_socket_2",
     "truth": "checkoutservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "checkoutservice_cpu",
@@ -564,6 +581,7 @@
     "case": "re2ob_checkoutservice_socket_3",
     "truth": "checkoutservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "redis_diskio",
@@ -597,6 +615,7 @@
     "case": "re2ob_currencyservice_cpu_1",
     "truth": "currencyservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "currencyservice_diskio",
@@ -630,6 +649,7 @@
     "case": "re2ob_currencyservice_cpu_2",
     "truth": "currencyservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "cartservice_latency-90",
@@ -663,6 +683,7 @@
     "case": "re2ob_currencyservice_cpu_3",
     "truth": "currencyservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "currencyservice_latency-50",
@@ -696,6 +717,7 @@
     "case": "re2ob_currencyservice_delay_1",
     "truth": "currencyservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "currencyservice_latency-50",
@@ -729,6 +751,7 @@
     "case": "re2ob_currencyservice_delay_2",
     "truth": "currencyservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "currencyservice_latency-90",
@@ -762,6 +785,7 @@
     "case": "re2ob_currencyservice_delay_3",
     "truth": "currencyservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "currencyservice_latency-50",
@@ -795,6 +819,7 @@
     "case": "re2ob_currencyservice_disk_1",
     "truth": "currencyservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "currencyservice_diskio",
       "redis_diskio",
@@ -828,6 +853,7 @@
     "case": "re2ob_currencyservice_disk_2",
     "truth": "currencyservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "currencyservice_diskio",
       "redis_diskio",
@@ -861,6 +887,7 @@
     "case": "re2ob_currencyservice_disk_3",
     "truth": "currencyservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "currencyservice_diskio",
       "redis_diskio",
@@ -894,6 +921,7 @@
     "case": "re2ob_currencyservice_loss_1",
     "truth": "currencyservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "currencyservice_latency-90",
@@ -927,6 +955,7 @@
     "case": "re2ob_currencyservice_loss_2",
     "truth": "currencyservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "frontend_latency-90",
@@ -960,6 +989,7 @@
     "case": "re2ob_currencyservice_loss_3",
     "truth": "currencyservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -993,6 +1023,7 @@
     "case": "re2ob_currencyservice_mem_1",
     "truth": "currencyservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "currencyservice_latency-50",
@@ -1026,6 +1057,7 @@
     "case": "re2ob_currencyservice_mem_2",
     "truth": "currencyservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "currencyservice_diskio",
       "redis_diskio",
@@ -1059,6 +1091,7 @@
     "case": "re2ob_currencyservice_mem_3",
     "truth": "currencyservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "currencyservice_mem",
@@ -1092,6 +1125,7 @@
     "case": "re2ob_currencyservice_socket_1",
     "truth": "currencyservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "redis_mem",
@@ -1125,6 +1159,7 @@
     "case": "re2ob_currencyservice_socket_2",
     "truth": "currencyservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "currencyservice_diskio",
@@ -1158,6 +1193,7 @@
     "case": "re2ob_currencyservice_socket_3",
     "truth": "currencyservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "cartservice_latency-90",
@@ -1191,6 +1227,7 @@
     "case": "re2ob_emailservice_cpu_1",
     "truth": "emailservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "redis_diskio",
@@ -1224,6 +1261,7 @@
     "case": "re2ob_emailservice_cpu_2",
     "truth": "emailservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_latency-50",
@@ -1257,6 +1295,7 @@
     "case": "re2ob_emailservice_cpu_3",
     "truth": "emailservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_mem",
@@ -1290,6 +1329,7 @@
     "case": "re2ob_emailservice_delay_1",
     "truth": "emailservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "checkoutservice_latency-90",
@@ -1323,6 +1363,7 @@
     "case": "re2ob_emailservice_delay_2",
     "truth": "emailservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_latency-90",
@@ -1356,6 +1397,7 @@
     "case": "re2ob_emailservice_delay_3",
     "truth": "emailservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_latency-90",
@@ -1389,6 +1431,7 @@
     "case": "re2ob_emailservice_disk_1",
     "truth": "emailservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "emailservice_diskio",
       "redis_diskio",
@@ -1422,6 +1465,7 @@
     "case": "re2ob_emailservice_disk_2",
     "truth": "emailservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "emailservice_diskio",
       "emailservice_mem",
@@ -1455,6 +1499,7 @@
     "case": "re2ob_emailservice_disk_3",
     "truth": "emailservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "emailservice_diskio",
       "redis_diskio",
@@ -1488,6 +1533,7 @@
     "case": "re2ob_emailservice_loss_1",
     "truth": "emailservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "redis_diskio",
@@ -1521,6 +1567,7 @@
     "case": "re2ob_emailservice_loss_2",
     "truth": "emailservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_mem",
@@ -1554,6 +1601,7 @@
     "case": "re2ob_emailservice_loss_3",
     "truth": "emailservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_latency-90",
@@ -1587,6 +1635,7 @@
     "case": "re2ob_emailservice_mem_1",
     "truth": "emailservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "emailservice_mem",
       "redis_diskio",
@@ -1620,6 +1669,7 @@
     "case": "re2ob_emailservice_mem_2",
     "truth": "emailservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "emailservice_mem",
       "redis_diskio",
@@ -1653,6 +1703,7 @@
     "case": "re2ob_emailservice_mem_3",
     "truth": "emailservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "emailservice_mem",
       "redis_diskio",
@@ -1686,6 +1737,7 @@
     "case": "re2ob_emailservice_socket_1",
     "truth": "emailservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_latency-50",
@@ -1719,6 +1771,7 @@
     "case": "re2ob_emailservice_socket_2",
     "truth": "emailservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_mem",
@@ -1752,6 +1805,7 @@
     "case": "re2ob_emailservice_socket_3",
     "truth": "emailservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "emailservice_mem",
@@ -1785,6 +1839,7 @@
     "case": "re2ob_productcatalogservice_cpu_1",
     "truth": "productcatalogservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -1818,6 +1873,7 @@
     "case": "re2ob_productcatalogservice_cpu_2",
     "truth": "productcatalogservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -1851,6 +1907,7 @@
     "case": "re2ob_productcatalogservice_cpu_3",
     "truth": "productcatalogservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -1884,6 +1941,7 @@
     "case": "re2ob_productcatalogservice_delay_1",
     "truth": "productcatalogservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -1917,6 +1975,7 @@
     "case": "re2ob_productcatalogservice_delay_2",
     "truth": "productcatalogservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -1950,6 +2009,7 @@
     "case": "re2ob_productcatalogservice_delay_3",
     "truth": "productcatalogservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -1983,6 +2043,7 @@
     "case": "re2ob_productcatalogservice_disk_1",
     "truth": "productcatalogservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "productcatalogservice_diskio",
       "redis_diskio",
@@ -2016,6 +2077,7 @@
     "case": "re2ob_productcatalogservice_disk_2",
     "truth": "productcatalogservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "emailservice_mem",
       "redis_mem",
@@ -2049,6 +2111,7 @@
     "case": "re2ob_productcatalogservice_disk_3",
     "truth": "productcatalogservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "productcatalogservice_diskio",
       "redis_diskio",
@@ -2082,6 +2145,7 @@
     "case": "re2ob_productcatalogservice_loss_1",
     "truth": "productcatalogservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "productcatalogservice_error",
       "productcatalogservice_latency-90",
@@ -2115,6 +2179,7 @@
     "case": "re2ob_productcatalogservice_loss_2",
     "truth": "productcatalogservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "productcatalogservice_error",
       "productcatalogservice_latency-90",
@@ -2148,6 +2213,7 @@
     "case": "re2ob_productcatalogservice_loss_3",
     "truth": "productcatalogservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "productcatalogservice_diskio",
       "productcatalogservice_latency-90",
@@ -2181,6 +2247,7 @@
     "case": "re2ob_productcatalogservice_mem_1",
     "truth": "productcatalogservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "productcatalogservice_latency-90",
       "redis_diskio",
@@ -2214,6 +2281,7 @@
     "case": "re2ob_productcatalogservice_mem_2",
     "truth": "productcatalogservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "adservice_error",
       "productcatalogservice_latency-90",
@@ -2247,6 +2315,7 @@
     "case": "re2ob_productcatalogservice_mem_3",
     "truth": "productcatalogservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "redis_mem",
       "redis_diskio",
@@ -2280,6 +2349,7 @@
     "case": "re2ob_productcatalogservice_socket_1",
     "truth": "productcatalogservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -2313,6 +2383,7 @@
     "case": "re2ob_productcatalogservice_socket_2",
     "truth": "productcatalogservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -2346,6 +2417,7 @@
     "case": "re2ob_productcatalogservice_socket_3",
     "truth": "productcatalogservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "productcatalogservice_latency-90",
@@ -2379,6 +2451,7 @@
     "case": "re2ob_recommendationservice_cpu_1",
     "truth": "recommendationservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -2412,6 +2485,7 @@
     "case": "re2ob_recommendationservice_cpu_2",
     "truth": "recommendationservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_diskio",
       "redis_diskio",
@@ -2445,6 +2519,7 @@
     "case": "re2ob_recommendationservice_cpu_3",
     "truth": "recommendationservice",
     "fault": "cpu",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -2478,6 +2553,7 @@
     "case": "re2ob_recommendationservice_delay_1",
     "truth": "recommendationservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -2511,6 +2587,7 @@
     "case": "re2ob_recommendationservice_delay_2",
     "truth": "recommendationservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_diskio",
       "redis_diskio",
@@ -2544,6 +2621,7 @@
     "case": "re2ob_recommendationservice_delay_3",
     "truth": "recommendationservice",
     "fault": "delay",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -2577,6 +2655,7 @@
     "case": "re2ob_recommendationservice_disk_1",
     "truth": "recommendationservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_diskio",
       "redis_diskio",
@@ -2610,6 +2689,7 @@
     "case": "re2ob_recommendationservice_disk_2",
     "truth": "recommendationservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_diskio",
       "emailservice_mem",
@@ -2643,6 +2723,7 @@
     "case": "re2ob_recommendationservice_disk_3",
     "truth": "recommendationservice",
     "fault": "disk",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_diskio",
       "redis_diskio",
@@ -2676,6 +2757,7 @@
     "case": "re2ob_recommendationservice_loss_1",
     "truth": "recommendationservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_mem",
@@ -2709,6 +2791,7 @@
     "case": "re2ob_recommendationservice_loss_2",
     "truth": "recommendationservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "productcatalogservice_error",
       "recommendationservice_latency-90",
@@ -2742,6 +2825,7 @@
     "case": "re2ob_recommendationservice_loss_3",
     "truth": "recommendationservice",
     "fault": "loss",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_latency-90",
       "recommendationservice_diskio",
@@ -2775,6 +2859,7 @@
     "case": "re2ob_recommendationservice_mem_1",
     "truth": "recommendationservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -2808,6 +2893,7 @@
     "case": "re2ob_recommendationservice_mem_2",
     "truth": "recommendationservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -2841,6 +2927,7 @@
     "case": "re2ob_recommendationservice_mem_3",
     "truth": "recommendationservice",
     "fault": "mem",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_diskio",
       "emailservice_mem",
@@ -2874,6 +2961,7 @@
     "case": "re2ob_recommendationservice_socket_1",
     "truth": "recommendationservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "redis_diskio",
       "recommendationservice_latency-90",
@@ -2907,6 +2995,7 @@
     "case": "re2ob_recommendationservice_socket_2",
     "truth": "recommendationservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "recommendationservice_diskio",
       "redis_diskio",
@@ -2940,6 +3029,7 @@
     "case": "re2ob_recommendationservice_socket_3",
     "truth": "recommendationservice",
     "fault": "socket",
+    "method": "baro",
     "top_metrics": [
       "emailservice_mem",
       "redis_diskio",

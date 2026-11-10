@@ -82,7 +82,7 @@ This is the reference for resetting our engineering targets (do not keep arbitra
 
 1. **AI/ML?** Yes — statistical anomaly RCA (BARO), learned ranker (GBT), plus our LLM investigation layer in the product.  
 2. **EDA?** Yes — deep EDA + data card on RE2-OB.  
-3. **Metrics validated?** Yes — BARO numbers above are the empirical baseline.  
+3. **Metrics validated?** Yes — full write-up in [`METRICS_VALIDATION.md`](METRICS_VALIDATION.md) (BARO + N-Sigma + E-Diagnosis, bootstrap CIs, revised targets, study size).  
 4. **Window size?** **120 s**, chosen by labelled sweep.
 
 ---

@@ -75,7 +75,7 @@ console/                  Operator console (CLI first, UI later)
 | Human pilot study | Planned (Semester B) |
 
 Unit tests: **16 passing** (`uv run pytest`).  
-RCAEval results: [`eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`](eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md) (RE2-OB detail: [`re2ob_RESULTS.md`](eval/artifacts/rcaeval/re2ob_RESULTS.md)).
+RCAEval results: [`eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`](eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md) · metrics validation / revised targets: [`METRICS_VALIDATION.md`](eval/artifacts/rcaeval/METRICS_VALIDATION.md).
 
 ---
 
@@ -104,6 +104,10 @@ Place RCAEval cases under `../datasets/RCAEval` (or set `RCAEVAL_DIR`), then:
 make rcaeval-everything
 # all RE1/RE2/RE3 suites (OB+SS+TT): EDA + window sweep + GBT ranker + BARO
 # → eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md
+
+make rcaeval-metrics-validation
+# BARO + N-Sigma + E-Diagnosis, bootstrap CIs, revised targets, study size
+# → eval/artifacts/rcaeval/METRICS_VALIDATION.md
 
 make rcaeval-all
 # RE2-OB only → eval/artifacts/rcaeval/re2ob_RESULTS.md

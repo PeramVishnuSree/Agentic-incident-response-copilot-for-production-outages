@@ -50,6 +50,9 @@ rcaeval-all: ## Full RCAEval track on RE2-OB only
 rcaeval-everything: ## All RCAEval suites RE1/RE2/RE3 (OB+SS+TT)
 	uv run python -m eval.rcaeval.run_all_suites
 
+rcaeval-metrics-validation: ## BARO+NSigma+EDiag, bootstrap CIs, revised targets, study size
+	uv run python -m eval.rcaeval.metrics_validation --suite re2ob
+
 rcaeval-smoke: ## Fast smoke (first 6 cases, skip BARO)
 	uv run python -m eval.rcaeval.run_all --suite re2ob --limit 6 --skip-baro
 
