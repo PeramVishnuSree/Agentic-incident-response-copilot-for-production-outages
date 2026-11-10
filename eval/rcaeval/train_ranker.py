@@ -9,7 +9,6 @@ from tqdm import tqdm
 
 from eval.rcaeval.common import (
     ARTIFACTS,
-    OB_SERVICES,
     REPO_ROOT,
     ac_at_k,
     find_data_root,
@@ -19,26 +18,26 @@ from eval.rcaeval.common import (
     load_metrics,
     metric_to_service,
     save_json,
+    services_from_metrics,
 )
 
 
-def _upstreamness_map() -> dict[str, float]:
+def _upstreamness_map(services: list[str]) -> dict[str, float]:
     try:
         from correlation_engine.graph import load_dependency_graph, upstreamness
 
         g = load_dependency_graph(REPO_ROOT / "config" / "dependency-graph.yaml")
-        return {svc: float(upstreamness(svc, g)) for svc in OB_SERVICES}
+        return {svc: float(upstreamness(svc, g)) if svc in g else 0.0 for svc in services}
     except Exception:  # noqa: BLE001
-        return {svc: 0.0 for svc in OB_SERVICES}
+        return {svc: 0.0 for svc in services}
 
 
 def build_feature_rows(suite: str = "re2ob", window: int = 300) -> pd.DataFrame:
     root = find_data_root()
     cases = list_cases(root, suite=suite)
-    up = _upstreamness_map()
     rows = []
 
-    for case in tqdm(cases, desc="features"):
+    for case in tqdm(cases, desc=f"features {suite}"):
         metrics = load_metrics(case)
         logs = load_logs(case)
         t0 = inject_time(case)
@@ -47,8 +46,11 @@ def build_feature_rows(suite: str = "re2ob", window: int = 300) -> pd.DataFrame:
         if pre.empty or post.empty:
             continue
 
+        services = sorted(set(services_from_metrics(metrics)) | {case.service})
+        up = _upstreamness_map(services)
+
         # per-service anomaly / onset / log errors
-        for svc in OB_SERVICES:
+        for svc in services:
             cols = [c for c in metrics.columns if metric_to_service(c) == svc]
             if not cols:
                 continue
@@ -57,8 +59,13 @@ def build_feature_rows(suite: str = "re2ob", window: int = 300) -> pd.DataFrame:
             for c in cols:
                 mu = float(pre[c].mean())
                 sigma = float(pre[c].std()) + 1e-9
+                if pd.isna(mu) or pd.isna(sigma):
+                    continue
                 series = ((post[c] - mu) / sigma).abs()
-                z_vals.append(float(series.max()))
+                z_max = float(series.max())
+                if pd.isna(z_max):
+                    continue
+                z_vals.append(z_max)
                 # first time z > 3
                 hit = series[series > 3]
                 if len(hit):
@@ -92,11 +99,16 @@ def build_feature_rows(suite: str = "re2ob", window: int = 300) -> pd.DataFrame:
 
 def evaluate_ranker(df: pd.DataFrame) -> dict:
     feature_cols = ["anomaly_score", "onset_sec", "upstreamness", "log_error_rate", "n_metrics"]
-    X = df[feature_cols].to_numpy()
+    # Sparse/missing post-injection windows produce NaNs; GBT needs finite inputs.
+    X = df[feature_cols].fillna(0.0).to_numpy()
     y = df["label"].to_numpy()
     groups = df["case"].to_numpy()
 
-    gkf = GroupKFold(n_splits=5)
+    n_splits = min(5, int(pd.Series(groups).nunique()))
+    if n_splits < 2:
+        raise ValueError(f"Need at least 2 cases to evaluate ranker, got {n_splits}")
+
+    gkf = GroupKFold(n_splits=n_splits)
     case_preds: dict[str, list[tuple[str, float]]] = {}
 
     for train_idx, test_idx in gkf.split(X, y, groups):
@@ -138,7 +150,7 @@ def evaluate_ranker(df: pd.DataFrame) -> dict:
         "feature_importance": importance,
         "features": feature_cols,
         "model": "GradientBoostingClassifier",
-        "cv": "GroupKFold(5) by case",
+        "cv": f"GroupKFold({n_splits}) by case",
     }
 
 

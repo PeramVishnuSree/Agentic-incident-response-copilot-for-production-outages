@@ -70,12 +70,12 @@ console/                  Operator console (CLI first, UI later)
 | Dependency graph + incident grouping + top-3 ranking | Done |
 | Read-only RCA tools, evidence verifier, mock LLM + spend cap | Done |
 | Fault scenarios: pod-crash, cpu-stress | Done |
-| RCAEval RE2-OB deep EDA + window sweep + GBT ranker + BARO | Done (`make rcaeval-all`) |
+| RCAEval all suites (RE1/RE2/RE3 × OB/SS/TT, 735 cases) | Done (`make rcaeval-everything`) |
 | PostgreSQL store, approval UI, restricted executor | In progress (next sprints) |
 | Human pilot study | Planned (Semester B) |
 
 Unit tests: **16 passing** (`uv run pytest`).  
-RCAEval results: [`eval/artifacts/rcaeval/re2ob_RESULTS.md`](eval/artifacts/rcaeval/re2ob_RESULTS.md).
+RCAEval results: [`eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`](eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md) (RE2-OB detail: [`re2ob_RESULTS.md`](eval/artifacts/rcaeval/re2ob_RESULTS.md)).
 
 ---
 
@@ -98,12 +98,15 @@ uv run pytest
 
 ### RCAEval experiments (public benchmark)
 
-Place RE2 cases under `../datasets/RCAEval` (or set `RCAEVAL_DIR`), then:
+Place RCAEval cases under `../datasets/RCAEval` (or set `RCAEVAL_DIR`), then:
 
 ```bash
+make rcaeval-everything
+# all RE1/RE2/RE3 suites (OB+SS+TT): EDA + window sweep + GBT ranker + BARO
+# → eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md
+
 make rcaeval-all
-# deep EDA + window sweep + learned ranker + BARO baselines
-# → eval/artifacts/rcaeval/re2ob_RESULTS.md
+# RE2-OB only → eval/artifacts/rcaeval/re2ob_RESULTS.md
 ```
 
 ### Local Kubernetes testbed

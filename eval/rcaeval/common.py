@@ -1,4 +1,4 @@
-"""Shared helpers for RCAEval experiments."""
+"""Shared helpers for RCAEval experiments (RE1 / RE2 / RE3)."""
 
 from __future__ import annotations
 
@@ -19,26 +19,39 @@ DEFAULT_DATA_ROOTS = [
     Path.home() / "Desktop" / "Masters RCA" / "datasets" / "RCAEval",
 ]
 
-OB_SERVICES = [
-    "frontend-external",
-    "productcatalogservice",
-    "recommendationservice",
-    "checkoutservice",
-    "currencyservice",
-    "paymentservice",
-    "emailservice",
-    "shippingservice",
-    "cartservice",
-    "adservice",
-    "frontend",
-    "redis",
+ALL_SUITES = [
+    "re1ob",
+    "re1ss",
+    "re1tt",
+    "re2ob",
+    "re2ss",
+    "re2tt",
+    "re3ob",
+    "re3ss",
+    "re3tt",
 ]
+
+# Longest-first metric suffixes used across RCAEval systems.
+_METRIC_SUFFIXES = [
+    "_latency-90",
+    "_latency-50",
+    "_diskio",
+    "_workload",
+    "_socket",
+    "_error",
+    "_cpu",
+    "_mem",
+]
+
+_CASE_RE = re.compile(
+    r"^(re[123](?:ob|ss|tt))_(.+)_(cpu|mem|disk|delay|loss|socket|f[1-5])_(\d+)$"
+)
 
 
 @dataclass(frozen=True)
 class Case:
     path: Path
-    suite: str  # re2ob / re2ss / re2tt
+    suite: str
     service: str
     fault: str
     rep: str
@@ -50,7 +63,7 @@ class Case:
 
 def find_data_root() -> Path:
     for root in DEFAULT_DATA_ROOTS:
-        if root and root.is_dir() and any(root.glob("re2ob_*")):
+        if root and root.is_dir() and any(root.glob("re*_*")):
             return root
     raise FileNotFoundError(
         "RCAEval data not found. Set RCAEVAL_DIR or place data under ../datasets/RCAEval"
@@ -58,8 +71,7 @@ def find_data_root() -> Path:
 
 
 def parse_case(path: Path) -> Case | None:
-    # re2ob_checkoutservice_cpu_1
-    m = re.match(r"^(re2(?:ob|ss|tt))_(.+)_(cpu|mem|disk|delay|loss|socket)_(\d+)$", path.name)
+    m = _CASE_RE.match(path.name)
     if not m:
         return None
     return Case(path=path, suite=m.group(1), service=m.group(2), fault=m.group(3), rep=m.group(4))
@@ -96,10 +108,18 @@ def inject_time(case: Case) -> int:
 
 
 def metric_to_service(metric: str) -> str | None:
-    for svc in sorted(OB_SERVICES, key=len, reverse=True):
-        if metric == svc or metric.startswith(svc + "_"):
+    if metric == "time":
+        return None
+    for suf in _METRIC_SUFFIXES:
+        if metric.endswith(suf):
+            svc = metric[: -len(suf)]
             return "redis-cart" if svc == "redis" else svc
     return None
+
+
+def services_from_metrics(metrics: pd.DataFrame) -> list[str]:
+    found = {metric_to_service(c) for c in metrics.columns}
+    return sorted(s for s in found if s)
 
 
 def ranks_to_services(ranks: list[str]) -> list[str]:
@@ -112,7 +132,10 @@ def ranks_to_services(ranks: list[str]) -> list[str]:
 
 
 def ac_at_k(pred_services: list[str], truth: str, k: int) -> float:
-    return 1.0 if truth in pred_services[:k] else 0.0
+    # Normalize redis naming
+    truth_n = "redis-cart" if truth == "redis" else truth
+    preds = ["redis-cart" if p == "redis" else p for p in pred_services]
+    return 1.0 if truth_n in preds[:k] else 0.0
 
 
 def avg_at_5(pred_services: list[str], truth: str) -> float:
