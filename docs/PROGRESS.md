@@ -22,11 +22,15 @@ Early diagnosis pipeline is implemented in-repo: collectors, dependency-graph co
 | Incident grouping + deterministic top-3 ranking | `services/correlation-engine/` |
 | Read-only RCA tools + evidence verifier + mock LLM / spend cap | `services/rca-agent/` |
 | Fault scenarios: pod-crash, cpu-stress | `scenarios/` |
-| RCAEval RE2-OB EDA + data card | `make eda` → `eval/artifacts/` |
+| RCAEval RE2-OB deep EDA + data card | `make rcaeval-all` → `eval/artifacts/rcaeval/` |
+| Window sweep (chose **120s**) | `re2ob_window_sweep.json` |
+| Learned GBT ranker (AC@1≈0.90) | `re2ob_ranker_summary.json` |
+| BARO baseline on 90 OB cases | `re2ob_baro_summary.json` (AC@1=0.30, AC@3=0.92) |
 | Baseline plan (BARO / HolmesGPT) | `docs/baselines.md` |
 | Architecture notes | `docs/architecture.md` |
 
-**Tests:** `uv run pytest` → 16 passing.
+**Tests:** `uv run pytest` → 16 passing.  
+**RCAEval report:** `eval/artifacts/rcaeval/re2ob_RESULTS.md`
 
 ---
 

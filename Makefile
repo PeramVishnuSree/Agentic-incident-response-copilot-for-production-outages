@@ -44,6 +44,12 @@ scenario-cpu-stress: ## Inject the cpu-stress fault scenario (S2)
 eda: ## Run RCAEval RE2-OB exploratory data analysis (X0)
 	uv run python -m eval.eda_re2ob
 
+rcaeval-all: ## Full RCAEval track: deep EDA + window sweep + ranker + BARO
+	uv run python -m eval.rcaeval.run_all --suite re2ob
+
+rcaeval-smoke: ## Fast smoke (first 6 cases, skip BARO)
+	uv run python -m eval.rcaeval.run_all --suite re2ob --limit 6 --skip-baro
+
 progress: ## Print Workbook 1/2 progress checklist
 	@cat docs/PROGRESS.md
 

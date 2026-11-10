@@ -70,11 +70,12 @@ console/                  Operator console (CLI first, UI later)
 | Dependency graph + incident grouping + top-3 ranking | Done |
 | Read-only RCA tools, evidence verifier, mock LLM + spend cap | Done |
 | Fault scenarios: pod-crash, cpu-stress | Done |
-| RCAEval RE2-OB download + EDA data card | Done (`make eda`) |
+| RCAEval RE2-OB deep EDA + window sweep + GBT ranker + BARO | Done (`make rcaeval-all`) |
 | PostgreSQL store, approval UI, restricted executor | In progress (next sprints) |
 | Human pilot study | Planned (Semester B) |
 
-Unit tests: **16 passing** (`uv run pytest`).
+Unit tests: **16 passing** (`uv run pytest`).  
+RCAEval results: [`eval/artifacts/rcaeval/re2ob_RESULTS.md`](eval/artifacts/rcaeval/re2ob_RESULTS.md).
 
 ---
 
@@ -95,13 +96,14 @@ uv sync --dev
 uv run pytest
 ```
 
-### Exploratory data analysis (public RCAEval dataset)
+### RCAEval experiments (public benchmark)
 
-Place RE2 Online Boutique cases under `../datasets/RCAEval` (or set `RCAEVAL_DIR`), then:
+Place RE2 cases under `../datasets/RCAEval` (or set `RCAEVAL_DIR`), then:
 
 ```bash
-make eda
-# writes eval/artifacts/re2ob_data_card.md
+make rcaeval-all
+# deep EDA + window sweep + learned ranker + BARO baselines
+# → eval/artifacts/rcaeval/re2ob_RESULTS.md
 ```
 
 ### Local Kubernetes testbed
