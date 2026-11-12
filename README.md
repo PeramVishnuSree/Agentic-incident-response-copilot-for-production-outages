@@ -36,7 +36,7 @@ Telemetry → gateway / normaliser → incident store
         → restricted executor   ← only write path
 ```
 
-Full detail: [docs/architecture.md](docs/architecture.md) · safety / baselines: [docs/baselines.md](docs/baselines.md) · status: [docs/PROGRESS.md](docs/PROGRESS.md)
+Full detail: [docs/architecture.md](docs/architecture.md) · plain-English complete guide: [docs/COMPLETE_EXPLAINER.md](docs/COMPLETE_EXPLAINER.md) · safety / baselines: [docs/baselines.md](docs/baselines.md) · status: [docs/PROGRESS.md](docs/PROGRESS.md)
 
 ---
 

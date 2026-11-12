@@ -33,7 +33,8 @@ Early diagnosis pipeline is implemented in-repo: collectors, dependency-graph co
 
 **Tests:** `uv run pytest` → 16 passing.  
 **RCAEval report:** `eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`  
-**Professor item #3 (metrics validated):** `eval/artifacts/rcaeval/METRICS_VALIDATION.md`
+**Professor item #3 (metrics validated):** `eval/artifacts/rcaeval/METRICS_VALIDATION.md`  
+**Full plain-English explainer (architecture + RCAEval + methods):** `docs/COMPLETE_EXPLAINER.md`
 
 ---
 

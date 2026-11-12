@@ -3,7 +3,10 @@
 **Notebook:** [`RCAEval_EDA.ipynb`](RCAEval_EDA.ipynb)  
 **Project:** Agentic Incident-Response Copilot (CMPE 295)  
 **Dataset:** public [RCAEval](https://github.com/phamquiluan/RCAEval) benchmark (not created by this team)  
-**Date:** 2026-11-12
+**Date:** 2026-11-12  
+
+For the full story (architecture, apps/releases, BARO, N-Sigma, GBT, AC@1, targets):  
+**[`../docs/COMPLETE_EXPLAINER.md`](../docs/COMPLETE_EXPLAINER.md)**
 
 ---
 
