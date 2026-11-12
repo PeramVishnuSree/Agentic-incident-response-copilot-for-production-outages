@@ -1,0 +1,113 @@
+{
+  "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval",
+  "suites": {
+    "re1ob": {
+      "n_cases": 125,
+      "chosen_window_sec": 30,
+      "ranker_AC@1": 0.7723577235772358,
+      "ranker_AC@3": 0.9512195121951219,
+      "baro_AC@1": 0.216,
+      "baro_AC@3": 0.84,
+      "baro_Avg@5": 0.696,
+      "avg_metrics_cols": 54.4,
+      "avg_logs_rows": 0.0,
+      "avg_traces_rows": 0.0
+    },
+    "re1ss": {
+      "n_cases": 125,
+      "chosen_window_sec": 120,
+      "ranker_AC@1": 0.88,
+      "ranker_AC@3": 0.992,
+      "baro_AC@1": 0.352,
+      "baro_AC@3": 0.912,
+      "baro_Avg@5": 0.7936,
+      "avg_metrics_cols": 58.96,
+      "avg_logs_rows": 0.0,
+      "avg_traces_rows": 0.0
+    },
+    "re1tt": {
+      "n_cases": 125,
+      "chosen_window_sec": 60,
+      "ranker_AC@1": 0.56,
+      "ranker_AC@3": 0.888,
+      "baro_AC@1": 0.12,
+      "baro_AC@3": 0.416,
+      "baro_Avg@5": 0.3728,
+      "avg_metrics_cols": 213.552,
+      "avg_logs_rows": 0.0,
+      "avg_traces_rows": 0.0
+    },
+    "re2ob": {
+      "n_cases": 90,
+      "chosen_window_sec": 120,
+      "ranker_AC@1": 0.8888888888888888,
+      "ranker_AC@3": 0.9777777777777777,
+      "baro_AC@1": 0.3,
+      "baro_AC@3": 0.9222222222222223,
+      "baro_Avg@5": 0.8044444444444445,
+      "avg_metrics_cols": 73.36666666666666,
+      "avg_logs_rows": 167258.03333333333,
+      "avg_traces_rows": 382902.6111111111
+    },
+    "re2ss": {
+      "n_cases": 90,
+      "chosen_window_sec": 60,
+      "ranker_AC@1": 0.9222222222222223,
+      "ranker_AC@3": 0.9888888888888889,
+      "baro_AC@1": 0.1111111111111111,
+      "baro_AC@3": 0.8222222222222222,
+      "baro_Avg@5": 0.6911111111111111,
+      "avg_metrics_cols": 76.61111111111111,
+      "avg_logs_rows": 84069.11111111111,
+      "avg_traces_rows": 0.0
+    },
+    "re2tt": {
+      "n_cases": 90,
+      "chosen_window_sec": 60,
+      "ranker_AC@1": 0.6333333333333333,
+      "ranker_AC@3": 0.8666666666666667,
+      "baro_AC@1": 0.4222222222222222,
+      "baro_AC@3": 0.6777777777777778,
+      "baro_Avg@5": 0.6377777777777778,
+      "avg_metrics_cols": 362.1333333333333,
+      "avg_logs_rows": 233466.9,
+      "avg_traces_rows": 748278.3444444444
+    },
+    "re3ob": {
+      "n_cases": 30,
+      "chosen_window_sec": 60,
+      "ranker_AC@1": 0.9666666666666667,
+      "ranker_AC@3": 1.0,
+      "baro_AC@1": 0.0,
+      "baro_AC@3": 0.9,
+      "baro_Avg@5": 0.7133333333333334,
+      "avg_metrics_cols": 70.33333333333333,
+      "avg_logs_rows": 69840.2,
+      "avg_traces_rows": 158503.0
+    },
+    "re3ss": {
+      "n_cases": 30,
+      "chosen_window_sec": 120,
+      "ranker_AC@1": 0.6666666666666666,
+      "ranker_AC@3": 0.9666666666666667,
+      "baro_AC@1": 0.06666666666666667,
+      "baro_AC@3": 0.6333333333333333,
+      "baro_Avg@5": 0.5133333333333333,
+      "avg_metrics_cols": 83.03333333333333,
+      "avg_logs_rows": 76607.93333333333,
+      "avg_traces_rows": 0.0
+    },
+    "re3tt": {
+      "n_cases": 30,
+      "chosen_window_sec": 120,
+      "ranker_AC@1": 0.8333333333333334,
+      "ranker_AC@3": 0.8666666666666667,
+      "baro_AC@1": 0.23333333333333334,
+      "baro_AC@3": 1.0,
+      "baro_Avg@5": 0.8066666666666666,
+      "avg_metrics_cols": 315.1666666666667,
+      "avg_logs_rows": 54262.1,
+      "avg_traces_rows": 138422.53333333333
+    }
+  }
+}

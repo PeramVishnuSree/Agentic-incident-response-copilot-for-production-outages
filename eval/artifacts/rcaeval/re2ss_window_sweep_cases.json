@@ -1,0 +1,7574 @@
+{
+  "30": [
+    {
+      "case": "re2ss_carts_cpu_1",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "orders-db",
+        "user",
+        "carts",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_2",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "carts",
+        "catalogue",
+        "carts-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_3",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "rabbitmq-exporter",
+        "carts",
+        "orders",
+        "user",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_1",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_2",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_3",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_1",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts",
+        "carts-db",
+        "user",
+        "catalogue-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_2",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_3",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts",
+        "orders",
+        "catalogue-db",
+        "queue-master",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_1",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_2",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts-db",
+        "carts",
+        "front-end",
+        "rabbitmq",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_3",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts",
+        "orders",
+        "front-end",
+        "catalogue",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_1",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "payment",
+        "session-db",
+        "front-end",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_2",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "payment",
+        "session-db",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_3",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "carts-db",
+        "user",
+        "catalogue",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_1",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "user",
+        "shipping",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_socket_2",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "carts",
+        "user",
+        "orders",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_3",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "carts",
+        "catalogue",
+        "payment",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_1",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_2",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "rabbitmq",
+        "user-db",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_3",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "carts",
+        "shipping",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_1",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "user-db",
+        "queue-master",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_2",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "rabbitmq",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_3",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "payment",
+        "orders",
+        "front-end",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_1",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "queue-master",
+        "orders-db",
+        "rabbitmq-exporter",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_2",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "front-end",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_3",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "session-db",
+        "payment",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_1",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue-db",
+        "catalogue",
+        "carts",
+        "front-end",
+        "session-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_2",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "shipping",
+        "rabbitmq",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_3",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "shipping",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_1",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "front-end",
+        "payment",
+        "orders-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_2",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "user",
+        "payment",
+        "shipping",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_3",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "front-end",
+        "user",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_1",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "user-db",
+        "carts-db",
+        "orders-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_2",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "orders-db",
+        "orders",
+        "queue-master",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_3",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "orders-db",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_1",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "carts",
+        "orders-db",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_2",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "orders-db",
+        "user-db",
+        "carts",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_3",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "session-db",
+        "front-end",
+        "carts",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_delay_1",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "shipping",
+        "payment",
+        "queue-master",
+        "user",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_2",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "shipping",
+        "orders",
+        "rabbitmq",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_delay_3",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "carts",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_1",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "orders-db",
+        "front-end",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_2",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders-db",
+        "orders",
+        "payment",
+        "user",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_3",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_1",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "orders-db",
+        "user-db",
+        "carts",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_3",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "orders",
+        "payment",
+        "session-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_1",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "orders",
+        "shipping",
+        "user",
+        "front-end",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_2",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "orders",
+        "carts",
+        "payment",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_3",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "user-db",
+        "user",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_1",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_socket_2",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "user",
+        "orders-db",
+        "user-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_socket_3",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "shipping",
+        "carts",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_1",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "queue-master",
+        "user-db",
+        "shipping",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_2",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "user",
+        "catalogue",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_3",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "user",
+        "orders-db",
+        "catalogue",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_1",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders-db",
+        "catalogue",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_2",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "queue-master",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_3",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "rabbitmq",
+        "user",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_1",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "session-db",
+        "user",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_2",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "user-db",
+        "user",
+        "catalogue",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_3",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts",
+        "orders",
+        "shipping",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_1",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "front-end",
+        "payment",
+        "orders-db",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_2",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "carts",
+        "user",
+        "user-db",
+        "carts-db",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_payment_loss_3",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "payment",
+        "session-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_payment_mem_1",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "queue-master",
+        "carts-db",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_2",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "user",
+        "user-db",
+        "queue-master",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_3",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "catalogue",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_1",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders-db",
+        "shipping",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_2",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "orders-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_3",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "session-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_1",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "orders",
+        "orders-db",
+        "payment",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_2",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "shipping",
+        "payment",
+        "orders",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_3",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_1",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "shipping",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_2",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user-db",
+        "user",
+        "orders",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_3",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "user",
+        "front-end",
+        "payment",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_1",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_2",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "user-db",
+        "catalogue-db",
+        "orders",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_3",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "catalogue-db",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_1",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "queue-master",
+        "session-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_2",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "orders",
+        "payment",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_3",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_1",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "catalogue",
+        "user-db",
+        "orders",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_2",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "catalogue-db",
+        "user-db",
+        "carts-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_3",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "orders",
+        "catalogue-db",
+        "carts",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_1",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "carts-db",
+        "carts",
+        "catalogue",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_2",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "carts",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_3",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "payment",
+        "front-end",
+        "shipping",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    }
+  ],
+  "60": [
+    {
+      "case": "re2ss_carts_cpu_1",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "orders-db",
+        "user",
+        "carts",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_2",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "carts",
+        "catalogue",
+        "carts-db",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_3",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "rabbitmq-exporter",
+        "carts",
+        "orders",
+        "user",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_1",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_2",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_3",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "orders-db",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_1",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts",
+        "carts-db",
+        "user",
+        "user-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_2",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_3",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts",
+        "orders",
+        "catalogue",
+        "catalogue-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_1",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_2",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts-db",
+        "carts",
+        "front-end",
+        "orders",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_3",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts",
+        "orders",
+        "front-end",
+        "catalogue",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_1",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "payment",
+        "user",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_2",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "payment",
+        "carts-db",
+        "user-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_3",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "carts-db",
+        "front-end",
+        "user",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_1",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "carts",
+        "user",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_2",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "user",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_3",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "catalogue",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_1",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user-db",
+        "carts-db",
+        "orders-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_2",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "rabbitmq",
+        "user-db",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_3",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "carts",
+        "user",
+        "shipping",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_1",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "user-db",
+        "queue-master",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_2",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "front-end",
+        "catalogue-db",
+        "rabbitmq",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_3",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "front-end",
+        "orders",
+        "payment",
+        "catalogue-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_1",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "orders-db",
+        "queue-master",
+        "user-db",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_2",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "front-end",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_3",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts",
+        "carts-db",
+        "payment",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_1",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "catalogue-db",
+        "catalogue",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_2",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "front-end",
+        "orders",
+        "shipping",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_3",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "front-end",
+        "catalogue-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_1",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "payment",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_2",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "orders",
+        "catalogue-db",
+        "user",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_3",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "user",
+        "front-end",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_1",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "user-db",
+        "carts-db",
+        "orders-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_2",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "shipping",
+        "front-end",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_3",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "shipping",
+        "front-end",
+        "orders",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_1",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "carts",
+        "orders-db",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_2",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "orders-db",
+        "user-db",
+        "carts-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_3",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "front-end",
+        "user",
+        "carts",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_delay_1",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "shipping",
+        "payment",
+        "user",
+        "queue-master",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_2",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "payment",
+        "user",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_3",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "payment",
+        "user",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_1",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "orders-db",
+        "front-end",
+        "queue-master",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_2",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders-db",
+        "orders",
+        "catalogue",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_3",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_1",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "orders",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "front-end",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_3",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "orders",
+        "payment",
+        "shipping",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_1",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "orders",
+        "shipping",
+        "front-end",
+        "user",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_2",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_3",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "user-db",
+        "front-end",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_1",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "user",
+        "catalogue",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_socket_2",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "user",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_3",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "shipping",
+        "payment",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_1",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "user-db",
+        "queue-master",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_2",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "user",
+        "catalogue",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_3",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "orders-db",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_1",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders-db",
+        "carts-db",
+        "catalogue",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_2",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "queue-master",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_3",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "rabbitmq",
+        "user",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_1",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "user",
+        "carts-db",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_2",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "user-db",
+        "user",
+        "rabbitmq",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_3",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts",
+        "orders",
+        "shipping",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_1",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "front-end",
+        "orders",
+        "shipping",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_2",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "carts",
+        "orders-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_3",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "payment",
+        "user",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_1",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "queue-master",
+        "carts-db",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_2",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "carts",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_3",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "carts",
+        "catalogue",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_1",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "shipping",
+        "orders-db",
+        "carts-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_2",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_3",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_1",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_2",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "shipping",
+        "payment",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_3",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_1",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "shipping",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_2",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user-db",
+        "user",
+        "orders",
+        "front-end",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_3",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "payment",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_1",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_2",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "orders",
+        "catalogue-db",
+        "user-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_3",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "catalogue-db",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_1",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "orders",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_2",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "session-db",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_3",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_1",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "catalogue",
+        "user-db",
+        "carts",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_2",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "orders-db",
+        "user",
+        "catalogue-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_3",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "shipping",
+        "carts-db",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_1",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "carts-db",
+        "carts",
+        "catalogue",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_2",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "carts",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_3",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "payment",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    }
+  ],
+  "120": [
+    {
+      "case": "re2ss_carts_cpu_1",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "orders-db",
+        "user",
+        "carts",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_2",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "carts",
+        "catalogue",
+        "orders",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_3",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "rabbitmq-exporter",
+        "carts",
+        "orders",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_1",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_2",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_3",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "user",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_1",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts",
+        "orders",
+        "carts-db",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_2",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "payment",
+        "carts",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_3",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts",
+        "orders",
+        "catalogue",
+        "catalogue-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_1",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "carts-db",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_2",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts-db",
+        "carts",
+        "front-end",
+        "orders",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_3",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts",
+        "orders",
+        "front-end",
+        "catalogue",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_1",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "payment",
+        "front-end",
+        "catalogue",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_2",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "catalogue",
+        "orders",
+        "carts-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_3",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "front-end",
+        "payment",
+        "carts-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_1",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "orders",
+        "carts",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_2",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "payment",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_3",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "carts-db",
+        "user",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_1",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user-db",
+        "carts-db",
+        "orders-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_2",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "rabbitmq",
+        "carts",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_3",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "carts",
+        "user",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_1",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_2",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "rabbitmq",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_3",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "front-end",
+        "catalogue-db",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_1",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "orders-db",
+        "queue-master",
+        "user-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_2",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "payment",
+        "front-end",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_3",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts",
+        "orders",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_1",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue-db",
+        "catalogue",
+        "front-end",
+        "session-db",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_2",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "catalogue",
+        "shipping",
+        "rabbitmq",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_3",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "front-end",
+        "catalogue-db",
+        "session-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_1",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "payment",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_2",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "orders",
+        "catalogue-db",
+        "queue-master",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_3",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "user",
+        "catalogue-db",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_1",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "user-db",
+        "orders-db",
+        "front-end",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_2",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "shipping",
+        "front-end",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_3",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "shipping",
+        "queue-master",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_1",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "carts",
+        "orders-db",
+        "user-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_2",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "orders-db",
+        "user-db",
+        "payment",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_3",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "front-end",
+        "carts",
+        "user",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_delay_1",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "shipping",
+        "payment",
+        "user",
+        "queue-master",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_2",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "payment",
+        "user",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_3",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "payment",
+        "user",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_1",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "orders-db",
+        "front-end",
+        "queue-master",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_2",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders-db",
+        "orders",
+        "catalogue",
+        "payment",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_3",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_1",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "orders",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_3",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "orders",
+        "payment",
+        "carts",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_1",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "orders",
+        "queue-master",
+        "payment",
+        "shipping",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_2",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "payment",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_3",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "user-db",
+        "front-end",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_1",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "user",
+        "catalogue",
+        "orders",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_2",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_3",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "shipping",
+        "payment",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_1",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "user",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_2",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "user",
+        "catalogue",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_3",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "orders-db",
+        "user-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_1",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders-db",
+        "catalogue",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_2",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "queue-master",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_3",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "catalogue-db",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_1",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "shipping",
+        "carts-db",
+        "user",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_2",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "rabbitmq",
+        "user-db",
+        "user",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_3",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts",
+        "orders",
+        "user-db",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_1",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "front-end",
+        "orders",
+        "shipping",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_2",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "orders-db",
+        "carts",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_3",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "user",
+        "shipping",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_1",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "queue-master",
+        "orders",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_2",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "queue-master",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_3",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "carts",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_1",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "shipping",
+        "orders-db",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_2",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_3",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_1",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "carts-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_2",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "queue-master",
+        "shipping",
+        "payment",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_3",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_1",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_2",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_3",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "payment",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_1",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "queue-master",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_2",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "orders",
+        "catalogue-db",
+        "user-db",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_3",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "catalogue-db",
+        "catalogue",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_1",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "orders",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_2",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "session-db",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_3",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "orders",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_1",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "catalogue",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_2",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "orders-db",
+        "carts-db",
+        "user",
+        "catalogue-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_3",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "shipping",
+        "carts-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_1",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "carts-db",
+        "carts",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_2",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "carts",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_3",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    }
+  ],
+  "300": [
+    {
+      "case": "re2ss_carts_cpu_1",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "orders-db",
+        "user",
+        "carts-db",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_cpu_2",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "carts",
+        "orders",
+        "catalogue",
+        "rabbitmq",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_3",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "rabbitmq-exporter",
+        "carts",
+        "catalogue-db",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_1",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_2",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "front-end",
+        "catalogue-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_3",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "queue-master",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_1",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts",
+        "carts-db",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_2",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "payment",
+        "carts",
+        "orders",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_3",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_1",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "rabbitmq",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_2",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts-db",
+        "carts",
+        "front-end",
+        "orders",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_3",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts",
+        "orders",
+        "front-end",
+        "carts-db",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_1",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "carts-db",
+        "front-end",
+        "payment",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_2",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts",
+        "queue-master",
+        "shipping",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_3",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "payment",
+        "carts-db",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_1",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "catalogue",
+        "carts",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_2",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders-db",
+        "orders",
+        "carts",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_3",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "carts-db",
+        "user",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_1",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user-db",
+        "carts-db",
+        "orders-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_2",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user",
+        "rabbitmq",
+        "user-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_3",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "carts",
+        "user",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_1",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "rabbitmq",
+        "front-end",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_2",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "rabbitmq",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_3",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "front-end",
+        "catalogue-db",
+        "carts-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_1",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "orders-db",
+        "queue-master",
+        "user-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_2",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "payment",
+        "carts",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_3",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts",
+        "carts-db",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_1",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "carts-db",
+        "front-end",
+        "session-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_2",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "session-db",
+        "catalogue",
+        "carts",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_3",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "session-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_1",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "rabbitmq",
+        "catalogue-db",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_2",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "payment",
+        "catalogue-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_3",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "user",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_1",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "payment",
+        "user-db",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_2",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "shipping",
+        "front-end",
+        "catalogue-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_3",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "payment",
+        "shipping",
+        "front-end",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_1",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "shipping",
+        "queue-master",
+        "user",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_2",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "catalogue-db",
+        "queue-master",
+        "payment",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_3",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "user",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_delay_1",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "shipping",
+        "payment",
+        "user",
+        "orders",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_2",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "payment",
+        "user",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_3",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "payment",
+        "user",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_1",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "rabbitmq-exporter",
+        "catalogue-db",
+        "rabbitmq",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_disk_2",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders-db",
+        "orders",
+        "user",
+        "catalogue",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_3",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "orders-db",
+        "user-db",
+        "carts-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_1",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "orders",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "payment",
+        "front-end",
+        "shipping",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_3",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "orders",
+        "payment",
+        "carts",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_1",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "user-db",
+        "user",
+        "orders",
+        "shipping",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_2",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "payment",
+        "orders-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_mem_3",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_1",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "user",
+        "catalogue",
+        "orders",
+        "orders-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_2",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "rabbitmq",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_3",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_1",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "user-db",
+        "queue-master",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_2",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "queue-master",
+        "user",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_3",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "catalogue",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_1",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "user",
+        "payment",
+        "queue-master",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_2",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_3",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "rabbitmq",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_1",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "shipping",
+        "carts-db",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_2",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "user-db",
+        "rabbitmq",
+        "carts-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_3",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts",
+        "orders",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_1",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "shipping",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_2",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "catalogue-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_3",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_1",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "queue-master",
+        "orders",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_2",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "carts",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_3",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts-db",
+        "orders",
+        "carts",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_1",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "shipping",
+        "orders-db",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_2",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_3",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_1",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "carts-db",
+        "orders",
+        "front-end",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_2",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "queue-master",
+        "shipping",
+        "payment",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_3",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_1",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_2",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_3",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_1",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "queue-master",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_2",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "orders",
+        "catalogue-db",
+        "user-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_3",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "catalogue-db",
+        "orders",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_1",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "session-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_2",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "session-db",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_3",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "catalogue",
+        "session-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_1",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "catalogue",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_2",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "orders-db",
+        "carts-db",
+        "user",
+        "catalogue-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_3",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "shipping",
+        "carts-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_1",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "carts",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_2",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_3",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    }
+  ],
+  "600": [
+    {
+      "case": "re2ss_carts_cpu_1",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "orders-db",
+        "carts-db",
+        "user",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_cpu_2",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "front-end",
+        "carts",
+        "rabbitmq",
+        "orders",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_3",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "rabbitmq-exporter",
+        "carts-db",
+        "carts",
+        "orders",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_1",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_2",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_3",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "shipping",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_1",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts",
+        "carts-db",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_2",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "payment",
+        "user-db",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_disk_3",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_1",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_loss_2",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts-db",
+        "carts",
+        "front-end",
+        "orders",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_3",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "carts",
+        "orders",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_1",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "catalogue",
+        "carts-db",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_2",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts",
+        "queue-master",
+        "shipping",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_3",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "carts-db",
+        "payment",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_1",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "catalogue",
+        "carts",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_2",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders-db",
+        "orders",
+        "carts",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_3",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "carts-db",
+        "user",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_1",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_2",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user",
+        "rabbitmq",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_3",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user",
+        "carts",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_1",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "shipping",
+        "carts-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_2",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "user-db",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_3",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "front-end",
+        "catalogue",
+        "carts-db",
+        "orders",
+        "catalogue-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_1",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "orders-db",
+        "catalogue-db",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_2",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "carts",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_3",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "carts",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_1",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "catalogue-db",
+        "front-end",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_2",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "session-db",
+        "catalogue",
+        "catalogue-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_3",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "user",
+        "front-end",
+        "session-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_1",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "rabbitmq",
+        "catalogue-db",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_2",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "payment",
+        "catalogue-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_3",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "rabbitmq-exporter",
+        "catalogue",
+        "catalogue-db",
+        "user",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_1",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "payment",
+        "user-db",
+        "orders-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_2",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "shipping",
+        "front-end",
+        "catalogue-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_3",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "payment",
+        "shipping",
+        "carts",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_1",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "shipping",
+        "queue-master",
+        "carts-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_2",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "catalogue-db",
+        "queue-master",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_3",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "carts",
+        "user",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_delay_1",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "user",
+        "user-db",
+        "shipping",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_2",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders-db",
+        "payment",
+        "user",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_3",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "orders",
+        "payment",
+        "user",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_1",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "rabbitmq-exporter",
+        "catalogue-db",
+        "rabbitmq",
+        "orders",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_disk_2",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders-db",
+        "orders",
+        "user",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_3",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "orders-db",
+        "carts",
+        "user-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_1",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "payment",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "front-end",
+        "rabbitmq",
+        "user-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_3",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "orders",
+        "shipping",
+        "payment",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_1",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "orders-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_mem_2",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "payment",
+        "orders-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_mem_3",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts-db",
+        "orders",
+        "user-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_1",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders-db",
+        "user-db",
+        "catalogue",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_socket_2",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "rabbitmq",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_3",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_1",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "queue-master",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_2",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "queue-master",
+        "user",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_3",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "catalogue",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_1",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "user",
+        "payment",
+        "queue-master",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_2",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "user",
+        "payment",
+        "orders",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_3",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "carts-db",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_1",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "shipping",
+        "carts-db",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_2",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts-db",
+        "user-db",
+        "rabbitmq",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_3",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts",
+        "orders-db",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_1",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "front-end",
+        "orders",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_2",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "carts-db",
+        "catalogue-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_3",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_1",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "queue-master",
+        "orders",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_2",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "catalogue",
+        "orders",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_3",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts-db",
+        "orders-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_1",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "catalogue",
+        "shipping",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_2",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_3",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_1",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "carts-db",
+        "user-db",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_2",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user-db",
+        "user",
+        "queue-master",
+        "shipping",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_3",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user",
+        "orders",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_1",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_2",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_3",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_1",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_2",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "catalogue-db",
+        "orders",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_3",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "carts-db",
+        "catalogue-db",
+        "catalogue",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_1",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "session-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_2",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "session-db",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_3",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "session-db",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_1",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "catalogue",
+        "payment",
+        "catalogue-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_2",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "carts-db",
+        "orders-db",
+        "user",
+        "catalogue-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_3",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "carts-db",
+        "shipping",
+        "catalogue",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_1",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "session-db",
+        "user",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_2",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "shipping",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_3",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    }
+  ],
+  "900": [
+    {
+      "case": "re2ss_carts_cpu_1",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "orders-db",
+        "carts-db",
+        "user",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_cpu_2",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "front-end",
+        "carts",
+        "shipping",
+        "rabbitmq",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_cpu_3",
+      "truth": "carts",
+      "fault": "cpu",
+      "top": [
+        "rabbitmq-exporter",
+        "carts-db",
+        "carts",
+        "orders",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_1",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders",
+        "carts",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_2",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_delay_3",
+      "truth": "carts",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "carts",
+        "front-end",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_1",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts",
+        "carts-db",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_disk_2",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "payment",
+        "user-db",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_disk_3",
+      "truth": "carts",
+      "fault": "disk",
+      "top": [
+        "carts-db",
+        "carts",
+        "orders",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_1",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_carts_loss_2",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "carts-db",
+        "carts",
+        "front-end",
+        "orders",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_loss_3",
+      "truth": "carts",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "carts",
+        "orders",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_1",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "catalogue",
+        "carts-db",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_2",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts",
+        "queue-master",
+        "shipping",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_mem_3",
+      "truth": "carts",
+      "fault": "mem",
+      "top": [
+        "carts",
+        "carts-db",
+        "payment",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_1",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "catalogue",
+        "carts",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_2",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "orders-db",
+        "orders",
+        "carts",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_carts_socket_3",
+      "truth": "carts",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "carts-db",
+        "user",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_1",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user-db",
+        "orders-db",
+        "carts-db",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_2",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user",
+        "rabbitmq",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_cpu_3",
+      "truth": "catalogue",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user",
+        "carts",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_1",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "shipping",
+        "carts-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_2",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "catalogue",
+        "catalogue-db",
+        "front-end",
+        "user-db",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_delay_3",
+      "truth": "catalogue",
+      "fault": "delay",
+      "top": [
+        "front-end",
+        "catalogue",
+        "payment",
+        "orders",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_1",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "orders-db",
+        "user-db",
+        "catalogue-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_2",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "carts",
+        "user-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_disk_3",
+      "truth": "catalogue",
+      "fault": "disk",
+      "top": [
+        "catalogue",
+        "payment",
+        "carts-db",
+        "carts",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_1",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "catalogue-db",
+        "user",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_2",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "front-end",
+        "session-db",
+        "catalogue-db",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_loss_3",
+      "truth": "catalogue",
+      "fault": "loss",
+      "top": [
+        "catalogue",
+        "user",
+        "catalogue-db",
+        "front-end",
+        "session-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_1",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "user",
+        "rabbitmq",
+        "catalogue-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_2",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "catalogue",
+        "carts-db",
+        "payment",
+        "catalogue-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_mem_3",
+      "truth": "catalogue",
+      "fault": "mem",
+      "top": [
+        "rabbitmq-exporter",
+        "catalogue",
+        "catalogue-db",
+        "user",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_1",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "payment",
+        "user-db",
+        "orders-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_2",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "shipping",
+        "front-end",
+        "catalogue-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_catalogue_socket_3",
+      "truth": "catalogue",
+      "fault": "socket",
+      "top": [
+        "catalogue",
+        "payment",
+        "shipping",
+        "carts",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_1",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "shipping",
+        "queue-master",
+        "carts-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_2",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "catalogue-db",
+        "queue-master",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_cpu_3",
+      "truth": "orders",
+      "fault": "cpu",
+      "top": [
+        "orders",
+        "carts",
+        "user",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_delay_1",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "user",
+        "user-db",
+        "shipping",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_2",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "carts-db",
+        "orders-db",
+        "payment",
+        "user",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_delay_3",
+      "truth": "orders",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "user",
+        "shipping",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_1",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "rabbitmq-exporter",
+        "catalogue-db",
+        "rabbitmq",
+        "orders",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_disk_2",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders-db",
+        "orders",
+        "user",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_disk_3",
+      "truth": "orders",
+      "fault": "disk",
+      "top": [
+        "orders",
+        "orders-db",
+        "carts",
+        "user-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_1",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "payment",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "orders",
+        "front-end",
+        "rabbitmq",
+        "user-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_loss_3",
+      "truth": "orders",
+      "fault": "loss",
+      "top": [
+        "front-end",
+        "orders",
+        "shipping",
+        "payment",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_mem_1",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "payment",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_mem_2",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "payment",
+        "orders-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_mem_3",
+      "truth": "orders",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts-db",
+        "orders",
+        "user-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_1",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders-db",
+        "user-db",
+        "carts-db",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re2ss_orders_socket_2",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "rabbitmq",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_orders_socket_3",
+      "truth": "orders",
+      "fault": "socket",
+      "top": [
+        "orders",
+        "payment",
+        "shipping",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_1",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "queue-master",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_2",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "user",
+        "user-db",
+        "orders",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_cpu_3",
+      "truth": "payment",
+      "fault": "cpu",
+      "top": [
+        "payment",
+        "orders",
+        "catalogue",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_1",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "user",
+        "payment",
+        "queue-master",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_2",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "user",
+        "payment",
+        "orders",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_delay_3",
+      "truth": "payment",
+      "fault": "delay",
+      "top": [
+        "payment",
+        "orders",
+        "front-end",
+        "carts-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_1",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "shipping",
+        "carts-db",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_2",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts-db",
+        "user-db",
+        "rabbitmq",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_disk_3",
+      "truth": "payment",
+      "fault": "disk",
+      "top": [
+        "payment",
+        "carts",
+        "orders-db",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_1",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "front-end",
+        "orders",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_2",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "carts-db",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_loss_3",
+      "truth": "payment",
+      "fault": "loss",
+      "top": [
+        "payment",
+        "orders",
+        "catalogue",
+        "shipping",
+        "catalogue-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_1",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "queue-master",
+        "orders-db",
+        "user-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_2",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "catalogue",
+        "orders",
+        "shipping",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_mem_3",
+      "truth": "payment",
+      "fault": "mem",
+      "top": [
+        "payment",
+        "carts-db",
+        "orders-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_1",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "catalogue",
+        "shipping",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_2",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_payment_socket_3",
+      "truth": "payment",
+      "fault": "socket",
+      "top": [
+        "payment",
+        "orders",
+        "shipping",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_1",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user",
+        "carts-db",
+        "user-db",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_2",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "user-db",
+        "user",
+        "queue-master",
+        "shipping",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_cpu_3",
+      "truth": "user",
+      "fault": "cpu",
+      "top": [
+        "catalogue",
+        "user",
+        "orders",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_1",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_2",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_delay_3",
+      "truth": "user",
+      "fault": "delay",
+      "top": [
+        "user",
+        "user-db",
+        "orders",
+        "front-end",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_1",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "user-db",
+        "carts-db",
+        "orders-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_2",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "catalogue-db",
+        "orders",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_disk_3",
+      "truth": "user",
+      "fault": "disk",
+      "top": [
+        "user",
+        "carts-db",
+        "catalogue-db",
+        "orders",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_1",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "user",
+        "front-end",
+        "session-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_2",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user-db",
+        "session-db",
+        "user",
+        "orders",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_loss_3",
+      "truth": "user",
+      "fault": "loss",
+      "top": [
+        "user",
+        "user-db",
+        "front-end",
+        "session-db",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_1",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "user-db",
+        "catalogue",
+        "payment",
+        "catalogue-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_2",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "carts-db",
+        "orders-db",
+        "user",
+        "catalogue-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_mem_3",
+      "truth": "user",
+      "fault": "mem",
+      "top": [
+        "user",
+        "carts-db",
+        "shipping",
+        "catalogue",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_1",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user-db",
+        "session-db",
+        "user",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_2",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "shipping",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re2ss_user_socket_3",
+      "truth": "user",
+      "fault": "socket",
+      "top": [
+        "user",
+        "orders",
+        "front-end",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    }
+  ]
+}

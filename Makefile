@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 SHELL := /bin/bash
 
-.PHONY: help install lint test fmt cluster-up cluster-down observability target-app chaos-install scenario-pod-crash dev-up dev-down
+.PHONY: help install lint test fmt cluster-up cluster-down observability target-app chaos-install scenario-pod-crash scenario-cpu-stress eda progress dev-up dev-down
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-20s\033[0m %s\n", $$1, $$2}'
@@ -37,6 +37,27 @@ chaos-install: ## Install Chaos Mesh into the cluster
 
 scenario-pod-crash: ## Inject the pod-crash fault scenario (S1)
 	uv run python -m scenarios.runner.run pod-crash
+
+scenario-cpu-stress: ## Inject the cpu-stress fault scenario (S2)
+	uv run python -m scenarios.runner.run cpu-stress
+
+eda: ## Run RCAEval RE2-OB exploratory data analysis (X0)
+	uv run python -m eval.eda_re2ob
+
+rcaeval-all: ## Full RCAEval track on RE2-OB only
+	uv run python -m eval.rcaeval.run_all --suite re2ob
+
+rcaeval-everything: ## All RCAEval suites RE1/RE2/RE3 (OB+SS+TT)
+	uv run python -m eval.rcaeval.run_all_suites
+
+rcaeval-metrics-validation: ## BARO+NSigma+EDiag, bootstrap CIs, revised targets, study size
+	uv run python -m eval.rcaeval.metrics_validation --suite re2ob
+
+rcaeval-smoke: ## Fast smoke (first 6 cases, skip BARO)
+	uv run python -m eval.rcaeval.run_all --suite re2ob --limit 6 --skip-baro
+
+progress: ## Print Workbook 1/2 progress checklist
+	@cat docs/PROGRESS.md
 
 dev-up: ## Full local bring-up: cluster, target app, observability, chaos
 	bash scripts/dev-up.sh all

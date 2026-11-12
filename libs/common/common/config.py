@@ -25,6 +25,12 @@ class Settings(BaseSettings):
     target_namespace: str = "online-boutique"
     namespace_allowlist: str = "online-boutique"
 
+    # Correlation / RCA budgets (Workbook 2 design + design spec)
+    window_seconds: int = 120
+    max_tool_calls: int = 12
+    max_tokens: int = 20000
+    dep_graph_path: str = "config/dependency-graph.yaml"
+
     @property
     def allowed_namespaces(self) -> set[str]:
         return {n.strip() for n in self.namespace_allowlist.split(",") if n.strip()}

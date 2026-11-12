@@ -1,0 +1,67 @@
+{
+  "suite": "re3tt",
+  "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval",
+  "n_cases": 30,
+  "fault_counts": {
+    "f1": 7,
+    "f2": 7,
+    "f3": 10,
+    "f4": 6
+  },
+  "service_counts": {
+    "ts-auth-service": 15,
+    "ts-route-service": 15
+  },
+  "avg_metrics_cols": 315.1666666666667,
+  "avg_sampling_interval_sec": 1.0,
+  "avg_metric_missing_rate": 0.06330512043260342,
+  "avg_constant_metric_cols": 27.4,
+  "avg_logs_rows": 54262.1,
+  "avg_traces_rows": 138422.53333333333,
+  "avg_max_abs_truth_shift_z": 8.368589278739034,
+  "by_fault": [
+    {
+      "fault": "f1",
+      "n": 7,
+      "median_metrics_cols": 315.0,
+      "median_logs": 42072.0,
+      "median_traces": 92108.0,
+      "mean_truth_shift": 11.577005186480575,
+      "mean_log_err": 0.0014987450288914447
+    },
+    {
+      "fault": "f2",
+      "n": 7,
+      "median_metrics_cols": 317.0,
+      "median_logs": 45238.0,
+      "median_traces": 99146.0,
+      "mean_truth_shift": 7.483801172622665,
+      "mean_log_err": 0.0015731208224350915
+    },
+    {
+      "fault": "f3",
+      "n": 10,
+      "median_metrics_cols": 316.0,
+      "median_logs": 68467.0,
+      "median_traces": 185095.0,
+      "mean_truth_shift": 5.280822637961725,
+      "mean_log_err": 0.03172716604439735
+    },
+    {
+      "fault": "f4",
+      "n": 6,
+      "median_metrics_cols": 317.5,
+      "median_logs": 56187.0,
+      "median_traces": 139178.5,
+      "mean_truth_shift": 10.803967911471853,
+      "mean_log_err": 0.0014517001564150703
+    }
+  ],
+  "cleaning_rules": [
+    "Drop constant / near-constant metric columns before ranking.",
+    "Align all analysis to inject_time; use pre-window as baseline.",
+    "Never put case folder names in model prompts (label leakage).",
+    "Map metrics to services via known Online Boutique prefixes.",
+    "Treat redis_* metrics as redis-cart in our dependency graph."
+  ]
+}

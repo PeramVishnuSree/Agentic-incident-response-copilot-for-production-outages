@@ -1,0 +1,18 @@
+# Chaos Mesh StressChaos: burn CPU on cartservice (Sprint 2 fault type).
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: cpu-stress-cartservice
+  namespace: online-boutique
+spec:
+  mode: one
+  selector:
+    namespaces:
+      - online-boutique
+    labelSelectors:
+      app: cartservice
+  stressors:
+    cpu:
+      workers: 2
+      load: 80
+  duration: "120s"
