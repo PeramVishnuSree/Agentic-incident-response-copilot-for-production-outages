@@ -472,7 +472,7 @@ make rcaeval-metrics-validation
 
 ---
 
-## 17. One-paragraph summary (for the professor)
+## 17. One-paragraph summary 
 
 We use the public RCAEval benchmark (9 suites, 735 labelled cases across Online Boutique, Sock Shop, and Train Ticket) as our evaluation corpus. We completed exploratory data analysis, documented columns/leakage/cleaning rules, selected a post-fault analysis window, and ran existing metric baselines (BARO, N-Sigma, E-Diagnosis) plus a small gradient-boosting service ranker. Scores use AC@1 / AC@3 / Avg@5 with bootstrap confidence intervals on RE2-OB. The old workbook 60%/85% targets were replaced with baseline-relative, per-fault gates. The product architecture separates read-only diagnosis from a human-approved restricted executor; the full LLM copilot path is designed but not yet fully evaluated on every RCAEval case.
 
