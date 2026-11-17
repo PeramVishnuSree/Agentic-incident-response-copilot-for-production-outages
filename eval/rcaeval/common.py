@@ -43,9 +43,7 @@ _METRIC_SUFFIXES = [
     "_mem",
 ]
 
-_CASE_RE = re.compile(
-    r"^(re[123](?:ob|ss|tt))_(.+)_(cpu|mem|disk|delay|loss|socket|f[1-5])_(\d+)$"
-)
+_CASE_RE = re.compile(r"^(re[123](?:ob|ss|tt))_(.+)_(cpu|mem|disk|delay|loss|socket|f[1-5])_(\d+)$")
 
 
 @dataclass(frozen=True)

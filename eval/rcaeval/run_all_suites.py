@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 
 from eval.rcaeval.baselines import run_baselines
 from eval.rcaeval.common import ALL_SUITES, ARTIFACTS, find_data_root, list_cases, save_json
@@ -61,8 +60,14 @@ def main() -> int:
         "",
         f"Data root: `{root}`",
         "",
-        "| Suite | Cases | Window | Ranker AC@1 | Ranker AC@3 | BARO AC@1 | BARO AC@3 | BARO Avg@5 |",
-        "|------|------:|-------:|------------:|------------:|----------:|----------:|-----------:|",
+        (
+            "| Suite | Cases | Window | Ranker AC@1 | Ranker AC@3 | "
+            "BARO AC@1 | BARO AC@3 | BARO Avg@5 |"
+        ),
+        (
+            "|------|------:|-------:|------------:|------------:|"
+            "----------:|----------:|-----------:|"
+        ),
     ]
     for suite, b in master["suites"].items():
         lines.append(

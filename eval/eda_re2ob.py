@@ -125,7 +125,7 @@ def write_artifacts(summary: dict) -> tuple[Path, Path]:
 - Approx total bytes scanned: {summary.get("total_bytes")}
 
 ## Quality / leakage
-{chr(10).join('- ' + n for n in summary.get("leakage_notes", []))}
+{chr(10).join("- " + n for n in summary.get("leakage_notes", []))}
 
 ## Cleaning decisions
 1. Use case folders only as **labels** (service, fault, repetition).

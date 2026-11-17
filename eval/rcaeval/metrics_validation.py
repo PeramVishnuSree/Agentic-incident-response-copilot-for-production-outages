@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import argparse
 import math
-from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
@@ -194,7 +193,9 @@ def revised_targets(baro_ci: dict, nsigma_ci: dict | None = None) -> dict:
     }
 
 
-def sample_size_two_proportions(p0: float, p1: float, alpha: float = 0.05, power: float = 0.8) -> int:
+def sample_size_two_proportions(
+    p0: float, p1: float, alpha: float = 0.05, power: float = 0.8
+) -> int:
     """Two-sided equal-n sample size per arm for independent proportions."""
     if abs(p1 - p0) < 1e-9:
         return 10**9
@@ -300,7 +301,8 @@ def write_report(payload: dict, path: Path) -> None:
     ]
     for fault, mets in baro["by_fault"].items():
         lines.append(
-            f"| {fault} | {_fmt_ci(mets['AC@1'])} | {_fmt_ci(mets['AC@3'])} | {_fmt_ci(mets['Avg@5'])} |"
+            f"| {fault} | {_fmt_ci(mets['AC@1'])} | {_fmt_ci(mets['AC@3'])} | "
+            f"{_fmt_ci(mets['Avg@5'])} |"
         )
 
     o = targets["overall"]
@@ -333,10 +335,16 @@ def write_report(payload: dict, path: Path) -> None:
         "",
         "## 3. Human-study sizing from pilot variance",
         "",
-        f"- Pilot BARO AC@1 = {study['pilot_BARO_AC@1']}, ranker AC@1 = {study['pilot_ranker_AC@1']}",
+        (
+            f"- Pilot BARO AC@1 = {study['pilot_BARO_AC@1']}, "
+            f"ranker AC@1 = {study['pilot_ranker_AC@1']}"
+        ),
         f"- To detect +15pp over BARO (80% power, α=0.05): "
         f"**n ≈ {study['detect_improvement']['n_cases_per_arm']} labelled cases / arm**",
-        f"- To estimate our AC@1 within ±5pp: **n ≈ {study['estimate_own_AC@1_within_5pp']['n_cases']}**",
+        (
+            "- To estimate our AC@1 within ±5pp: "
+            f"**n ≈ {study['estimate_own_AC@1_within_5pp']['n_cases']}**"
+        ),
         f"- Per-fault stratum (±15pp, worst-case p=0.5): "
         f"**n ≈ {hs['per_fault_stratum_min']} / fault** × {hs['fault_types']} faults",
         f"- Recommended labelled eval budget: **≥ {hs['labelled_fault_cases_total']} cases**",
@@ -347,7 +355,10 @@ def write_report(payload: dict, path: Path) -> None:
         "",
         "- Metrics AC@k / Avg@5 are empirically grounded on public RCAEval RE2-OB.",
         "- Targets are relative to BARO (overall + per fault), with bootstrap CIs.",
-        "- Pilot variance sizes the accuracy arm of the human study; TTRC still needs a timed pilot.",
+        (
+            "- Pilot variance sizes the accuracy arm of the human study; "
+            "TTRC still needs a timed pilot."
+        ),
         "",
         "## Reproduce",
         "",

@@ -19,9 +19,7 @@ def from_alertmanager_payload(
     for i, alert in enumerate(payload.get("alerts", [])):
         labels = alert.get("labels", {})
         annotations = alert.get("annotations", {})
-        service = (
-            labels.get("service") or labels.get("job") or labels.get("app") or "unknown"
-        )
+        service = labels.get("service") or labels.get("job") or labels.get("app") or "unknown"
         severity = labels.get("severity", "warning")
         alertname = labels.get("alertname", f"alert-{i}")
         starts = alert.get("startsAt") or alert.get("starts_at")
