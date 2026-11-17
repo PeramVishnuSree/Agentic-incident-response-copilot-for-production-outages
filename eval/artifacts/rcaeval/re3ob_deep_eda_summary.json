@@ -1,0 +1,79 @@
+{
+  "suite": "re3ob",
+  "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval",
+  "n_cases": 30,
+  "fault_counts": {
+    "f3": 6,
+    "f4": 6,
+    "f5": 6,
+    "f1": 9,
+    "f2": 3
+  },
+  "service_counts": {
+    "adservice": 9,
+    "cartservice": 3,
+    "currencyservice": 3,
+    "emailservice": 15
+  },
+  "avg_metrics_cols": 70.33333333333333,
+  "avg_sampling_interval_sec": 1.0,
+  "avg_metric_missing_rate": 0.03363890086906038,
+  "avg_constant_metric_cols": 12.7,
+  "avg_logs_rows": 69840.2,
+  "avg_traces_rows": 158503.0,
+  "avg_max_abs_truth_shift_z": 14330170.234848699,
+  "by_fault": [
+    {
+      "fault": "f1",
+      "n": 9,
+      "median_metrics_cols": 68.0,
+      "median_logs": 66441.0,
+      "median_traces": 151000.0,
+      "mean_truth_shift": 16134948.98742642,
+      "mean_log_err": 0.021258950675584986
+    },
+    {
+      "fault": "f2",
+      "n": 3,
+      "median_metrics_cols": 68.0,
+      "median_logs": 70587.0,
+      "median_traces": 164764.0,
+      "mean_truth_shift": 47593774.66830043,
+      "mean_log_err": 0.0020332592925050223
+    },
+    {
+      "fault": "f3",
+      "n": 6,
+      "median_metrics_cols": 68.5,
+      "median_logs": 70111.0,
+      "median_traces": 164493.0,
+      "mean_truth_shift": 148.56202565432605,
+      "mean_log_err": 0.016355041427384122
+    },
+    {
+      "fault": "f4",
+      "n": 6,
+      "median_metrics_cols": 68.0,
+      "median_logs": 74624.0,
+      "median_traces": 165123.0,
+      "mean_truth_shift": 3.2027896564601583,
+      "mean_log_err": 0.03483754507073006
+    },
+    {
+      "fault": "f5",
+      "n": 6,
+      "median_metrics_cols": 68.0,
+      "median_logs": 70229.0,
+      "median_traces": 164160.0,
+      "mean_truth_shift": 23651388.594138335,
+      "mean_log_err": 0.016683082826538836
+    }
+  ],
+  "cleaning_rules": [
+    "Drop constant / near-constant metric columns before ranking.",
+    "Align all analysis to inject_time; use pre-window as baseline.",
+    "Never put case folder names in model prompts (label leakage).",
+    "Map metrics to services via known Online Boutique prefixes.",
+    "Treat redis_* metrics as redis-cart in our dependency graph."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "suite": "re2tt",
+  "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval",
+  "n_cases": 90,
+  "fault_counts": {
+    "cpu": 15,
+    "delay": 15,
+    "disk": 15,
+    "loss": 15,
+    "mem": 15,
+    "socket": 15
+  },
+  "service_counts": {
+    "ts-auth-service": 18,
+    "ts-order-service": 18,
+    "ts-route-service": 18,
+    "ts-train-service": 18,
+    "ts-travel-service": 18
+  },
+  "avg_metrics_cols": 362.1333333333333,
+  "avg_sampling_interval_sec": 1.0,
+  "avg_metric_missing_rate": 0.005105977974830326,
+  "avg_constant_metric_cols": 41.8,
+  "avg_logs_rows": 233466.9,
+  "avg_traces_rows": 748278.3444444444,
+  "avg_max_abs_truth_shift_z": 1964.4893531868308,
+  "by_fault": [
+    {
+      "fault": "cpu",
+      "n": 15,
+      "median_metrics_cols": 367.0,
+      "median_logs": 272238.0,
+      "median_traces": 807137.0,
+      "mean_truth_shift": 233.33566625542846,
+      "mean_log_err": 0.0007857926782242898
+    },
+    {
+      "fault": "delay",
+      "n": 15,
+      "median_metrics_cols": 361.0,
+      "median_logs": 241579.0,
+      "median_traces": 783245.0,
+      "mean_truth_shift": 4472.443213326084,
+      "mean_log_err": 0.0006555581237395002
+    },
+    {
+      "fault": "disk",
+      "n": 15,
+      "median_metrics_cols": 361.0,
+      "median_logs": 271266.0,
+      "median_traces": 691762.0,
+      "mean_truth_shift": 5865.010869382395,
+      "mean_log_err": 0.001256333482000844
+    },
+    {
+      "fault": "loss",
+      "n": 15,
+      "median_metrics_cols": 361.0,
+      "median_logs": 272113.0,
+      "median_traces": 961039.0,
+      "mean_truth_shift": 562.9745310809146,
+      "mean_log_err": 0.0007421804467457208
+    },
+    {
+      "fault": "mem",
+      "n": 15,
+      "median_metrics_cols": 361.0,
+      "median_logs": 261722.0,
+      "median_traces": 688564.0,
+      "mean_truth_shift": 285.5139724795333,
+      "mean_log_err": 0.0004034034826932307
+    },
+    {
+      "fault": "socket",
+      "n": 15,
+      "median_metrics_cols": 362.0,
+      "median_logs": 269560.0,
+      "median_traces": 770484.0,
+      "mean_truth_shift": 367.6578665966312,
+      "mean_log_err": 0.0006997656341387096
+    }
+  ],
+  "cleaning_rules": [
+    "Drop constant / near-constant metric columns before ranking.",
+    "Align all analysis to inject_time; use pre-window as baseline.",
+    "Never put case folder names in model prompts (label leakage).",
+    "Map metrics to services via known Online Boutique prefixes.",
+    "Treat redis_* metrics as redis-cart in our dependency graph."
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "suite": "re2ob",
+  "deep_eda": {
+    "suite": "re2ob",
+    "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval",
+    "n_cases": 90,
+    "fault_counts": {
+      "cpu": 15,
+      "delay": 15,
+      "disk": 15,
+      "loss": 15,
+      "mem": 15,
+      "socket": 15
+    },
+    "service_counts": {
+      "checkoutservice": 18,
+      "currencyservice": 18,
+      "emailservice": 18,
+      "productcatalogservice": 18,
+      "recommendationservice": 18
+    },
+    "avg_metrics_cols": 73.36666666666666,
+    "avg_sampling_interval_sec": 1.0,
+    "avg_metric_missing_rate": 0.003880621143702372,
+    "avg_constant_metric_cols": 15.088888888888889,
+    "avg_logs_rows": 167258.03333333333,
+    "avg_traces_rows": 382902.6111111111,
+    "avg_max_abs_truth_shift_z": 14896.945106514499,
+    "by_fault": [
+      {
+        "fault": "cpu",
+        "n": 15,
+        "median_metrics_cols": 74.0,
+        "median_logs": 175593.0,
+        "median_traces": 401542.0,
+        "mean_truth_shift": 1327.2764146685724,
+        "mean_log_err": 0.00010781311988758362
+      },
+      {
+        "fault": "delay",
+        "n": 15,
+        "median_metrics_cols": 74.0,
+        "median_logs": 173760.0,
+        "median_traces": 396200.0,
+        "mean_truth_shift": 4974.309398314041,
+        "mean_log_err": 0.0
+      },
+      {
+        "fault": "disk",
+        "n": 15,
+        "median_metrics_cols": 74.0,
+        "median_logs": 175180.0,
+        "median_traces": 399976.0,
+        "mean_truth_shift": 11107.188230322166,
+        "mean_log_err": 0.0
+      },
+      {
+        "fault": "loss",
+        "n": 15,
+        "median_metrics_cols": 74.0,
+        "median_logs": 164897.0,
+        "median_traces": 365309.0,
+        "mean_truth_shift": 47218.326784150726,
+        "mean_log_err": 0.004167845621584833
+      },
+      {
+        "fault": "mem",
+        "n": 15,
+        "median_metrics_cols": 74.0,
+        "median_logs": 172175.0,
+        "median_traces": 394497.0,
+        "mean_truth_shift": 23348.802409264612,
+        "mean_log_err": 5.988813892686331e-05
+      },
+      {
+        "fault": "socket",
+        "n": 15,
+        "median_metrics_cols": 74.0,
+        "median_logs": 177376.0,
+        "median_traces": 406431.0,
+        "mean_truth_shift": 1405.7674023668894,
+        "mean_log_err": 0.0
+      }
+    ],
+    "cleaning_rules": [
+      "Drop constant / near-constant metric columns before ranking.",
+      "Align all analysis to inject_time; use pre-window as baseline.",
+      "Never put case folder names in model prompts (label leakage).",
+      "Map metrics to services via known Online Boutique prefixes.",
+      "Treat redis_* metrics as redis-cart in our dependency graph."
+    ]
+  },
+  "window_sweep": {
+    "suite": "re2ob",
+    "windows_sec": [
+      30,
+      60,
+      120,
+      300,
+      600,
+      900
+    ],
+    "results": {
+      "30": {
+        "AC@1": 0.8,
+        "AC@3": 0.9777777777777777,
+        "n": 90
+      },
+      "60": {
+        "AC@1": 0.8333333333333334,
+        "AC@3": 0.9888888888888889,
+        "n": 90
+      },
+      "120": {
+        "AC@1": 0.8333333333333334,
+        "AC@3": 1.0,
+        "n": 90
+      },
+      "300": {
+        "AC@1": 0.7333333333333333,
+        "AC@3": 1.0,
+        "n": 90
+      },
+      "600": {
+        "AC@1": 0.7222222222222222,
+        "AC@3": 0.9888888888888889,
+        "n": 90
+      },
+      "900": {
+        "AC@1": 0.7,
+        "AC@3": 0.9777777777777777,
+        "n": 90
+      }
+    },
+    "chosen_window_sec": 120,
+    "reason": "Chose W=120s because it maximises AC@3 (1.000) on labelled RE2-OB anomaly-window ranking."
+  },
+  "ranker": {
+    "n_cases_scored": 90,
+    "AC@1": 0.9,
+    "AC@3": 0.9777777777777777,
+    "feature_importance": {
+      "anomaly_score": 0.8745249011746956,
+      "onset_sec": 0.07702447034644881,
+      "upstreamness": 0.0,
+      "log_error_rate": 0.04597709283224715,
+      "n_metrics": 0.0024735356466084346
+    },
+    "features": [
+      "anomaly_score",
+      "onset_sec",
+      "upstreamness",
+      "log_error_rate",
+      "n_metrics"
+    ],
+    "model": "GradientBoostingClassifier",
+    "cv": "GroupKFold(5) by case",
+    "suite": "re2ob",
+    "window_sec": 120,
+    "n_rows": 988
+  },
+  "baro": {
+    "method": "BARO",
+    "suite": "re2ob",
+    "n_cases": 90,
+    "n_errors": 0,
+    "overall": {
+      "AC@1": 0.3,
+      "AC@3": 0.9222222222222223,
+      "AC@5": 1.0,
+      "Avg@5": 0.8044444444444445
+    },
+    "by_fault": {
+      "cpu": {
+        "ac1": 0.06666666666666667,
+        "ac3": 1.0,
+        "ac5": 1.0,
+        "avg5": 0.7733333333333333
+      },
+      "delay": {
+        "ac1": 0.06666666666666667,
+        "ac3": 0.8,
+        "ac5": 1.0,
+        "avg5": 0.6933333333333334
+      },
+      "disk": {
+        "ac1": 0.8666666666666667,
+        "ac3": 1.0,
+        "ac5": 1.0,
+        "avg5": 0.9600000000000001
+      },
+      "loss": {
+        "ac1": 0.26666666666666666,
+        "ac3": 0.8,
+        "ac5": 1.0,
+        "avg5": 0.7466666666666667
+      },
+      "mem": {
+        "ac1": 0.4666666666666667,
+        "ac3": 1.0,
+        "ac5": 1.0,
+        "avg5": 0.8933333333333333
+      },
+      "socket": {
+        "ac1": 0.06666666666666667,
+        "ac3": 0.9333333333333333,
+        "ac5": 1.0,
+        "avg5": 0.76
+      }
+    }
+  }
+}

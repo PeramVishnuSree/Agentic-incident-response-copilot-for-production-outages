@@ -1,0 +1,24 @@
+{
+  "n_cases_scored": 90,
+  "AC@1": 0.6333333333333333,
+  "AC@3": 0.8666666666666667,
+  "feature_importance": {
+    "anomaly_score": 0.7947651702921759,
+    "onset_sec": 0.1374123525669327,
+    "upstreamness": 0.0,
+    "log_error_rate": 0.042336057103012976,
+    "n_metrics": 0.025486420037878342
+  },
+  "features": [
+    "anomaly_score",
+    "onset_sec",
+    "upstreamness",
+    "log_error_rate",
+    "n_metrics"
+  ],
+  "model": "GradientBoostingClassifier",
+  "cv": "GroupKFold(5) by case",
+  "suite": "re2tt",
+  "window_sec": 60,
+  "n_rows": 6125
+}

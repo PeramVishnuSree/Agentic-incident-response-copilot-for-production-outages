@@ -1,0 +1,75 @@
+baro re2ob:   0%|          | 0/90 [00:00<?, ?it/s]baro re2ob:   1%|          | 1/90 [00:00<00:12,  7.21it/s]baro re2ob:  10%|█         | 9/90 [00:00<00:01, 43.39it/s]baro re2ob:  18%|█▊        | 16/90 [00:00<00:01, 52.62it/s]baro re2ob:  27%|██▋       | 24/90 [00:00<00:01, 62.29it/s]baro re2ob:  36%|███▌      | 32/90 [00:00<00:00, 65.80it/s]baro re2ob:  44%|████▍     | 40/90 [00:00<00:00, 69.69it/s]baro re2ob:  53%|█████▎    | 48/90 [00:00<00:00, 72.66it/s]baro re2ob:  62%|██████▏   | 56/90 [00:00<00:00, 74.21it/s]baro re2ob:  71%|███████   | 64/90 [00:00<00:00, 75.15it/s]baro re2ob:  80%|████████  | 72/90 [00:01<00:00, 74.04it/s]baro re2ob:  89%|████████▉ | 80/90 [00:01<00:00, 75.60it/s]baro re2ob:  98%|█████████▊| 88/90 [00:01<00:00, 76.23it/s]baro re2ob: 100%|██████████| 90/90 [00:01<00:00, 68.39it/s]
+nsigma re2ob:   0%|          | 0/90 [00:00<?, ?it/s]nsigma re2ob:  10%|█         | 9/90 [00:00<00:00, 81.23it/s]nsigma re2ob:  20%|██        | 18/90 [00:00<00:00, 81.02it/s]nsigma re2ob:  30%|███       | 27/90 [00:00<00:00, 81.55it/s]nsigma re2ob:  40%|████      | 36/90 [00:00<00:00, 81.21it/s]nsigma re2ob:  50%|█████     | 45/90 [00:00<00:00, 81.68it/s]nsigma re2ob:  60%|██████    | 54/90 [00:00<00:00, 81.90it/s]nsigma re2ob:  70%|███████   | 63/90 [00:00<00:00, 81.38it/s]nsigma re2ob:  80%|████████  | 72/90 [00:00<00:00, 80.89it/s]nsigma re2ob:  90%|█████████ | 81/90 [00:00<00:00, 81.53it/s]nsigma re2ob: 100%|██████████| 90/90 [00:01<00:00, 80.85it/s]nsigma re2ob: 100%|██████████| 90/90 [00:01<00:00, 81.21it/s]
+e_diagnosis re2ob:   0%|          | 0/90 [00:00<?, ?it/s]e_diagnosis re2ob:   1%|          | 1/90 [00:00<00:48,  1.83it/s]e_diagnosis re2ob:   2%|▏         | 2/90 [00:01<00:45,  1.94it/s]e_diagnosis re2ob:   3%|▎         | 3/90 [00:01<00:46,  1.88it/s]e_diagnosis re2ob:   4%|▍         | 4/90 [00:02<00:46,  1.86it/s]e_diagnosis re2ob:   6%|▌         | 5/90 [00:02<00:46,  1.82it/s]e_diagnosis re2ob:   7%|▋         | 6/90 [00:03<00:45,  1.84it/s]e_diagnosis re2ob:   8%|▊         | 7/90 [00:03<00:45,  1.81it/s]e_diagnosis re2ob:   9%|▉         | 8/90 [00:04<00:44,  1.83it/s]e_diagnosis re2ob:  10%|█         | 9/90 [00:04<00:44,  1.84it/s]e_diagnosis re2ob:  11%|█         | 10/90 [00:05<00:42,  1.86it/s]e_diagnosis re2ob:  12%|█▏        | 11/90 [00:05<00:42,  1.88it/s]e_diagnosis re2ob:  13%|█▎        | 12/90 [00:06<00:42,  1.84it/s]e_diagnosis re2ob:  14%|█▍        | 13/90 [00:07<00:41,  1.86it/s]e_diagnosis re2ob:  16%|█▌        | 14/90 [00:07<00:40,  1.89it/s]e_diagnosis re2ob:  17%|█▋        | 15/90 [00:08<00:39,  1.90it/s]e_diagnosis re2ob:  18%|█▊        | 16/90 [00:08<00:39,  1.88it/s]e_diagnosis re2ob:  19%|█▉        | 17/90 [00:09<00:38,  1.90it/s]e_diagnosis re2ob:  20%|██        | 18/90 [00:09<00:38,  1.88it/s]e_diagnosis re2ob:  21%|██        | 19/90 [00:10<00:37,  1.88it/s]e_diagnosis re2ob:  22%|██▏       | 20/90 [00:10<00:37,  1.88it/s]e_diagnosis re2ob:  23%|██▎       | 21/90 [00:11<00:36,  1.88it/s]e_diagnosis re2ob:  24%|██▍       | 22/90 [00:11<00:35,  1.90it/s]e_diagnosis re2ob:  26%|██▌       | 23/90 [00:12<00:35,  1.89it/s]e_diagnosis re2ob:  27%|██▋       | 24/90 [00:12<00:34,  1.91it/s]e_diagnosis re2ob:  28%|██▊       | 25/90 [00:13<00:34,  1.90it/s]e_diagnosis re2ob:  29%|██▉       | 26/90 [00:13<00:33,  1.89it/s]e_diagnosis re2ob:  30%|███       | 27/90 [00:14<00:33,  1.87it/s]e_diagnosis re2ob:  31%|███       | 28/90 [00:14<00:33,  1.87it/s]e_diagnosis re2ob:  32%|███▏      | 29/90 [00:15<00:33,  1.85it/s]e_diagnosis re2ob:  33%|███▎      | 30/90 [00:16<00:32,  1.86it/s]e_diagnosis re2ob:  34%|███▍      | 31/90 [00:16<00:31,  1.86it/s]e_diagnosis re2ob:  36%|███▌      | 32/90 [00:17<00:31,  1.86it/s]e_diagnosis re2ob:  37%|███▋      | 33/90 [00:17<00:30,  1.86it/s]e_diagnosis re2ob:  38%|███▊      | 34/90 [00:18<00:29,  1.87it/s]e_diagnosis re2ob:  39%|███▉      | 35/90 [00:18<00:29,  1.87it/s]e_diagnosis re2ob:  40%|████      | 36/90 [00:19<00:28,  1.87it/s]e_diagnosis re2ob:  41%|████      | 37/90 [00:19<00:28,  1.87it/s]e_diagnosis re2ob:  42%|████▏     | 38/90 [00:20<00:28,  1.86it/s]e_diagnosis re2ob:  43%|████▎     | 39/90 [00:20<00:27,  1.87it/s]e_diagnosis re2ob:  44%|████▍     | 40/90 [00:21<00:27,  1.85it/s]e_diagnosis re2ob:  46%|████▌     | 41/90 [00:21<00:26,  1.84it/s]e_diagnosis re2ob:  47%|████▋     | 42/90 [00:22<00:25,  1.86it/s]e_diagnosis re2ob:  48%|████▊     | 43/90 [00:23<00:24,  1.89it/s]e_diagnosis re2ob:  49%|████▉     | 44/90 [00:23<00:24,  1.90it/s]e_diagnosis re2ob:  50%|█████     | 45/90 [00:24<00:23,  1.90it/s]e_diagnosis re2ob:  51%|█████     | 46/90 [00:24<00:23,  1.89it/s]e_diagnosis re2ob:  52%|█████▏    | 47/90 [00:25<00:22,  1.90it/s]e_diagnosis re2ob:  53%|█████▎    | 48/90 [00:25<00:22,  1.89it/s]e_diagnosis re2ob:  54%|█████▍    | 49/90 [00:26<00:21,  1.90it/s]e_diagnosis re2ob:  56%|█████▌    | 50/90 [00:26<00:21,  1.90it/s]e_diagnosis re2ob:  57%|█████▋    | 51/90 [00:27<00:20,  1.92it/s]e_diagnosis re2ob:  58%|█████▊    | 52/90 [00:27<00:19,  1.91it/s]e_diagnosis re2ob:  59%|█████▉    | 53/90 [00:28<00:19,  1.90it/s]e_diagnosis re2ob:  60%|██████    | 54/90 [00:28<00:19,  1.86it/s]e_diagnosis re2ob:  61%|██████    | 55/90 [00:29<00:19,  1.82it/s]e_diagnosis re2ob:  62%|██████▏   | 56/90 [00:29<00:18,  1.84it/s]e_diagnosis re2ob:  63%|██████▎   | 57/90 [00:30<00:17,  1.86it/s]e_diagnosis re2ob:  64%|██████▍   | 58/90 [00:30<00:17,  1.86it/s]e_diagnosis re2ob:  66%|██████▌   | 59/90 [00:31<00:16,  1.88it/s]e_diagnosis re2ob:  67%|██████▋   | 60/90 [00:32<00:15,  1.88it/s]e_diagnosis re2ob:  68%|██████▊   | 61/90 [00:32<00:15,  1.88it/s]e_diagnosis re2ob:  69%|██████▉   | 62/90 [00:33<00:14,  1.87it/s]e_diagnosis re2ob:  70%|███████   | 63/90 [00:33<00:15,  1.78it/s]e_diagnosis re2ob:  71%|███████   | 64/90 [00:34<00:14,  1.79it/s]e_diagnosis re2ob:  72%|███████▏  | 65/90 [00:34<00:13,  1.82it/s]e_diagnosis re2ob:  73%|███████▎  | 66/90 [00:35<00:13,  1.82it/s]e_diagnosis re2ob:  74%|███████▍  | 67/90 [00:35<00:12,  1.85it/s]e_diagnosis re2ob:  76%|███████▌  | 68/90 [00:36<00:11,  1.85it/s]e_diagnosis re2ob:  77%|███████▋  | 69/90 [00:36<00:11,  1.86it/s]e_diagnosis re2ob:  78%|███████▊  | 70/90 [00:37<00:10,  1.85it/s]e_diagnosis re2ob:  79%|███████▉  | 71/90 [00:38<00:10,  1.84it/s]e_diagnosis re2ob:  80%|████████  | 72/90 [00:38<00:09,  1.84it/s]e_diagnosis re2ob:  81%|████████  | 73/90 [00:39<00:09,  1.83it/s]e_diagnosis re2ob:  82%|████████▏ | 74/90 [00:39<00:08,  1.85it/s]e_diagnosis re2ob:  83%|████████▎ | 75/90 [00:40<00:08,  1.86it/s]e_diagnosis re2ob:  84%|████████▍ | 76/90 [00:40<00:07,  1.85it/s]e_diagnosis re2ob:  86%|████████▌ | 77/90 [00:41<00:07,  1.85it/s]e_diagnosis re2ob:  87%|████████▋ | 78/90 [00:41<00:06,  1.85it/s]e_diagnosis re2ob:  88%|████████▊ | 79/90 [00:42<00:06,  1.83it/s]e_diagnosis re2ob:  89%|████████▉ | 80/90 [00:42<00:05,  1.83it/s]e_diagnosis re2ob:  90%|█████████ | 81/90 [00:43<00:04,  1.83it/s]e_diagnosis re2ob:  91%|█████████ | 82/90 [00:44<00:04,  1.82it/s]e_diagnosis re2ob:  92%|█████████▏| 83/90 [00:44<00:03,  1.82it/s]e_diagnosis re2ob:  93%|█████████▎| 84/90 [00:45<00:03,  1.82it/s]e_diagnosis re2ob:  94%|█████████▍| 85/90 [00:45<00:02,  1.74it/s]e_diagnosis re2ob:  96%|█████████▌| 86/90 [00:46<00:02,  1.74it/s]e_diagnosis re2ob:  97%|█████████▋| 87/90 [00:46<00:01,  1.79it/s]e_diagnosis re2ob:  98%|█████████▊| 88/90 [00:47<00:01,  1.81it/s]e_diagnosis re2ob:  99%|█████████▉| 89/90 [00:47<00:00,  1.82it/s]e_diagnosis re2ob: 100%|██████████| 90/90 [00:48<00:00,  1.82it/s]e_diagnosis re2ob: 100%|██████████| 90/90 [00:48<00:00,  1.86it/s]
+== GBT ranker case scores ==
+features re2ob:   0%|          | 0/90 [00:00<?, ?it/s]features re2ob:   2%|▏         | 2/90 [00:00<00:05, 15.76it/s]features re2ob:   4%|▍         | 4/90 [00:00<00:06, 14.11it/s]features re2ob:   7%|▋         | 6/90 [00:00<00:06, 13.22it/s]features re2ob:   9%|▉         | 8/90 [00:00<00:06, 13.49it/s]features re2ob:  11%|█         | 10/90 [00:00<00:05, 13.83it/s]features re2ob:  13%|█▎        | 12/90 [00:00<00:05, 13.94it/s]features re2ob:  16%|█▌        | 14/90 [00:00<00:05, 14.36it/s]features re2ob:  18%|█▊        | 16/90 [00:01<00:05, 14.10it/s]features re2ob:  20%|██        | 18/90 [00:01<00:05, 14.12it/s]features re2ob:  22%|██▏       | 20/90 [00:01<00:04, 14.23it/s]features re2ob:  24%|██▍       | 22/90 [00:01<00:04, 14.33it/s]features re2ob:  28%|██▊       | 25/90 [00:01<00:04, 15.92it/s]features re2ob:  30%|███       | 27/90 [00:01<00:04, 15.36it/s]features re2ob:  32%|███▏      | 29/90 [00:01<00:03, 16.13it/s]features re2ob:  34%|███▍      | 31/90 [00:02<00:03, 15.65it/s]features re2ob:  37%|███▋      | 33/90 [00:02<00:03, 15.13it/s]features re2ob:  39%|███▉      | 35/90 [00:02<00:03, 14.97it/s]features re2ob:  41%|████      | 37/90 [00:02<00:03, 14.81it/s]features re2ob:  43%|████▎     | 39/90 [00:02<00:03, 14.33it/s]features re2ob:  46%|████▌     | 41/90 [00:02<00:03, 13.98it/s]features re2ob:  48%|████▊     | 43/90 [00:02<00:03, 14.11it/s]features re2ob:  50%|█████     | 45/90 [00:03<00:03, 14.28it/s]features re2ob:  52%|█████▏    | 47/90 [00:03<00:02, 14.41it/s]features re2ob:  54%|█████▍    | 49/90 [00:03<00:02, 14.44it/s]features re2ob:  57%|█████▋    | 51/90 [00:03<00:02, 14.51it/s]features re2ob:  59%|█████▉    | 53/90 [00:03<00:02, 14.50it/s]features re2ob:  61%|██████    | 55/90 [00:03<00:02, 14.60it/s]features re2ob:  63%|██████▎   | 57/90 [00:03<00:02, 14.34it/s]features re2ob:  66%|██████▌   | 59/90 [00:04<00:02, 14.59it/s]features re2ob:  68%|██████▊   | 61/90 [00:04<00:01, 14.75it/s]features re2ob:  70%|███████   | 63/90 [00:04<00:01, 14.75it/s]features re2ob:  73%|███████▎  | 66/90 [00:04<00:01, 16.24it/s]features re2ob:  76%|███████▌  | 68/90 [00:04<00:01, 16.47it/s]features re2ob:  78%|███████▊  | 70/90 [00:04<00:01, 16.34it/s]features re2ob:  80%|████████  | 72/90 [00:04<00:01, 15.87it/s]features re2ob:  82%|████████▏ | 74/90 [00:05<00:01, 15.20it/s]features re2ob:  84%|████████▍ | 76/90 [00:05<00:01, 13.95it/s]features re2ob:  87%|████████▋ | 78/90 [00:05<00:00, 13.92it/s]features re2ob:  89%|████████▉ | 80/90 [00:05<00:00, 14.05it/s]features re2ob:  91%|█████████ | 82/90 [00:05<00:00, 14.36it/s]features re2ob:  93%|█████████▎| 84/90 [00:05<00:00, 14.37it/s]features re2ob:  96%|█████████▌| 86/90 [00:05<00:00, 14.28it/s]features re2ob:  98%|█████████▊| 88/90 [00:06<00:00, 14.55it/s]features re2ob: 100%|██████████| 90/90 [00:06<00:00, 14.39it/s]features re2ob: 100%|██████████| 90/90 [00:06<00:00, 14.64it/s]
+# Metrics validation (Workbook professor item #3)
+
+**Question:** Have any preliminary experiments validated the evaluation metrics?
+**Answer now:** Yes — RE2-OB pilot with BARO + other RCAEval metric baselines,
+bootstrap 95% CIs, revised targets relative to BARO (per fault), and a study-size calc.
+
+Suite: `re2ob` · cases: **90** · date: 2026-11-09
+
+## 1. Baselines on RE2-OB (empirical reference)
+
+| Method | AC@1 (95% CI) | AC@3 (95% CI) | Avg@5 (95% CI) |
+|--------|--------------:|--------------:|---------------:|
+| baro | 0.300 [0.211, 0.389] | 0.922 [0.867, 0.978] | 0.804 [0.764, 0.840] |
+| nsigma | 0.856 [0.778, 0.922] | 0.967 [0.922, 1.000] | 0.951 [0.920, 0.978] |
+| e_diagnosis | 0.111 [0.056, 0.178] | 0.189 [0.111, 0.278] | 0.173 [0.102, 0.249] |
+| gbt_ranker | 0.889 [0.822, 0.944] | 0.978 [0.944, 1.000] | 0.962 [0.929, 0.987] |
+
+Published context: BARO paper/repo reports Avg@5 ≈ 0.86 on Online Boutique metric data;
+our RE2-OB BARO Avg@5 = **0.804** (95% CI [0.764, 0.840]).
+
+### BARO per fault (95% bootstrap CI)
+
+| Fault | AC@1 | AC@3 | Avg@5 |
+|-------|-----:|-----:|------:|
+| cpu | 0.067 [0.000, 0.200] | 1.000 [1.000, 1.000] | 0.773 [0.720, 0.827] |
+| delay | 0.067 [0.000, 0.200] | 0.800 [0.600, 1.000] | 0.693 [0.573, 0.800] |
+| disk | 0.867 [0.667, 1.000] | 1.000 [1.000, 1.000] | 0.960 [0.893, 1.000] |
+| loss | 0.267 [0.067, 0.467] | 0.800 [0.600, 1.000] | 0.747 [0.613, 0.853] |
+| mem | 0.467 [0.200, 0.733] | 1.000 [1.000, 1.000] | 0.893 [0.840, 0.947] |
+| socket | 0.067 [0.000, 0.200] | 0.933 [0.800, 1.000] | 0.760 [0.693, 0.827] |
+
+## 2. Revised targets (replace workbook 60% / 85%)
+
+- Old (unvalidated): AC@1 ≥ 0.6, AC@3 ≥ 0.85
+- **Gate (must beat BARO):** AC@1 ≥ **0.45**, AC@3 ≥ **0.922**, Avg@5 ≥ **0.854**
+- **Stretch:** AC@1 ≥ **0.8**, AC@3 ≥ **0.95**
+- BARO reference AC@1 = 0.3 (95% CI [0.211, 0.389])
+
+| Fault | BARO AC@1 | Target AC@1 | BARO AC@3 | Target AC@3 |
+|-------|----------:|------------:|----------:|------------:|
+| cpu | 0.067 | **0.267** | 1.000 | **1.000** |
+| delay | 0.067 | **0.267** | 0.800 | **0.850** |
+| disk | 0.867 | **0.867** | 1.000 | **1.000** |
+| loss | 0.267 | **0.517** | 0.800 | **0.850** |
+| mem | 0.467 | **0.783** | 1.000 | **1.000** |
+| socket | 0.067 | **0.267** | 0.933 | **0.933** |
+
+## 3. Human-study sizing from pilot variance
+
+- Pilot BARO AC@1 = 0.3, ranker AC@1 = 0.889
+- To detect +15pp over BARO (80% power, α=0.05): **n ≈ 151 labelled cases / arm**
+- To estimate our AC@1 within ±5pp: **n ≈ 152**
+- Per-fault stratum (±15pp, worst-case p=0.5): **n ≈ 43 / fault** × 6 faults
+- Recommended labelled eval budget: **≥ 152 cases**
+- Human TTRC pilot: **~12 operators** (within-subject) to estimate SD, then re-size Semester B
+
+## 4. What this closes
+
+- Metrics AC@k / Avg@5 are empirically grounded on public RCAEval RE2-OB.
+- Targets are relative to BARO (overall + per fault), with bootstrap CIs.
+- Pilot variance sizes the accuracy arm of the human study; TTRC still needs a timed pilot.
+
+## Reproduce
+
+```bash
+uv run python -m eval.rcaeval.metrics_validation --suite re2ob
+```
+
+Artifacts: `re2ob_*_cases.json`, `re2ob_metrics_validation.json`, this file.
+

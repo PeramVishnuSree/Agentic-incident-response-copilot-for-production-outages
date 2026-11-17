@@ -1,64 +1,158 @@
-# Agentic-incident-response-copilot-for-production-outages
+# Agentic Incident-Response Copilot for Production Outages
 
-An agent that watches logs/metrics/alerts (simulate with real open datasets or a Kubernetes test cluster you break on purpose), correlates signals across services, proposes root cause, and drafts the fix or rollback - with a human approving each step.
+A human-supervised copilot for Kubernetes microservice outages. It collects telemetry, groups related symptoms, ranks likely root causes with checkable evidence, drafts a remediation plan, and **never changes the cluster until an operator approves**.
 
-CMPE 295 master's project — Charan Sai Gandham, Venkata Satya Charan Naga Deep Patrini, Vishnu Sree Peram. Advisor: Dr. Bertin Cordova-Diba.
+**CMPE 295** master’s project · San José State University  
+**Team:** Charan Sai Gandham · Venkata Satya Charan Naga Deep Patrini · Vishnu Sree Peram  
+**Advisor:** Dr. Bertin Cordova-Diba
 
-## Architecture (one line)
+---
 
-Telemetry → gateway/normaliser → incident store → deterministic correlation →
-read-only RCA agent (ranked candidates + evidence) → remediation plan → **human
-approval** → restricted executor (the only write path). See
-[docs/architecture.md](docs/architecture.md).
+## What it does
+
+When a service fails in production, alerts, metrics, logs, and events all fire at once. Operators waste time chasing symptoms instead of the real cause.
+
+This project builds a measurable pipeline that:
+
+1. **Ingests** metrics, logs, Kubernetes events, and alerts into one schema  
+2. **Correlates** related signals with a time window + service dependency graph  
+3. **Ranks** top root-cause candidates (works even if the LLM is down)  
+4. **Investigates** with read-only tools and cites evidence that must exist in stored data  
+5. **Proposes** a structured fix (action, risk, undo)  
+6. **Waits for human approval**, then runs only allowlisted actions through a restricted executor  
+
+Evaluation uses a local Online Boutique + Chaos Mesh testbed **and** the public **RCAEval** benchmark (not a hand-made dataset).
+
+---
+
+## Architecture
+
+```
+Telemetry → gateway / normaliser → incident store
+        → deterministic correlation (group + rank)
+        → read-only RCA agent (evidence + explanation)
+        → remediation plan
+        → human approval
+        → restricted executor   ← only write path
+```
+
+Full detail: [docs/architecture.md](docs/architecture.md) · plain-English complete guide: [docs/COMPLETE_EXPLAINER.md](docs/COMPLETE_EXPLAINER.md) · safety / baselines: [docs/baselines.md](docs/baselines.md) · status: [docs/PROGRESS.md](docs/PROGRESS.md)
+
+---
 
 ## Repository layout
 
-```
-libs/common/            Shared event schema, config, DB models (the contract)
+```text
+libs/common/              Shared Event / Candidate schema and config
 services/
-  telemetry-gateway/    Collect + normalise telemetry (Gandham)
-  correlation-engine/   Time-window + dependency-graph grouping & ranking (Patrini)
-  rca-agent/            Read-only RCA agent + model-agnostic LLM interface (Patrini)
-  remediation-planner/  Drafts plans only (Peram, S3)
-  approval-service/     Human approval gate + audit log (Peram, S3)
-  executor/             ONLY write path; allowlisted actions (Peram, S4)
-console/                CLI (MVP) / React approval UI (Peram)
-deploy/                 kind cluster, Online Boutique, observability, Chaos Mesh (Gandham)
-scenarios/              Fault suite with known ground truth (Peram)
-eval/                   Manual-vs-copilot evaluation harness (Peram)
+  telemetry-gateway/      Collect + normalise telemetry
+  correlation-engine/     Time-window + dependency-graph grouping & ranking
+  rca-agent/              Read-only RCA agent + model-agnostic LLM interface
+  remediation-planner/    Drafts plans only (later sprint)
+  approval-service/       Human approval gate + audit log (later sprint)
+  executor/               ONLY write path; allowlisted actions (later sprint)
+config/                   Online Boutique dependency graph
+deploy/                   kind, Online Boutique, Prometheus, Chaos Mesh
+scenarios/                Fault suite with ground truth (pod-crash, cpu-stress, …)
+eval/                     EDA, scoring harness, baseline notes
+docs/                     Architecture, baselines, progress
+console/                  Operator console (CLI first, UI later)
 ```
 
-## Getting started (Sprint 1)
+---
 
-Prerequisites: [uv](https://docs.astral.sh/uv/), Docker, `kind`, `kubectl`, `helm`.
+## Current status
+
+| Area | Status |
+|------|--------|
+| Shared event schema + CI | Done |
+| Telemetry collectors / normaliser / in-memory store | Done |
+| Dependency graph + incident grouping + top-3 ranking | Done |
+| Read-only RCA tools, evidence verifier, mock LLM + spend cap | Done |
+| Fault scenarios: pod-crash, cpu-stress | Done |
+| RCAEval all suites (RE1/RE2/RE3 × OB/SS/TT, 735 cases) | Done (`make rcaeval-everything`) |
+| PostgreSQL store, approval UI, restricted executor | In progress (next sprints) |
+| Human pilot study | Planned (Semester B) |
+
+Unit tests: **16 passing** (`uv run pytest`).  
+RCAEval results: [`eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`](eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md) · metrics validation / revised targets: [`METRICS_VALIDATION.md`](eval/artifacts/rcaeval/METRICS_VALIDATION.md).
+
+---
+
+## Quick start
+
+### Prerequisites
+
+- [uv](https://docs.astral.sh/uv/)
+- Docker, [kind](https://kind.sigs.k8s.io/), `kubectl`, Helm (for the live testbed)
+
+### Install and test
 
 ```bash
-# 1. Python workspace
+git clone https://github.com/PeramVishnuSree/Agentic-incident-response-copilot-for-production-outages.git
+cd Agentic-incident-response-copilot-for-production-outages
+
 uv sync --dev
-uv run pytest            # schema + read-only-tool safety tests should pass
-
-# 2. Local testbed
-make cluster-up          # kind cluster
-make target-app          # Online Boutique
-make observability       # Prometheus + Alertmanager (+ Grafana)
-make chaos-install       # Chaos Mesh
-
-# 3. First fault scenario (pod-crash, with ground truth)
-make scenario-pod-crash
-
-# teardown
-make dev-down
+uv run pytest
 ```
 
-Run `make help` for all targets. Copy `.env.example` to `.env` and fill in your
-LLM key (keep the per-run spend cap).
+### RCAEval experiments (public benchmark)
 
-## Sprint 1 ownership
+Place RCAEval cases under `../datasets/RCAEval` (or set `RCAEVAL_DIR`), then:
 
-- **Gandham** — `deploy/` (kind, Online Boutique, Prometheus/Alertmanager), `services/telemetry-gateway/`.
-- **Patrini** — repo/CI/tooling, `libs/common` schema, `services/rca-agent/` model interface + read-only tool stubs, baseline review ([docs/baselines.md](docs/baselines.md)).
-- **Peram** — Chaos Mesh + first `scenarios/pod-crash` scenario.
+```bash
+make rcaeval-everything
+# all RE1/RE2/RE3 suites (OB+SS+TT): EDA + window sweep + GBT ranker + BARO
+# → eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md
 
-## Meeting logs
+make rcaeval-metrics-validation
+# BARO + N-Sigma + E-Diagnosis, bootstrap CIs, revised targets, study size
+# → eval/artifacts/rcaeval/METRICS_VALIDATION.md
 
-Advisor and team meeting logs are in [`meetings/`](meetings/).
+make rcaeval-all
+# RE2-OB only → eval/artifacts/rcaeval/re2ob_RESULTS.md
+```
+
+### Local Kubernetes testbed
+
+```bash
+cp .env.example .env   # add LLM key; keep the per-run spend cap
+
+make cluster-up        # kind cluster
+make target-app        # Online Boutique
+make observability     # Prometheus + Alertmanager
+make chaos-install     # Chaos Mesh
+
+make scenario-pod-crash
+make scenario-cpu-stress
+
+make dev-down          # teardown
+```
+
+Run `make help` for all targets.
+
+---
+
+## Team ownership
+
+| Member | Focus |
+|--------|--------|
+| **Charan Sai Gandham** | Cluster, observability, telemetry gateway, collectors |
+| **Venkata Satya Charan Naga Deep Patrini** | Correlation engine, RCA agent, shared schema, baselines |
+| **Vishnu Sree Peram** | Fault scenarios, remediation, approval path, evaluation |
+
+---
+
+## Safety principles
+
+- Diagnosis tools are **read-only** (enforced in CI).  
+- The executor is the **only** write path.  
+- Every write requires a recorded human approval.  
+- Only allowlisted actions / namespaces are permitted.  
+- Correlation still returns a result if the LLM is unavailable.
+
+---
+
+## License / academic use
+
+Built for CMPE 295 at SJSU. Evaluation data includes the public [RCAEval](https://github.com/phamquiluan/RCAEval) benchmark — cite the original authors when reporting results.

@@ -1,0 +1,2534 @@
+{
+  "30": [
+    {
+      "case": "re3tt_ts-auth-service_f1_1",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-station-mongo",
+        "ts-user-service",
+        "ts-auth-service",
+        "ts-contacts-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_2",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-inside-payment-service",
+        "ts-food-service",
+        "ts-inside-payment-mongo",
+        "ts-food-map-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_3",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-consign-mongo",
+        "ts-auth-service",
+        "ts-food-service",
+        "ts-security-service",
+        "ts-preserve-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_4",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-inside-payment-mongo",
+        "ts-auth-service",
+        "ts-food-mongo",
+        "ts-news-service",
+        "ts-payment-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_1",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-price-mongo",
+        "ts-contacts-mongo",
+        "ts-ui-dashboard"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_2",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-service",
+        "ts-ticket-office-mongo",
+        "ts-consign-price-mongo",
+        "ts-assurance-mongo",
+        "ts-user-mongo"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_3",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-security-mongo",
+        "ts-price-mongo",
+        "ts-inside-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_4",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-order-mongo",
+        "ts-food-map-mongo",
+        "ts-order-service",
+        "ts-auth-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_1",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-service",
+        "ts-route-mongo",
+        "ts-admin-basic-info-service",
+        "ts-food-map-service",
+        "ts-consign-price-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_2",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-security-service",
+        "ts-price-service",
+        "ts-config-mongo",
+        "ts-route-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_3",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-notification-mongo",
+        "ts-price-service",
+        "ts-contacts-service",
+        "ts-order-mongo",
+        "ts-preserve-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_4",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-travel-mongo",
+        "ts-order-other-mongo",
+        "ts-auth-service",
+        "ts-assurance-service",
+        "ts-food-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_1",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-contacts-service",
+        "ts-food-map-mongo",
+        "ts-inside-payment-service",
+        "ts-route-plan-service",
+        "ts-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_2",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-security-mongo",
+        "ts-auth-service",
+        "ts-payment-service",
+        "ts-train-service",
+        "ts-food-map-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_3",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-contacts-service",
+        "ts-user-mongo",
+        "ts-auth-service",
+        "ts-preserve-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_1",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-route-plan-service",
+        "ts-order-other-mongo",
+        "ts-station-service",
+        "ts-travel2-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_2",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-order-mongo",
+        "ts-user-service",
+        "ts-consign-mongo",
+        "ts-food-service",
+        "ts-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_3",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-preserve-other-mongo",
+        "ts-consign-service",
+        "ts-ticket-office-mongo",
+        "ts-assurance-mongo",
+        "ts-consign-price-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-config-mongo",
+        "ts-consign-mongo",
+        "ts-station-mongo",
+        "ts-inside-payment-mongo",
+        "ts-price-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_2",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-price-service",
+        "ts-order-other-mongo",
+        "ts-config-service",
+        "ts-station-mongo",
+        "ts-route-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_3",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-travel-service",
+        "ts-ui-dashboard",
+        "ts-admin-basic-info-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_1",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-train-mongo",
+        "ts-preserve-other-mongo",
+        "ts-price-mongo",
+        "ts-ticket-office-mongo",
+        "ts-order-other-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_2",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-price-service",
+        "ts-station-mongo",
+        "ts-food-map-service",
+        "ts-train-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_3",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-travel-service",
+        "ts-preserve-service",
+        "ts-travel-mongo",
+        "ts-consign-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_4",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-payment-mongo",
+        "ts-price-mongo",
+        "ts-consign-mongo",
+        "ts-preserve-other-mongo",
+        "ts-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_5",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-inside-payment-mongo",
+        "ts-config-mongo",
+        "ts-contacts-service",
+        "ts-travel2-mongo",
+        "ts-food-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_6",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-food-service",
+        "ts-seat-service",
+        "ts-station-mongo",
+        "ts-food-mongo",
+        "ts-food-map-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_1",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-travel-service",
+        "ts-payment-service",
+        "ts-security-mongo",
+        "ts-inside-payment-mongo",
+        "ts-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_2",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-food-service",
+        "ts-security-mongo",
+        "ts-order-other-service",
+        "ts-price-mongo",
+        "ts-order-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_3",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-ui-dashboard",
+        "ts-train-mongo",
+        "ts-payment-mongo",
+        "ts-travel-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ],
+  "60": [
+    {
+      "case": "re3tt_ts-auth-service_f1_1",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-station-mongo",
+        "ts-route-mongo",
+        "ts-auth-service",
+        "ts-ui-dashboard"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_2",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-auth-mongo",
+        "ts-food-map-service",
+        "ts-voucher-mysql",
+        "ts-inside-payment-mongo"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_3",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-notification-mongo",
+        "ts-consign-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_4",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-auth-mongo",
+        "ts-inside-payment-mongo",
+        "ts-news-service",
+        "ts-payment-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_1",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-station-service",
+        "ts-price-mongo",
+        "ts-contacts-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_2",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-mongo",
+        "ts-ticket-office-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_3",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-price-mongo",
+        "ts-inside-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_4",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-order-mongo",
+        "ts-food-map-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_1",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-station-service",
+        "ts-admin-basic-info-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_2",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-security-service",
+        "ts-price-service",
+        "ts-order-other-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_3",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-notification-mongo",
+        "ts-food-map-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_4",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-travel-mongo",
+        "ts-order-other-mongo",
+        "ts-auth-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_1",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-order-other-service",
+        "ts-auth-service",
+        "ts-consign-price-service",
+        "ts-contacts-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_2",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-security-mongo",
+        "ts-payment-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_3",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-auth-service",
+        "ts-order-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_1",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-order-other-mongo",
+        "ts-route-plan-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_2",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-user-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_3",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-preserve-other-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-station-mongo",
+        "ts-config-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_2",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_3",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-travel2-service",
+        "ts-admin-travel-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_1",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-travel-service",
+        "ts-route-service",
+        "ts-ticket-office-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_2",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel2-service",
+        "ts-admin-travel-service",
+        "ts-travel-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_3",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-travel-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_4",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-consign-price-service",
+        "ts-route-service",
+        "ts-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_5",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-inside-payment-mongo",
+        "ts-route-service",
+        "ts-config-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_6",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-route-mongo",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_1",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-travel-service",
+        "ts-travel2-service",
+        "ts-admin-travel-service",
+        "ts-route-mongo",
+        "ts-ticket-office-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_2",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-ticket-office-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_3",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-payment-mongo",
+        "ts-ui-dashboard"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    }
+  ],
+  "120": [
+    {
+      "case": "re3tt_ts-auth-service_f1_1",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-auth-service",
+        "ts-station-mongo",
+        "ts-route-mongo",
+        "ts-ui-dashboard"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_2",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-auth-mongo",
+        "ts-train-service",
+        "ts-route-service",
+        "ts-food-map-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_3",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_4",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-news-service",
+        "ts-auth-mongo",
+        "ts-inside-payment-mongo",
+        "ts-route-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_1",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-price-mongo",
+        "ts-contacts-mongo",
+        "ts-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_2",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-mongo",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_3",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_4",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-order-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_1",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-contacts-service",
+        "ts-admin-basic-info-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_2",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-price-service",
+        "ts-security-service",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_3",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-auth-service",
+        "ts-notification-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_4",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-admin-basic-info-service",
+        "ts-auth-service",
+        "ts-travel-mongo",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_1",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-order-other-service",
+        "ts-auth-service",
+        "ts-contacts-service",
+        "ts-consign-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_2",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-security-mongo",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_3",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-auth-service",
+        "ts-notification-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_1",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-food-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_2",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_3",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-train-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-service",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_2",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_3",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_1",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_2",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel2-service",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_3",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_4",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-consign-price-service",
+        "ts-station-service",
+        "ts-order-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_5",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-service",
+        "ts-order-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_6",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-order-other-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_1",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-travel-service",
+        "ts-travel2-service",
+        "ts-admin-travel-service",
+        "ts-route-mongo",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_2",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_3",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-other-service",
+        "ts-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    }
+  ],
+  "300": [
+    {
+      "case": "re3tt_ts-auth-service_f1_1",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-auth-service",
+        "ts-station-mongo",
+        "ts-route-mongo",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_2",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-auth-mongo",
+        "ts-route-mongo"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_3",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_4",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-news-service",
+        "ts-travel2-service",
+        "ts-route-service",
+        "ts-rebook-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_1",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-price-mongo",
+        "ts-train-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_2",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-station-mongo",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_3",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_4",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-order-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_1",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-admin-basic-info-service",
+        "ts-contacts-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_2",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-auth-service",
+        "ts-admin-basic-info-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_3",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-auth-service",
+        "ts-notification-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_4",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-basic-info-service",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-travel-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_1",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-order-other-service",
+        "ts-auth-service",
+        "ts-contacts-service",
+        "ts-consign-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_2",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-security-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_3",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-auth-service",
+        "ts-ticket-office-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_1",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-mongo",
+        "ts-route-service",
+        "ts-food-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_2",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_3",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-mongo",
+        "ts-user-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-route-mongo",
+        "ts-route-service",
+        "ts-config-mongo",
+        "ts-order-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_2",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-mongo",
+        "ts-food-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_3",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-preserve-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_1",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-preserve-other-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_2",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-travel2-service",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-mongo",
+        "ts-notification-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_3",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-security-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_4",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-consign-price-service",
+        "ts-station-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_5",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-service",
+        "ts-order-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_6",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-consign-price-service",
+        "ts-order-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_1",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-travel-service",
+        "ts-travel2-service",
+        "ts-admin-travel-service",
+        "ts-ticket-office-mongo",
+        "ts-contacts-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_2",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-preserve-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_3",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-other-service",
+        "ts-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    }
+  ],
+  "600": [
+    {
+      "case": "re3tt_ts-auth-service_f1_1",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-auth-service",
+        "ts-station-mongo",
+        "ts-route-mongo",
+        "ts-travel2-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_2",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-price-service",
+        "ts-route-mongo"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_3",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_4",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-news-service",
+        "ts-voucher-service",
+        "ts-notification-service",
+        "ts-rebook-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_1",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-train-mongo",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_2",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-station-mongo",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_3",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_4",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-auth-service",
+        "ts-order-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_1",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-admin-basic-info-service",
+        "ts-auth-service",
+        "ts-contacts-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_2",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-auth-service",
+        "ts-admin-basic-info-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_3",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-admin-basic-info-service",
+        "ts-auth-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_4",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-basic-info-service",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-travel-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_1",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-order-other-service",
+        "ts-contacts-service",
+        "ts-auth-service",
+        "ts-consign-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_2",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-security-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_3",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-auth-service",
+        "ts-ticket-office-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_1",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-other-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_2",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-travel-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_3",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-price-mongo",
+        "ts-route-service",
+        "ts-order-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-consign-price-service",
+        "ts-config-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_2",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_3",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-preserve-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_1",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-station-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-consign-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_2",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel2-service",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-notification-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_3",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-security-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_4",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-consign-price-service",
+        "ts-station-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_5",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-service",
+        "ts-order-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_6",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-consign-price-service",
+        "ts-order-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_1",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-travel-service",
+        "ts-travel2-service",
+        "ts-admin-travel-service",
+        "ts-ticket-office-mongo",
+        "ts-contacts-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_2",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-preserve-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_3",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-other-service",
+        "ts-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    }
+  ],
+  "900": [
+    {
+      "case": "re3tt_ts-auth-service_f1_1",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-station-mongo",
+        "ts-auth-service",
+        "ts-travel2-mongo",
+        "ts-travel-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_2",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-route-mongo",
+        "ts-price-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_3",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f1_4",
+      "truth": "ts-auth-service",
+      "fault": "f1",
+      "top": [
+        "ts-auth-service",
+        "ts-news-service",
+        "ts-voucher-service",
+        "ts-notification-service",
+        "ts-rebook-service"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_1",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-travel2-service",
+        "ts-train-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_2",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-station-mongo",
+        "ts-train-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_3",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-train-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f2_4",
+      "truth": "ts-auth-service",
+      "fault": "f2",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-order-mongo",
+        "ts-auth-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_1",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-admin-basic-info-service",
+        "ts-contacts-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_2",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-admin-basic-info-service",
+        "ts-train-mongo",
+        "ts-auth-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_3",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-admin-basic-info-service",
+        "ts-auth-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f3_4",
+      "truth": "ts-auth-service",
+      "fault": "f3",
+      "top": [
+        "ts-admin-basic-info-service",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-route-service",
+        "ts-basic-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_1",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-admin-travel-service",
+        "ts-order-other-service",
+        "ts-contacts-service",
+        "ts-consign-price-service",
+        "ts-auth-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_2",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-auth-service",
+        "ts-food-map-mongo",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-auth-service_f4_3",
+      "truth": "ts-auth-service",
+      "fault": "f4",
+      "top": [
+        "ts-auth-mongo",
+        "ts-admin-travel-service",
+        "ts-order-service",
+        "ts-ticket-office-mongo",
+        "ts-order-other-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_1",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-other-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_2",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-travel-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f1_3",
+      "truth": "ts-route-service",
+      "fault": "f1",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-price-mongo",
+        "ts-user-mongo",
+        "ts-order-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-consign-price-service",
+        "ts-config-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_2",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-auth-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_3",
+      "truth": "ts-route-service",
+      "fault": "f2",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-travel2-service",
+        "ts-preserve-other-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_1",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-station-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-consign-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_2",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel2-service",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-notification-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_3",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-security-service",
+        "ts-route-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_4",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-consign-price-service",
+        "ts-station-service",
+        "ts-auth-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_5",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-order-service",
+        "ts-inside-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f3_6",
+      "truth": "ts-route-service",
+      "fault": "f3",
+      "top": [
+        "ts-order-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-food-service",
+        "ts-consign-price-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_1",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-travel-service",
+        "ts-travel2-service",
+        "ts-admin-travel-service",
+        "ts-ticket-office-mongo",
+        "ts-contacts-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_2",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-route-mongo",
+        "ts-travel-service",
+        "ts-admin-travel-service",
+        "ts-preserve-mongo",
+        "ts-user-service"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3tt_ts-route-service_f4_3",
+      "truth": "ts-route-service",
+      "fault": "f4",
+      "top": [
+        "ts-train-mongo",
+        "ts-route-mongo",
+        "ts-admin-travel-service",
+        "ts-route-service",
+        "ts-payment-mongo"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ]
+}

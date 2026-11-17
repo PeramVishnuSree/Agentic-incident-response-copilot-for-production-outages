@@ -1,0 +1,80 @@
+{
+  "suite": "re1ss",
+  "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval",
+  "n_cases": 125,
+  "fault_counts": {
+    "cpu": 25,
+    "delay": 25,
+    "disk": 25,
+    "loss": 25,
+    "mem": 25
+  },
+  "service_counts": {
+    "carts": 25,
+    "catalogue": 25,
+    "orders": 25,
+    "payment": 25,
+    "user": 25
+  },
+  "avg_metrics_cols": 58.96,
+  "avg_sampling_interval_sec": 1.0,
+  "avg_metric_missing_rate": 0.0019619597329165487,
+  "avg_constant_metric_cols": 5.52,
+  "avg_logs_rows": 0.0,
+  "avg_traces_rows": 0.0,
+  "avg_max_abs_truth_shift_z": 9476.45376360309,
+  "by_fault": [
+    {
+      "fault": "cpu",
+      "n": 25,
+      "median_metrics_cols": 59.0,
+      "median_logs": 0.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 1148.8404928455184,
+      "mean_log_err": NaN
+    },
+    {
+      "fault": "delay",
+      "n": 25,
+      "median_metrics_cols": 59.0,
+      "median_logs": 0.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 9505.80238503082,
+      "mean_log_err": NaN
+    },
+    {
+      "fault": "disk",
+      "n": 25,
+      "median_metrics_cols": 60.0,
+      "median_logs": 0.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 520.1527410449193,
+      "mean_log_err": NaN
+    },
+    {
+      "fault": "loss",
+      "n": 25,
+      "median_metrics_cols": 59.0,
+      "median_logs": 0.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 2417.151679141344,
+      "mean_log_err": NaN
+    },
+    {
+      "fault": "mem",
+      "n": 25,
+      "median_metrics_cols": 59.0,
+      "median_logs": 0.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 33790.32151995285,
+      "mean_log_err": NaN
+    }
+  ],
+  "cleaning_rules": [
+    "Drop constant / near-constant metric columns before ranking.",
+    "Align all analysis to inject_time; use pre-window as baseline.",
+    "Never put case folder names in model prompts (label leakage).",
+    "Map metrics to services via known Online Boutique prefixes.",
+    "Treat redis_* metrics as redis-cart in our dependency graph."
+  ]
+}

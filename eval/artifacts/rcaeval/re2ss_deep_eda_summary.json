@@ -1,0 +1,90 @@
+{
+  "suite": "re2ss",
+  "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval",
+  "n_cases": 90,
+  "fault_counts": {
+    "cpu": 15,
+    "delay": 15,
+    "disk": 15,
+    "loss": 15,
+    "mem": 15,
+    "socket": 15
+  },
+  "service_counts": {
+    "carts": 18,
+    "catalogue": 18,
+    "orders": 18,
+    "payment": 18,
+    "user": 18
+  },
+  "avg_metrics_cols": 76.61111111111111,
+  "avg_sampling_interval_sec": 1.0,
+  "avg_metric_missing_rate": 0.008624881848474358,
+  "avg_constant_metric_cols": 12.7,
+  "avg_logs_rows": 84069.11111111111,
+  "avg_traces_rows": 0.0,
+  "avg_max_abs_truth_shift_z": 19730.61210549325,
+  "by_fault": [
+    {
+      "fault": "cpu",
+      "n": 15,
+      "median_metrics_cols": 76.0,
+      "median_logs": 86451.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 435.1497755069453,
+      "mean_log_err": 0.06892147232368678
+    },
+    {
+      "fault": "delay",
+      "n": 15,
+      "median_metrics_cols": 75.0,
+      "median_logs": 84632.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 6782.02762512803,
+      "mean_log_err": 0.06683726341342568
+    },
+    {
+      "fault": "disk",
+      "n": 15,
+      "median_metrics_cols": 76.0,
+      "median_logs": 86663.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 86617.94945950634,
+      "mean_log_err": 0.06761658526601474
+    },
+    {
+      "fault": "loss",
+      "n": 15,
+      "median_metrics_cols": 76.0,
+      "median_logs": 84486.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 10938.090801228003,
+      "mean_log_err": 0.06764612591950957
+    },
+    {
+      "fault": "mem",
+      "n": 15,
+      "median_metrics_cols": 76.0,
+      "median_logs": 86519.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 12407.837625091573,
+      "mean_log_err": 0.06926526509275213
+    },
+    {
+      "fault": "socket",
+      "n": 15,
+      "median_metrics_cols": 76.0,
+      "median_logs": 86415.0,
+      "median_traces": 0.0,
+      "mean_truth_shift": 1202.6173464985886,
+      "mean_log_err": 0.06679258838321457
+    }
+  ],
+  "cleaning_rules": [
+    "Drop constant / near-constant metric columns before ranking.",
+    "Align all analysis to inject_time; use pre-window as baseline.",
+    "Never put case folder names in model prompts (label leakage).",
+    "Map metrics to services via known Online Boutique prefixes.",
+    "Treat redis_* metrics as redis-cart in our dependency graph."
+  ]
+}

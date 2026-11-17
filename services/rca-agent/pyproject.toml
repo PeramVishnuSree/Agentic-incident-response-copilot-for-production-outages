@@ -5,11 +5,13 @@ description = "Read-only root-cause analysis agent + model-agnostic LLM interfac
 requires-python = ">=3.11"
 dependencies = [
     "copilot-common",
+    "correlation-engine",
     "langgraph>=0.2",
 ]
 
 [tool.uv.sources]
 copilot-common = { workspace = true }
+correlation-engine = { workspace = true }
 
 [build-system]
 requires = ["hatchling"]

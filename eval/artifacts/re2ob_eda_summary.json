@@ -1,0 +1,31 @@
+{
+  "n_cases": 90,
+  "fault_counts": {
+    "cpu": 15,
+    "delay": 15,
+    "disk": 15,
+    "loss": 15,
+    "mem": 15,
+    "socket": 15
+  },
+  "service_counts": {
+    "checkoutservice": 18,
+    "currencyservice": 18,
+    "emailservice": 18,
+    "productcatalogservice": 18,
+    "recommendationservice": 18
+  },
+  "file_extension_counts": {
+    "parquet": 270,
+    "txt": 90
+  },
+  "total_bytes": 922484805,
+  "median_file_bytes": 183599.5,
+  "cases_missing_expected_files": [],
+  "leakage_notes": [
+    "Case directory names encode root-cause service and fault type.",
+    "Keep paths out of model prompts; use inject_time + telemetry only.",
+    "example: re2ob_checkoutservice_cpu_1 encodes label service=checkoutservice fault=cpu"
+  ],
+  "data_root": "/Users/charan/Desktop/Masters RCA/datasets/RCAEval"
+}

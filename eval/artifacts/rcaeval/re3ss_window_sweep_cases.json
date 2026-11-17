@@ -1,0 +1,2534 @@
+{
+  "30": [
+    {
+      "case": "re3ss_carts_f1_1",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "catalogue",
+        "user-db",
+        "user",
+        "rabbitmq",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f1_2",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "front-end",
+        "orders",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_3",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "carts-db",
+        "front-end",
+        "user",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_4",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "user",
+        "user-db",
+        "carts-db",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f3_1",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "orders-db",
+        "user-db",
+        "orders",
+        "user",
+        "session-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_2",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "carts-db",
+        "user",
+        "catalogue",
+        "user-db",
+        "session-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_3",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "orders-db",
+        "user",
+        "user-db",
+        "carts-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_4",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "queue-master",
+        "rabbitmq",
+        "catalogue",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_1",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "user-db",
+        "orders-db",
+        "user",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_2",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "user-db",
+        "user",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_3",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "shipping",
+        "user-db",
+        "payment",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_4",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "queue-master",
+        "shipping",
+        "orders-db",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f1_1",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "orders",
+        "user-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_2",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "shipping",
+        "orders",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_3",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "shipping",
+        "user",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_1",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "orders-db",
+        "user",
+        "carts",
+        "user-db",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f2_2",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "session-db",
+        "orders-db",
+        "carts-db",
+        "front-end",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f2_3",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "session-db",
+        "user",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f3_1",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "front-end",
+        "carts-db",
+        "catalogue",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_2",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "orders",
+        "shipping",
+        "orders-db",
+        "rabbitmq",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f3_3",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "session-db",
+        "queue-master",
+        "user",
+        "carts",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f1_1",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders",
+        "shipping",
+        "front-end",
+        "orders-db",
+        "queue-master"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_2",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "rabbitmq",
+        "user-db",
+        "carts-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f1_3",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "orders",
+        "rabbitmq",
+        "carts",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f3_1",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "orders-db",
+        "rabbitmq-exporter",
+        "carts-db",
+        "carts",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_2",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "session-db",
+        "catalogue",
+        "orders-db",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_3",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "shipping",
+        "queue-master",
+        "orders-db",
+        "user",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_1",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue-db",
+        "session-db",
+        "queue-master",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_2",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "front-end",
+        "shipping",
+        "orders",
+        "user-db",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f4_3",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue",
+        "payment",
+        "carts",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ],
+  "60": [
+    {
+      "case": "re3ss_carts_f1_1",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "front-end",
+        "orders",
+        "carts",
+        "payment",
+        "session-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_2",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "front-end",
+        "orders",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_3",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "carts-db",
+        "front-end",
+        "orders",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_4",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "orders",
+        "front-end",
+        "user-db",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f3_1",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "shipping",
+        "orders-db",
+        "user-db",
+        "user",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_2",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "carts-db",
+        "user",
+        "orders",
+        "catalogue",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_3",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "carts-db",
+        "orders-db",
+        "front-end",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_4",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "queue-master",
+        "front-end",
+        "orders",
+        "rabbitmq",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_1",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "user-db",
+        "carts-db",
+        "orders-db",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_2",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "carts-db",
+        "queue-master",
+        "front-end",
+        "shipping",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_3",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "carts-db",
+        "user-db",
+        "front-end",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_4",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "queue-master",
+        "carts",
+        "shipping",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_1",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "orders",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_2",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "orders",
+        "rabbitmq",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_3",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "shipping",
+        "user",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_1",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "front-end",
+        "orders",
+        "user",
+        "orders-db",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_2",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "session-db",
+        "front-end",
+        "orders-db",
+        "carts-db",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_3",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "session-db",
+        "front-end",
+        "user",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_1",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "front-end",
+        "orders",
+        "catalogue",
+        "carts-db",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_2",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "orders",
+        "rabbitmq",
+        "orders-db",
+        "shipping",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f3_3",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "session-db",
+        "front-end",
+        "user",
+        "carts",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_1",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders",
+        "front-end",
+        "shipping",
+        "orders-db",
+        "carts"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_2",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "front-end",
+        "rabbitmq",
+        "orders",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f1_3",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "orders",
+        "front-end",
+        "rabbitmq",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f3_1",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "orders-db",
+        "orders",
+        "front-end",
+        "carts-db",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f3_2",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "orders-db",
+        "carts",
+        "front-end",
+        "catalogue",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_3",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "orders-db",
+        "front-end",
+        "shipping",
+        "queue-master",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_1",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue-db",
+        "payment",
+        "front-end",
+        "orders",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_2",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "front-end",
+        "orders",
+        "shipping",
+        "catalogue-db",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f4_3",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue",
+        "carts",
+        "orders-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ],
+  "120": [
+    {
+      "case": "re3ss_carts_f1_1",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "orders",
+        "carts",
+        "front-end",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_2",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "front-end",
+        "orders",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_3",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "carts-db",
+        "front-end",
+        "payment",
+        "orders"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_4",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "orders",
+        "carts-db",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f3_1",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "payment",
+        "shipping",
+        "carts-db",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_2",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "carts-db",
+        "front-end",
+        "carts",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f3_3",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "queue-master",
+        "carts-db",
+        "front-end",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_4",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "payment",
+        "front-end",
+        "queue-master",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_1",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "carts-db",
+        "orders",
+        "front-end",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_2",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "carts-db",
+        "front-end",
+        "orders",
+        "carts",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_3",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "carts-db",
+        "front-end",
+        "carts",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_4",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "queue-master",
+        "front-end",
+        "carts",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f1_1",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "user",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_2",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "catalogue",
+        "rabbitmq",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_3",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "rabbitmq",
+        "user-db",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_1",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "front-end",
+        "user",
+        "orders",
+        "orders-db",
+        "rabbitmq"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_2",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "session-db",
+        "catalogue",
+        "front-end",
+        "carts-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_3",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "session-db",
+        "front-end",
+        "user",
+        "user-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_1",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "front-end",
+        "catalogue",
+        "orders",
+        "carts",
+        "user"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_2",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "shipping",
+        "orders",
+        "front-end",
+        "catalogue",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_3",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "session-db",
+        "orders",
+        "front-end",
+        "carts",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_1",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders",
+        "front-end",
+        "carts",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_2",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "front-end",
+        "orders",
+        "rabbitmq",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_3",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "orders",
+        "carts",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f3_1",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "user",
+        "orders-db",
+        "front-end",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_2",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "carts",
+        "orders-db",
+        "front-end",
+        "orders",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_3",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "orders-db",
+        "front-end",
+        "user",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_1",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue-db",
+        "front-end",
+        "payment",
+        "carts",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_2",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "front-end",
+        "orders",
+        "queue-master",
+        "catalogue-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f4_3",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "session-db",
+        "front-end",
+        "payment",
+        "carts",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ],
+  "300": [
+    {
+      "case": "re3ss_carts_f1_1",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "front-end",
+        "carts",
+        "orders",
+        "payment",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_2",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "front-end",
+        "orders",
+        "carts-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_3",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "front-end",
+        "user",
+        "carts-db",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_4",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "payment",
+        "carts-db",
+        "user-db",
+        "catalogue"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f3_1",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "payment",
+        "orders",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_2",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "catalogue",
+        "user",
+        "payment",
+        "user-db",
+        "catalogue-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_3",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "payment",
+        "orders-db",
+        "user-db",
+        "shipping",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_4",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "user",
+        "queue-master",
+        "rabbitmq",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_1",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "user-db",
+        "user",
+        "queue-master",
+        "front-end",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_2",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "carts",
+        "user-db",
+        "front-end",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f4_3",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "user-db",
+        "user",
+        "orders",
+        "orders-db",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_4",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "queue-master",
+        "user-db",
+        "user",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f1_1",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "user",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_2",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "catalogue",
+        "rabbitmq",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_3",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "shipping",
+        "rabbitmq",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_1",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "queue-master",
+        "front-end",
+        "user",
+        "orders",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_2",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "shipping",
+        "session-db",
+        "catalogue",
+        "front-end",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f2_3",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "session-db",
+        "front-end",
+        "user",
+        "user-db",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_1",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "catalogue",
+        "front-end",
+        "user",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_2",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "shipping",
+        "catalogue",
+        "orders",
+        "user",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f3_3",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "session-db",
+        "orders",
+        "catalogue",
+        "user",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f1_1",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders",
+        "front-end",
+        "carts",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_2",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "front-end",
+        "orders",
+        "payment",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_3",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "orders",
+        "carts",
+        "front-end",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f3_1",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "orders-db",
+        "carts",
+        "user",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_2",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "catalogue",
+        "orders-db",
+        "front-end",
+        "orders",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_3",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "rabbitmq",
+        "front-end",
+        "orders",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_1",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue-db",
+        "session-db",
+        "front-end",
+        "catalogue",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_2",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "shipping",
+        "front-end",
+        "orders",
+        "orders-db",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f4_3",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "session-db",
+        "front-end",
+        "user",
+        "carts",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ],
+  "600": [
+    {
+      "case": "re3ss_carts_f1_1",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "front-end",
+        "carts",
+        "carts-db",
+        "user-db",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_2",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "front-end",
+        "orders",
+        "carts-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_3",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "catalogue",
+        "user",
+        "front-end",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_4",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "payment",
+        "carts-db",
+        "catalogue",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f3_1",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "payment",
+        "user-db",
+        "orders-db",
+        "orders",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_2",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "catalogue",
+        "user",
+        "payment",
+        "user-db",
+        "catalogue-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_3",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "payment",
+        "orders-db",
+        "shipping",
+        "user-db",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_4",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "user",
+        "catalogue",
+        "queue-master",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_1",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "user-db",
+        "user",
+        "queue-master",
+        "orders-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_2",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "carts-db",
+        "user-db",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_3",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "user",
+        "user-db",
+        "orders-db",
+        "payment",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_4",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "orders",
+        "user-db",
+        "queue-master",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f1_1",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "queue-master",
+        "front-end",
+        "user",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_2",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "queue-master",
+        "front-end",
+        "catalogue",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_3",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "shipping",
+        "rabbitmq",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_1",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "queue-master",
+        "front-end",
+        "user",
+        "orders-db",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_2",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "shipping",
+        "queue-master",
+        "session-db",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f2_3",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "queue-master",
+        "session-db",
+        "front-end",
+        "user",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_1",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "catalogue",
+        "front-end",
+        "user",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_2",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "shipping",
+        "catalogue",
+        "user",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f3_3",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "session-db",
+        "queue-master",
+        "orders",
+        "user",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f1_1",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders",
+        "front-end",
+        "carts",
+        "payment",
+        "shipping"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_2",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "front-end",
+        "orders",
+        "payment",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_3",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "user",
+        "queue-master",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_1",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "catalogue-db",
+        "user",
+        "queue-master",
+        "rabbitmq",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_2",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "queue-master",
+        "catalogue",
+        "orders",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f3_3",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "queue-master",
+        "rabbitmq",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_1",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue-db",
+        "session-db",
+        "queue-master",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_2",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "shipping",
+        "front-end",
+        "payment",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_3",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "session-db",
+        "queue-master",
+        "front-end",
+        "user",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ],
+  "900": [
+    {
+      "case": "re3ss_carts_f1_1",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "front-end",
+        "carts",
+        "user-db",
+        "user",
+        "catalogue-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_2",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "front-end",
+        "orders",
+        "carts-db",
+        "payment"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_3",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "catalogue",
+        "user",
+        "user-db",
+        "front-end"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f1_4",
+      "truth": "carts",
+      "fault": "f1",
+      "top": [
+        "carts",
+        "payment",
+        "carts-db",
+        "catalogue",
+        "user-db"
+      ],
+      "ac1": 1.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_carts_f3_1",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "queue-master",
+        "user-db",
+        "orders-db",
+        "user",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_2",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "catalogue",
+        "user",
+        "payment",
+        "user-db",
+        "queue-master"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_3",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "payment",
+        "queue-master",
+        "orders-db",
+        "user-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f3_4",
+      "truth": "carts",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "user",
+        "queue-master",
+        "catalogue",
+        "rabbitmq"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_1",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "user-db",
+        "user",
+        "queue-master",
+        "orders-db",
+        "shipping"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_2",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "carts-db",
+        "user-db",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_3",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "catalogue-db",
+        "user",
+        "user-db",
+        "orders-db",
+        "carts-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_carts_f4_4",
+      "truth": "carts",
+      "fault": "f4",
+      "top": [
+        "payment",
+        "queue-master",
+        "orders",
+        "user-db",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f1_1",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "queue-master",
+        "front-end",
+        "catalogue",
+        "user"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f1_2",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "catalogue",
+        "payment",
+        "session-db",
+        "queue-master",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f1_3",
+      "truth": "front-end",
+      "fault": "f1",
+      "top": [
+        "session-db",
+        "front-end",
+        "rabbitmq",
+        "shipping",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_1",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "queue-master",
+        "front-end",
+        "user",
+        "orders-db",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f2_2",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "shipping",
+        "queue-master",
+        "session-db",
+        "catalogue",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f2_3",
+      "truth": "front-end",
+      "fault": "f2",
+      "top": [
+        "queue-master",
+        "session-db",
+        "front-end",
+        "user",
+        "user-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_1",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "catalogue",
+        "front-end",
+        "user",
+        "carts",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_front-end_f3_2",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "shipping",
+        "catalogue",
+        "user",
+        "front-end",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_front-end_f3_3",
+      "truth": "front-end",
+      "fault": "f3",
+      "top": [
+        "session-db",
+        "queue-master",
+        "orders",
+        "user",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f1_1",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "queue-master",
+        "orders",
+        "front-end",
+        "carts",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_2",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "orders",
+        "front-end",
+        "carts-db",
+        "payment"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f1_3",
+      "truth": "orders",
+      "fault": "f1",
+      "top": [
+        "orders-db",
+        "user",
+        "queue-master",
+        "orders",
+        "carts"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_1",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "catalogue-db",
+        "user",
+        "queue-master",
+        "rabbitmq",
+        "orders"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f3_2",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "queue-master",
+        "catalogue",
+        "orders",
+        "orders-db",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 1.0
+    },
+    {
+      "case": "re3ss_orders_f3_3",
+      "truth": "orders",
+      "fault": "f3",
+      "top": [
+        "user-db",
+        "queue-master",
+        "rabbitmq",
+        "user",
+        "front-end"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_1",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "catalogue-db",
+        "session-db",
+        "queue-master",
+        "front-end",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_2",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "queue-master",
+        "shipping",
+        "front-end",
+        "payment",
+        "orders-db"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    },
+    {
+      "case": "re3ss_orders_f4_3",
+      "truth": "orders",
+      "fault": "f4",
+      "top": [
+        "session-db",
+        "queue-master",
+        "front-end",
+        "user",
+        "catalogue"
+      ],
+      "ac1": 0.0,
+      "ac3": 0.0
+    }
+  ]
+}
