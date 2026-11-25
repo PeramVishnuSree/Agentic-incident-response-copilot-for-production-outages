@@ -1,0 +1,7 @@
+{
+  "0": [
+    "redis_diskio",
+    "productcatalogservice_latency",
+    "adservice_latency"
+  ]
+}

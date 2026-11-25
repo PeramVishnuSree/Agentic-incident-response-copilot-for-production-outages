@@ -5,6 +5,8 @@ from __future__ import annotations
 from collections import defaultdict
 from collections.abc import Callable
 
+import numpy as np
+import pandas as pd
 from tqdm import tqdm
 
 from eval.rcaeval.common import (
@@ -23,15 +25,43 @@ from eval.rcaeval.common import (
 DEFAULT_METHODS = ("baro", "nsigma", "e_diagnosis")
 
 
-def _prepare_metrics(case):
+WINDOW_ROWS = 600
+RCAEVAL_DATASET = {
+    "re2ob": "re2-ob",
+    "re2ss": "re2-ss",
+    "re2tt": "re2-tt",
+    "re1ob": "re1-ob",
+    "re1ss": "re1-ss",
+    "re1tt": "re1-tt",
+    "re3ob": "re3-ob",
+    "re3ss": "re3-ss",
+    "re3tt": "re3-tt",
+}
+
+
+def _prepare_metrics(case, *, window_rows: int | None = WINDOW_ROWS):
+    """Mirror RCAEval ``main.py`` (commit 3c3e25f) before a method is called.
+
+    Drops p50 latency, replaces inf, forward-fills then zero-fills gaps, keeps
+    ``window_rows`` rows on each side of the injection time (main.py's default
+    length of 20 minutes) and renames ``*_latency-90`` to ``*_latency``.
+    Constant columns are removed later by the method's own ``preprocess`` call,
+    which only happens when the dataset name is passed (see run_method_case).
+    """
     data = load_metrics(case)
-    keep = ["time"]
-    for c in data.columns:
-        if c == "time":
-            continue
-        if data[c].nunique(dropna=True) > 1:
-            keep.append(c)
-    return data[keep]
+    data = data.loc[:, ~data.columns.duplicated()].copy()
+    if "time" not in data.columns:
+        raise ValueError(f"metrics for {case.name} do not contain a time column")
+    data["time"] = pd.to_numeric(data["time"], errors="coerce")
+    data = data.dropna(subset=["time"]).sort_values("time").reset_index(drop=True)
+    data = data.loc[:, ~data.columns.str.endswith("_latency-50")]
+    data = data.replace([np.inf, -np.inf], np.nan).ffill().fillna(0)
+    if window_rows:
+        t0 = inject_time(case)
+        before = data[data["time"] < t0].tail(window_rows)
+        after = data[data["time"] >= t0].head(window_rows)
+        data = pd.concat([before, after], ignore_index=True)
+    return data.rename(columns=lambda c: c.replace("_latency-90", "_latency"))
 
 
 def _resolve_method(name: str) -> Callable:
@@ -46,7 +76,7 @@ def _resolve_method(name: str) -> Callable:
 def run_method_case(case, method: str) -> dict:
     fn = _resolve_method(method)
     data = _prepare_metrics(case)
-    out = fn(data, inject_time(case))
+    out = fn(data, inject_time(case), dataset=RCAEVAL_DATASET.get(case.suite, case.suite))
     ranks = list(out["ranks"])
     services = ranks_to_services(ranks)
     truth = case.service

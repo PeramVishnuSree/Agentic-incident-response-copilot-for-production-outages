@@ -1,0 +1,172 @@
+{
+  "generated_utc": "2026-11-25T03:32:48.426744+00:00",
+  "model": "mlx-community/Qwen3-4B-4bit",
+  "served_models": [
+    "mlx-community/Qwen3-4B-4bit"
+  ],
+  "base_url": "http://127.0.0.1:8080/v1",
+  "host": "Darwin arm64",
+  "max_tool_calls": 12,
+  "thinking": false,
+  "prompt": "v1",
+  "n_cases": 5,
+  "completed": 5,
+  "ac1": 0.2,
+  "ac3": 0.2,
+  "tool_calls": 35,
+  "invalid_tool_calls": 0,
+  "valid_tool_call_rate": 1.0,
+  "mean_seconds_per_case": 7.6,
+  "cases": [
+    {
+      "file": "case_001.json",
+      "case": "re2ob_checkoutservice_cpu_1",
+      "true_service": "checkoutservice",
+      "fault": "cpu",
+      "rank_of_truth": 1,
+      "seconds": 8.5,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "redis-cart",
+        "cartservice"
+      ],
+      "tool_calls": 7,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_topology",
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_002.json",
+      "case": "re2ob_currencyservice_delay_1",
+      "true_service": "currencyservice",
+      "fault": "delay",
+      "rank_of_truth": null,
+      "seconds": 7.3,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "cartservice",
+        "redis-cart"
+      ],
+      "tool_calls": 7,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs",
+        "get_topology"
+      ]
+    },
+    {
+      "file": "case_003.json",
+      "case": "re2ob_emailservice_mem_1",
+      "true_service": "emailservice",
+      "fault": "mem",
+      "rank_of_truth": null,
+      "seconds": 6.9,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "cartservice",
+        "checkoutservice",
+        "redis-cart"
+      ],
+      "tool_calls": 7,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs",
+        "get_topology"
+      ]
+    },
+    {
+      "file": "case_004.json",
+      "case": "re2ob_productcatalogservice_loss_1",
+      "true_service": "productcatalogservice",
+      "fault": "loss",
+      "rank_of_truth": null,
+      "seconds": 7.1,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "cartservice",
+        "redis-cart"
+      ],
+      "tool_calls": 7,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs",
+        "get_topology"
+      ]
+    },
+    {
+      "file": "case_005.json",
+      "case": "re2ob_recommendationservice_disk_1",
+      "true_service": "recommendationservice",
+      "fault": "disk",
+      "rank_of_truth": null,
+      "seconds": 8.1,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "redis-cart",
+        "checkoutservice",
+        "cartservice"
+      ],
+      "tool_calls": 7,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_topology",
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "0": [
+    "frontend_socket",
+    "redis_mem",
+    "frontend_cpu",
+    "paymentservice_cpu",
+    "adservice_workload",
+    "productcatalogservice_mem",
+    "adservice_mem",
+    "frontend-external_workload",
+    "adservice_cpu",
+    "checkoutservice_cpu",
+    "shippingservice_workload",
+    "currencyservice_mem",
+    "checkoutservice_mem",
+    "adservice_latency"
+  ]
+}

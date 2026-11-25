@@ -1,0 +1,15 @@
+{
+  "0": [
+    "recommendationservice_mem",
+    "cartservice_mem",
+    "currencyservice_workload",
+    "paymentservice_cpu",
+    "emailservice_cpu",
+    "currencyservice_mem",
+    "adservice_diskio",
+    "cartservice_workload",
+    "productcatalogservice_cpu",
+    "productcatalogservice_workload",
+    "adservice_cpu"
+  ]
+}

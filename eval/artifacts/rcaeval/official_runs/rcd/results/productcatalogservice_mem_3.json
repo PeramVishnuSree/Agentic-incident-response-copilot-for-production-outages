@@ -1,0 +1,11 @@
+{
+  "0": [
+    "adservice_workload",
+    "paymentservice_workload",
+    "redis_mem",
+    "frontend_latency",
+    "frontend-external_workload",
+    "currencyservice_latency",
+    "emailservice_workload"
+  ]
+}

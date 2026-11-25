@@ -1,0 +1,11 @@
+{
+  "0": [
+    "emailservice_mem",
+    "cartservice_latency",
+    "adservice_cpu",
+    "productcatalogservice_workload",
+    "currencyservice_latency",
+    "recommendationservice_latency",
+    "productcatalogservice_mem"
+  ]
+}

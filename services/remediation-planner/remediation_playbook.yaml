@@ -1,0 +1,113 @@
+# Remediation playbook (lookup / if-then table) — 295A design
+# Planner maps (fault_type, service_or_role) → allowlisted action.
+# Never invent actions outside this table. Unknown → escalate.
+# Owner: Peram · Status: design + coverage check for 295A; live executor in 295B
+
+version: "295A-1.0"
+policy:
+  primary: map_top1_only
+  secondary: optional_top2_top3_alternatives
+  on_failure: next_candidate_then_escalate
+  require_human_approval: true
+  invent_actions: false
+
+allowlisted_actions:
+  - restart_pod
+  - delete_pod_for_reschedule
+  - scale_deployment
+  - set_cpu_limit
+  - set_memory_limit
+  - rollback_deployment
+  - isolate_service_traffic  # future / escalate if unsupported
+  - escalate_manual
+
+# Coverage for Online Boutique + Chaos Mesh scenarios + RCAEval fault types
+entries:
+  - id: PB-01
+    fault_type: pod_crash
+    service_role: any
+    primary_action: restart_pod
+    params: { strategy: recreate }
+    risk: low
+    undo: none_needed_if_healthy
+    rationale: "CrashLoop/OOM-killed pod usually recovers by reschedule/restart."
+
+  - id: PB-02
+    fault_type: cpu
+    service_role: any
+    primary_action: set_cpu_limit
+    alternate_action: scale_deployment
+    params: { scale_factor: 2 }
+    risk: medium
+    undo: restore_previous_resources
+    rationale: "CPU stress: limit or scale the blamed service after confirmation."
+
+  - id: PB-03
+    fault_type: mem
+    service_role: any
+    primary_action: set_memory_limit
+    alternate_action: restart_pod
+    risk: medium
+    undo: restore_previous_resources
+    rationale: "Memory pressure: raise/restore limits or recycle the pod."
+
+  - id: PB-04
+    fault_type: delay
+    service_role: any
+    primary_action: restart_pod
+    alternate_action: escalate_manual
+    risk: medium
+    undo: none_needed_if_healthy
+    rationale: "Network delay often needs infra/network check; restart is first safe try."
+
+  - id: PB-05
+    fault_type: loss
+    service_role: any
+    primary_action: escalate_manual
+    alternate_action: restart_pod
+    risk: high
+    undo: n/a
+    rationale: "Packet loss often outside app control; prefer escalate."
+
+  - id: PB-06
+    fault_type: disk
+    service_role: any
+    primary_action: restart_pod
+    alternate_action: escalate_manual
+    risk: medium
+    undo: n/a
+    rationale: "Disk pressure: recycle pod; persistent volume issues escalate."
+
+  - id: PB-07
+    fault_type: socket
+    service_role: any
+    primary_action: restart_pod
+    alternate_action: scale_deployment
+    risk: medium
+    undo: scale_back
+    rationale: "Socket/exhaustion: recycle connections via restart or scale."
+
+  - id: PB-08
+    fault_type: bad_deploy
+    service_role: any
+    primary_action: rollback_deployment
+    risk: medium
+    undo: roll_forward_previous
+    rationale: "Bad release: rollback to last known good revision."
+
+  - id: PB-09
+    fault_type: f1
+    service_role: any
+    primary_action: rollback_deployment
+    alternate_action: escalate_manual
+    risk: high
+    undo: n/a
+    rationale: "RE3 functional fault class — prefer rollback/escalate over blind restart."
+
+  - id: PB-10
+    fault_type: unknown
+    service_role: any
+    primary_action: escalate_manual
+    risk: high
+    undo: n/a
+    rationale: "No playbook match → human escalation. Do not invent."

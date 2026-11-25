@@ -1,0 +1,14 @@
+{
+  "0": [
+    "emailservice_mem",
+    "recommendationservice_mem",
+    "adservice_cpu",
+    "adservice_latency",
+    "redis_mem",
+    "emailservice_cpu",
+    "productcatalogservice_mem",
+    "recommendationservice_workload",
+    "recommendationservice_latency",
+    "adservice_mem"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "0": [
+    "frontend_mem",
+    "frontend_cpu",
+    "paymentservice_mem",
+    "adservice_cpu",
+    "adservice_diskio",
+    "adservice_workload",
+    "cartservice_mem",
+    "redis_mem",
+    "paymentservice_cpu"
+  ]
+}

@@ -16,6 +16,12 @@ class LLMClient(Protocol):
         """Return a completion for the prompt."""
         ...
 
+    def chat(
+        self, messages: list[dict], *, tools: list[dict] | None = None, max_tokens: int = 1024
+    ) -> dict:
+        """Return a provider-neutral chat response."""
+        ...
+
 
 class MockLLM:
     """Deterministic stand-in used in tests and offline development."""
@@ -27,6 +33,22 @@ class MockLLM:
             "EVIDENCE: restarts and cascading cart/frontend errors\n"
             f"NOTES: {prompt[: min(120, max_tokens)]}"
         )
+
+    def chat(
+        self, messages: list[dict], *, tools: list[dict] | None = None, max_tokens: int = 1024
+    ) -> dict:
+        return {
+            "choices": [
+                {
+                    "message": {
+                        "role": "assistant",
+                        "content": self.complete(
+                            messages[-1].get("content", ""), max_tokens=max_tokens
+                        ),
+                    }
+                }
+            ]
+        }
 
 
 class BudgetedLLM:
@@ -57,6 +79,20 @@ class BudgetedLLM:
         self.spent_usd += (tokens / 1000.0) * self.usd_per_1k_tokens
         return out
 
+    def chat(
+        self, messages: list[dict], *, tools: list[dict] | None = None, max_tokens: int = 1024
+    ) -> dict:
+        if self.spent_usd >= self.max_spend_usd:
+            raise RuntimeError(
+                f"LLM spend cap reached (${self.max_spend_usd:.2f}); refusing further calls"
+            )
+        result = self.inner.chat(messages, tools=tools, max_tokens=max_tokens)
+        text = str(result)
+        tokens = max(1, len(text) // 4)
+        self.tokens_used += tokens
+        self.spent_usd += (tokens / 1000.0) * self.usd_per_1k_tokens
+        return result
+
 
 def get_llm(provider: str | None = None) -> LLMClient:
     """Factory. Hosted providers can be added without changing callers."""
@@ -64,6 +100,15 @@ def get_llm(provider: str | None = None) -> LLMClient:
     name = (provider or settings.llm_provider or "mock").lower()
     if name in {"mock", "echo", "test"}:
         inner: LLMClient = MockLLM()
+    elif name == "vllm":
+        from rca_agent.llm.vllm_client import VLLMClient
+
+        inner = VLLMClient(
+            base_url=settings.llm_base_url,
+            model=settings.llm_model,
+            api_key=settings.llm_api_key or "EMPTY",
+            timeout=settings.llm_timeout_seconds,
+        )
     elif name == "anthropic" and not settings.llm_api_key:
         # Safe default when no key is configured (local / CI).
         inner = MockLLM()

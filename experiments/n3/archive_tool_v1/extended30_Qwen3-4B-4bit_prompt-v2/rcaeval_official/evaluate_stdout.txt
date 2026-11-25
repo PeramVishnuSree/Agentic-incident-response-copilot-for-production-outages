@@ -1,0 +1,34 @@
+--- Evaluation results (re2-ob, 90 cases) ---
+Coverage:    30/90 cases predicted (60 missing, scored as misses)
+             service    indicator
+AC@1:        0.31       0.00
+AC@3:        0.33       0.00
+AC@5:        0.33       0.00
+Avg@5:       0.33       0.00
+Chance@5:    0.25       0.05
+Lift@5:      0.08       -0.05
+--- Avg@5 by fault (service level) ---
+Avg@5-CPU:   0.33
+Chance@5-CPU: 0.25
+Lift@5-CPU:  0.09
+Avg@5-MEM:   0.33
+Chance@5-MEM: 0.25
+Lift@5-MEM:  0.08
+Avg@5-DISK:  0.33
+Chance@5-DISK: 0.25
+Lift@5-DISK: 0.08
+Avg@5-SOCKET: 0.33
+Chance@5-SOCKET: 0.25
+Lift@5-SOCKET: 0.08
+Avg@5-DELAY: 0.33
+Chance@5-DELAY: 0.25
+Lift@5-DELAY: 0.08
+Avg@5-LOSS:  0.31
+Chance@5-LOSS: 0.25
+Lift@5-LOSS: 0.06
+--- Usage ---
+input_tokens:   total 428279, mean 14276 over 30 cases
+output_tokens:  total 13032, mean 434.4 over 30 cases
+wall_time_s:    total 273.3, mean 9.11 over 30 cases
+tool_calls:     total 163, mean 5.43333 over 30 cases
+---

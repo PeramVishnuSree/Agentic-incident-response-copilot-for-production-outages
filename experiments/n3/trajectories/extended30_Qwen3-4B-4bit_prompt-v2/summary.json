@@ -1,0 +1,864 @@
+{
+  "generated_utc": "2026-11-25T03:37:38.308492+00:00",
+  "model": "mlx-community/Qwen3-4B-4bit",
+  "served_models": [
+    "mlx-community/Qwen3-4B-4bit"
+  ],
+  "base_url": "http://127.0.0.1:8080/v1",
+  "host": "Darwin arm64",
+  "max_tool_calls": 12,
+  "thinking": false,
+  "prompt": "v2",
+  "n_cases": 30,
+  "completed": 30,
+  "ac1": 0.9333333333333333,
+  "ac3": 1.0,
+  "tool_calls": 152,
+  "invalid_tool_calls": 0,
+  "valid_tool_call_rate": 1.0,
+  "mean_seconds_per_case": 8.3,
+  "cases": [
+    {
+      "file": "case_001.json",
+      "case": "re2ob_checkoutservice_cpu_1",
+      "true_service": "checkoutservice",
+      "fault": "cpu",
+      "rank_of_truth": 1,
+      "seconds": 8.2,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "redis-cart",
+        "currencyservice"
+      ],
+      "tool_calls": 5,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_002.json",
+      "case": "re2ob_checkoutservice_delay_1",
+      "true_service": "checkoutservice",
+      "fault": "delay",
+      "rank_of_truth": 1,
+      "seconds": 8.1,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice"
+      ],
+      "tool_calls": 5,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_003.json",
+      "case": "re2ob_checkoutservice_disk_1",
+      "true_service": "checkoutservice",
+      "fault": "disk",
+      "rank_of_truth": 1,
+      "seconds": 9.2,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "currencyservice",
+        "productcatalogservice"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_004.json",
+      "case": "re2ob_checkoutservice_loss_1",
+      "true_service": "checkoutservice",
+      "fault": "loss",
+      "rank_of_truth": 1,
+      "seconds": 8.7,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "currencyservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_005.json",
+      "case": "re2ob_checkoutservice_mem_1",
+      "true_service": "checkoutservice",
+      "fault": "mem",
+      "rank_of_truth": 1,
+      "seconds": 9.0,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "currencyservice",
+        "paymentservice"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_006.json",
+      "case": "re2ob_checkoutservice_socket_1",
+      "true_service": "checkoutservice",
+      "fault": "socket",
+      "rank_of_truth": 1,
+      "seconds": 7.5,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "redis-cart",
+        "currencyservice"
+      ],
+      "tool_calls": 5,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_007.json",
+      "case": "re2ob_currencyservice_cpu_1",
+      "true_service": "currencyservice",
+      "fault": "cpu",
+      "rank_of_truth": 1,
+      "seconds": 8.8,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "currencyservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_008.json",
+      "case": "re2ob_currencyservice_delay_1",
+      "true_service": "currencyservice",
+      "fault": "delay",
+      "rank_of_truth": 1,
+      "seconds": 9.5,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "currencyservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_009.json",
+      "case": "re2ob_currencyservice_disk_1",
+      "true_service": "currencyservice",
+      "fault": "disk",
+      "rank_of_truth": 1,
+      "seconds": 10.1,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "currencyservice",
+        "frontend",
+        "checkoutservice"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_010.json",
+      "case": "re2ob_currencyservice_loss_1",
+      "true_service": "currencyservice",
+      "fault": "loss",
+      "rank_of_truth": 1,
+      "seconds": 9.7,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "currencyservice",
+        "frontend",
+        "recommendationservice"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "get_metrics",
+        "get_metrics"
+      ]
+    },
+    {
+      "file": "case_011.json",
+      "case": "re2ob_currencyservice_mem_1",
+      "true_service": "currencyservice",
+      "fault": "mem",
+      "rank_of_truth": 1,
+      "seconds": 9.6,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "currencyservice",
+        "frontend",
+        "checkoutservice"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_012.json",
+      "case": "re2ob_currencyservice_socket_1",
+      "true_service": "currencyservice",
+      "fault": "socket",
+      "rank_of_truth": 1,
+      "seconds": 9.9,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "currencyservice",
+        "recommendationservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "get_metrics",
+        "get_metrics"
+      ]
+    },
+    {
+      "file": "case_013.json",
+      "case": "re2ob_emailservice_cpu_1",
+      "true_service": "emailservice",
+      "fault": "cpu",
+      "rank_of_truth": 1,
+      "seconds": 6.8,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "emailservice",
+        "currencyservice",
+        "checkoutservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_014.json",
+      "case": "re2ob_emailservice_delay_1",
+      "true_service": "emailservice",
+      "fault": "delay",
+      "rank_of_truth": 1,
+      "seconds": 9.4,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "emailservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_015.json",
+      "case": "re2ob_emailservice_disk_1",
+      "true_service": "emailservice",
+      "fault": "disk",
+      "rank_of_truth": 1,
+      "seconds": 6.9,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "emailservice",
+        "cartservice",
+        "checkoutservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_016.json",
+      "case": "re2ob_emailservice_loss_1",
+      "true_service": "emailservice",
+      "fault": "loss",
+      "rank_of_truth": 1,
+      "seconds": 5.6,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "emailservice",
+        "frontend",
+        "checkoutservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 1,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_017.json",
+      "case": "re2ob_emailservice_mem_1",
+      "true_service": "emailservice",
+      "fault": "mem",
+      "rank_of_truth": 1,
+      "seconds": 7.2,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "emailservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_018.json",
+      "case": "re2ob_emailservice_socket_1",
+      "true_service": "emailservice",
+      "fault": "socket",
+      "rank_of_truth": 1,
+      "seconds": 7.2,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "emailservice",
+        "paymentservice",
+        "currencyservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_019.json",
+      "case": "re2ob_productcatalogservice_cpu_1",
+      "true_service": "productcatalogservice",
+      "fault": "cpu",
+      "rank_of_truth": 1,
+      "seconds": 8.9,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "productcatalogservice",
+        "recommendationservice",
+        "currencyservice"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_020.json",
+      "case": "re2ob_productcatalogservice_delay_1",
+      "true_service": "productcatalogservice",
+      "fault": "delay",
+      "rank_of_truth": 2,
+      "seconds": 11.5,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "productcatalogservice",
+        "frontend"
+      ],
+      "tool_calls": 7,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_021.json",
+      "case": "re2ob_productcatalogservice_disk_1",
+      "true_service": "productcatalogservice",
+      "fault": "disk",
+      "rank_of_truth": 1,
+      "seconds": 6.9,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "productcatalogservice",
+        "recommendationservice",
+        "frontend"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_022.json",
+      "case": "re2ob_productcatalogservice_loss_1",
+      "true_service": "productcatalogservice",
+      "fault": "loss",
+      "rank_of_truth": 3,
+      "seconds": 10.3,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "frontend",
+        "productcatalogservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_023.json",
+      "case": "re2ob_productcatalogservice_mem_1",
+      "true_service": "productcatalogservice",
+      "fault": "mem",
+      "rank_of_truth": 1,
+      "seconds": 9.8,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "productcatalogservice",
+        "recommendationservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_024.json",
+      "case": "re2ob_productcatalogservice_socket_1",
+      "true_service": "productcatalogservice",
+      "fault": "socket",
+      "rank_of_truth": 1,
+      "seconds": 6.6,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "productcatalogservice",
+        "recommendationservice",
+        "frontend"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_025.json",
+      "case": "re2ob_recommendationservice_cpu_1",
+      "true_service": "recommendationservice",
+      "fault": "cpu",
+      "rank_of_truth": 1,
+      "seconds": 7.3,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "frontend",
+        "currencyservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_026.json",
+      "case": "re2ob_recommendationservice_delay_1",
+      "true_service": "recommendationservice",
+      "fault": "delay",
+      "rank_of_truth": 1,
+      "seconds": 8.8,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "frontend",
+        "productcatalogservice"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 3,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_027.json",
+      "case": "re2ob_recommendationservice_disk_1",
+      "true_service": "recommendationservice",
+      "fault": "disk",
+      "rank_of_truth": 1,
+      "seconds": 7.1,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "currencyservice",
+        "frontend"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_028.json",
+      "case": "re2ob_recommendationservice_loss_1",
+      "true_service": "recommendationservice",
+      "fault": "loss",
+      "rank_of_truth": 1,
+      "seconds": 5.2,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "frontend",
+        "productcatalogservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 1,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_029.json",
+      "case": "re2ob_recommendationservice_mem_1",
+      "true_service": "recommendationservice",
+      "fault": "mem",
+      "rank_of_truth": 1,
+      "seconds": 7.0,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "frontend",
+        "currencyservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_030.json",
+      "case": "re2ob_recommendationservice_socket_1",
+      "true_service": "recommendationservice",
+      "fault": "socket",
+      "rank_of_truth": 1,
+      "seconds": 7.2,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "frontend",
+        "productcatalogservice"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    }
+  ]
+}

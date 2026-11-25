@@ -1,0 +1,10 @@
+{
+  "0": [
+    "checkoutservice_mem",
+    "adservice_latency",
+    "shippingservice_workload",
+    "productcatalogservice_cpu",
+    "adservice_cpu",
+    "recommendationservice_cpu"
+  ]
+}

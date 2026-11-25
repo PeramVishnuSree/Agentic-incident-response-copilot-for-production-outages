@@ -1,0 +1,11 @@
+{
+  "0": [
+    "emailservice_mem",
+    "currencyservice_workload",
+    "adservice_workload",
+    "emailservice_cpu",
+    "shippingservice_mem",
+    "paymentservice_workload",
+    "currencyservice_cpu"
+  ]
+}

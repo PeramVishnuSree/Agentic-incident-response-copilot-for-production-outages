@@ -1,0 +1,14 @@
+{
+  "0": [
+    "frontend_socket",
+    "frontend_latency",
+    "emailservice_mem",
+    "cartservice_mem",
+    "cartservice_cpu",
+    "productcatalogservice_workload",
+    "currencyservice_workload",
+    "paymentservice_workload",
+    "checkoutservice_workload",
+    "paymentservice_cpu"
+  ]
+}

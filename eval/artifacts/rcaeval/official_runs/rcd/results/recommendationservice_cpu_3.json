@@ -1,0 +1,14 @@
+{
+  "0": [
+    "recommendationservice_mem",
+    "productcatalogservice_cpu",
+    "shippingservice_mem",
+    "cartservice_workload",
+    "adservice_diskio",
+    "frontend_cpu",
+    "productcatalogservice_workload",
+    "recommendationservice_workload",
+    "paymentservice_cpu",
+    "adservice_cpu"
+  ]
+}

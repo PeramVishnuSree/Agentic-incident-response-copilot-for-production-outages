@@ -1,0 +1,13 @@
+{
+  "0": [
+    "checkoutservice_latency",
+    "frontend_cpu",
+    "paymentservice_cpu",
+    "emailservice_cpu",
+    "redis_cpu",
+    "paymentservice_mem",
+    "frontend_mem",
+    "currencyservice_cpu",
+    "checkoutservice_mem"
+  ]
+}
