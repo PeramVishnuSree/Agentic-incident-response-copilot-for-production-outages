@@ -1,0 +1,7 @@
+{
+  "0": [
+    "emailservice_mem",
+    "adservice_cpu",
+    "paymentservice_latency"
+  ]
+}

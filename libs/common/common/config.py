@@ -13,6 +13,8 @@ class Settings(BaseSettings):
     llm_model: str = "claude-sonnet-5-5"
     llm_api_key: str = ""
     llm_max_spend_usd: float = 5.0
+    llm_base_url: str = "http://127.0.0.1:8000/v1"
+    llm_timeout_seconds: float = 120.0
 
     # Stores
     database_url: str = "postgresql+psycopg://copilot:copilot@localhost:5432/copilot"

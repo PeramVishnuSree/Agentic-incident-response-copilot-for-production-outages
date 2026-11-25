@@ -1,0 +1,13 @@
+{
+  "0": [
+    "productcatalogservice_mem",
+    "emailservice_mem",
+    "frontend_mem",
+    "currencyservice_workload",
+    "checkoutservice_workload",
+    "cartservice_cpu",
+    "shippingservice_mem",
+    "emailservice_cpu",
+    "paymentservice_mem"
+  ]
+}

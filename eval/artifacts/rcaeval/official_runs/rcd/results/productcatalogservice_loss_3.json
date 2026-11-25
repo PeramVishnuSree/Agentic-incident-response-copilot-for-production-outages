@@ -1,0 +1,18 @@
+{
+  "0": [
+    "frontend_socket",
+    "adservice_mem",
+    "checkoutservice_workload",
+    "emailservice_workload",
+    "adservice_diskio",
+    "paymentservice_mem",
+    "productcatalogservice_mem",
+    "frontend_mem",
+    "checkoutservice_cpu",
+    "checkoutservice_mem",
+    "frontend-external_error",
+    "paymentservice_workload",
+    "productcatalogservice_diskio",
+    "paymentservice_cpu"
+  ]
+}

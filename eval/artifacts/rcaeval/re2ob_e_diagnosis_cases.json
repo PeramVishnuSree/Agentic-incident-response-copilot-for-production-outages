@@ -5,11 +5,12 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "emailservice_mem",
-      "recommendationservice_mem"
+      "recommendationservice_latency"
     ],
     "top_services": [
+      "redis-cart",
       "emailservice",
       "recommendationservice"
     ],
@@ -24,13 +25,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "currencyservice_latency-50",
-      "checkoutservice_mem"
+      "recommendationservice_latency",
+      "checkoutservice_mem",
+      "shippingservice_latency"
     ],
     "top_services": [
-      "currencyservice",
-      "checkoutservice"
+      "recommendationservice",
+      "checkoutservice",
+      "shippingservice"
     ],
     "ac1": 0.0,
     "ac3": 1.0,
@@ -43,12 +45,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "cartservice_latency-90",
-      "cartservice_latency-50"
+      "redis_diskio",
+      "currencyservice_latency",
+      "emailservice_workload"
     ],
     "top_services": [
-      "cartservice"
+      "redis-cart",
+      "currencyservice",
+      "emailservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -61,13 +65,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "cartservice_cpu"
+      "recommendationservice_latency",
+      "redis_diskio",
+      "frontend_latency"
     ],
     "top_services": [
-      "productcatalogservice",
-      "cartservice"
+      "recommendationservice",
+      "redis-cart",
+      "frontend"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -80,17 +85,19 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "productcatalogservice_latency-90"
+      "redis_diskio",
+      "checkoutservice_cpu",
+      "paymentservice_cpu"
     ],
     "top_services": [
-      "productcatalogservice"
+      "redis-cart",
+      "checkoutservice",
+      "paymentservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.8
   },
   {
     "case": "re2ob_checkoutservice_delay_3",
@@ -98,11 +105,12 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "shippingservice_mem",
-      "frontend_latency-90"
+      "frontend_latency"
     ],
     "top_services": [
+      "redis-cart",
       "shippingservice",
       "frontend"
     ],
@@ -117,13 +125,14 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "emailservice_mem",
-      "cartservice_mem"
+      "shippingservice_latency"
     ],
     "top_services": [
+      "redis-cart",
       "emailservice",
-      "cartservice"
+      "shippingservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -136,11 +145,12 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "emailservice_mem",
       "paymentservice_mem",
       "recommendationservice_mem"
     ],
     "top_services": [
+      "emailservice",
       "paymentservice",
       "recommendationservice"
     ],
@@ -155,11 +165,12 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "emailservice_mem",
       "recommendationservice_mem"
     ],
     "top_services": [
+      "redis-cart",
       "emailservice",
       "recommendationservice"
     ],
@@ -174,12 +185,13 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "emailservice_mem",
-      "recommendationservice_latency-50"
+      "redis_diskio",
+      "paymentservice_latency",
+      "recommendationservice_cpu"
     ],
     "top_services": [
-      "emailservice",
+      "redis-cart",
+      "paymentservice",
       "recommendationservice"
     ],
     "ac1": 0.0,
@@ -193,13 +205,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-90",
-      "cartservice_latency-50"
+      "redis_diskio",
+      "currencyservice_latency",
+      "paymentservice_cpu"
     ],
     "top_services": [
-      "productcatalogservice",
-      "cartservice"
+      "redis-cart",
+      "currencyservice",
+      "paymentservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -212,13 +225,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "paymentservice_mem",
-      "adservice_latency-50"
+      "adservice_latency",
+      "recommendationservice_mem"
     ],
     "top_services": [
       "paymentservice",
-      "adservice"
+      "adservice",
+      "recommendationservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -231,13 +245,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_latency-50",
-      "recommendationservice_latency-90"
+      "redis_diskio",
+      "emailservice_mem",
+      "cartservice_cpu"
     ],
     "top_services": [
-      "frontend",
-      "recommendationservice"
+      "redis-cart",
+      "emailservice",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -250,13 +265,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "paymentservice_latency-90",
-      "frontend_latency-50"
+      "paymentservice_latency",
+      "redis_diskio",
+      "productcatalogservice_mem"
     ],
     "top_services": [
       "paymentservice",
-      "frontend"
+      "redis-cart",
+      "productcatalogservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -269,18 +285,19 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "checkoutservice_diskio",
-      "adservice_latency-90"
+      "redis_diskio",
+      "currencyservice_latency",
+      "shippingservice_latency"
     ],
     "top_services": [
-      "checkoutservice",
-      "adservice"
+      "redis-cart",
+      "currencyservice",
+      "shippingservice"
     ],
-    "ac1": 1.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 1.0
+    "ac1": 0.0,
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_checkoutservice_socket_1",
@@ -288,13 +305,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "paymentservice_mem",
-      "adservice_mem"
+      "adservice_mem",
+      "recommendationservice_mem"
     ],
     "top_services": [
       "paymentservice",
-      "adservice"
+      "adservice",
+      "recommendationservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -307,13 +325,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "emailservice_mem",
-      "checkoutservice_mem"
+      "redis_diskio",
+      "checkoutservice_mem",
+      "paymentservice_cpu"
     ],
     "top_services": [
-      "emailservice",
-      "checkoutservice"
+      "redis-cart",
+      "checkoutservice",
+      "paymentservice"
     ],
     "ac1": 0.0,
     "ac3": 1.0,
@@ -326,18 +345,19 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend-external_workload",
-      "adservice_latency-50"
+      "redis_diskio",
+      "checkoutservice_mem",
+      "cartservice_mem"
     ],
     "top_services": [
-      "frontend-external",
-      "adservice"
+      "redis-cart",
+      "checkoutservice",
+      "cartservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.8
   },
   {
     "case": "re2ob_currencyservice_cpu_1",
@@ -345,13 +365,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "checkoutservice_latency-90",
-      "cartservice_cpu"
+      "redis_diskio",
+      "cartservice_mem",
+      "paymentservice_cpu"
     ],
     "top_services": [
-      "checkoutservice",
-      "cartservice"
+      "redis-cart",
+      "cartservice",
+      "paymentservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -364,13 +385,13 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "recommendationservice_latency-50"
+      "redis_diskio",
+      "cartservice_cpu",
+      "cartservice_mem"
     ],
     "top_services": [
-      "productcatalogservice",
-      "recommendationservice"
+      "redis-cart",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -383,12 +404,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "productcatalogservice_latency-90"
+      "redis_diskio",
+      "productcatalogservice_latency",
+      "adservice_diskio"
     ],
     "top_services": [
-      "productcatalogservice"
+      "redis-cart",
+      "productcatalogservice",
+      "adservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -401,18 +424,19 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_latency-50",
-      "currencyservice_latency-50"
+      "redis_diskio",
+      "frontend_latency",
+      "cartservice_cpu"
     ],
     "top_services": [
+      "redis-cart",
       "frontend",
-      "currencyservice"
+      "cartservice"
     ],
     "ac1": 0.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 0.8
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_currencyservice_delay_2",
@@ -420,13 +444,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "currencyservice_mem",
-      "paymentservice_cpu"
+      "redis_diskio",
+      "checkoutservice_mem"
     ],
     "top_services": [
       "currencyservice",
-      "paymentservice"
+      "redis-cart",
+      "checkoutservice"
     ],
     "ac1": 1.0,
     "ac3": 1.0,
@@ -439,18 +464,19 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "currencyservice_mem",
-      "paymentservice_latency-90"
+      "shippingservice_cpu"
     ],
     "top_services": [
+      "redis-cart",
       "currencyservice",
-      "paymentservice"
+      "shippingservice"
     ],
-    "ac1": 1.0,
+    "ac1": 0.0,
     "ac3": 1.0,
     "ac5": 1.0,
-    "avg5": 1.0
+    "avg5": 0.8
   },
   {
     "case": "re2ob_currencyservice_disk_1",
@@ -458,12 +484,13 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "emailservice_mem",
-      "shippingservice_mem"
+      "redis_diskio",
+      "recommendationservice_latency",
+      "shippingservice_cpu"
     ],
     "top_services": [
-      "emailservice",
+      "redis-cart",
+      "recommendationservice",
       "shippingservice"
     ],
     "ac1": 0.0,
@@ -477,13 +504,14 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "paymentservice_mem",
-      "checkoutservice_mem"
+      "redis_diskio",
+      "emailservice_latency",
+      "paymentservice_mem"
     ],
     "top_services": [
-      "paymentservice",
-      "checkoutservice"
+      "redis-cart",
+      "emailservice",
+      "paymentservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -496,12 +524,14 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "checkoutservice_mem",
-      "checkoutservice_latency-50"
+      "redis_diskio",
+      "productcatalogservice_latency",
+      "adservice_latency"
     ],
     "top_services": [
-      "checkoutservice"
+      "redis-cart",
+      "productcatalogservice",
+      "adservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -514,13 +544,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "currencyservice_mem",
-      "productcatalogservice_latency-50"
+      "redis_diskio",
+      "emailservice_latency"
     ],
     "top_services": [
       "currencyservice",
-      "productcatalogservice"
+      "redis-cart",
+      "emailservice"
     ],
     "ac1": 1.0,
     "ac3": 1.0,
@@ -533,13 +564,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "checkoutservice_mem"
+      "redis_diskio",
+      "checkoutservice_latency",
+      "frontend_socket"
     ],
     "top_services": [
-      "productcatalogservice",
-      "checkoutservice"
+      "redis-cart",
+      "checkoutservice",
+      "frontend"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -552,13 +584,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "checkoutservice_latency-90"
+      "redis_diskio",
+      "recommendationservice_latency",
+      "cartservice_latency"
     ],
     "top_services": [
-      "productcatalogservice",
-      "checkoutservice"
+      "redis-cart",
+      "recommendationservice",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -571,12 +604,13 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "emailservice_mem",
-      "emailservice_latency-90"
+      "redis_diskio",
+      "emailservice_latency"
     ],
     "top_services": [
-      "emailservice"
+      "emailservice",
+      "redis-cart"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -589,12 +623,13 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "emailservice_mem",
+      "redis_diskio",
       "frontend_socket"
     ],
     "top_services": [
       "emailservice",
+      "redis-cart",
       "frontend"
     ],
     "ac1": 0.0,
@@ -608,18 +643,19 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "currencyservice_latency-50",
-      "checkoutservice_latency-90"
+      "redis_diskio",
+      "frontend_socket",
+      "currencyservice_latency"
     ],
     "top_services": [
-      "currencyservice",
-      "checkoutservice"
+      "redis-cart",
+      "frontend",
+      "currencyservice"
     ],
-    "ac1": 1.0,
+    "ac1": 0.0,
     "ac3": 1.0,
     "ac5": 1.0,
-    "avg5": 1.0
+    "avg5": 0.6
   },
   {
     "case": "re2ob_currencyservice_socket_1",
@@ -627,13 +663,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "checkoutservice_mem",
-      "shippingservice_workload"
+      "redis_diskio",
+      "productcatalogservice_workload",
+      "paymentservice_latency"
     ],
     "top_services": [
-      "checkoutservice",
-      "shippingservice"
+      "redis-cart",
+      "productcatalogservice",
+      "paymentservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -646,13 +683,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "shippingservice_latency-90",
-      "productcatalogservice_latency-90"
+      "redis_diskio",
+      "frontend_latency",
+      "paymentservice_latency"
     ],
     "top_services": [
-      "shippingservice",
-      "productcatalogservice"
+      "redis-cart",
+      "frontend",
+      "paymentservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -665,13 +703,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "emailservice_mem",
       "frontend_socket",
-      "recommendationservice_latency-50"
+      "redis_diskio"
     ],
     "top_services": [
+      "emailservice",
       "frontend",
-      "recommendationservice"
+      "redis-cart"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -684,18 +723,19 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-90",
-      "emailservice_latency-50"
+      "redis_diskio",
+      "productcatalogservice_latency",
+      "adservice_mem"
     ],
     "top_services": [
+      "redis-cart",
       "productcatalogservice",
-      "emailservice"
+      "adservice"
     ],
     "ac1": 0.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 0.8
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_emailservice_cpu_2",
@@ -703,13 +743,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "shippingservice_latency-50",
-      "recommendationservice_latency-50"
+      "redis_diskio",
+      "cartservice_workload",
+      "frontend_latency"
     ],
     "top_services": [
-      "shippingservice",
-      "recommendationservice"
+      "redis-cart",
+      "cartservice",
+      "frontend"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -722,13 +763,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "adservice_mem",
-      "frontend_latency-50"
+      "redis_diskio",
+      "paymentservice_latency",
+      "cartservice_mem"
     ],
     "top_services": [
-      "adservice",
-      "frontend"
+      "redis-cart",
+      "paymentservice",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -741,13 +783,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "adservice_mem",
-      "frontend_latency-90"
+      "recommendationservice_mem"
     ],
     "top_services": [
+      "redis-cart",
       "adservice",
-      "frontend"
+      "recommendationservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -760,18 +803,19 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "emailservice_latency-90",
-      "currencyservice_latency-90"
+      "redis_diskio",
+      "checkoutservice_mem",
+      "currencyservice_latency"
     ],
     "top_services": [
-      "emailservice",
+      "redis-cart",
+      "checkoutservice",
       "currencyservice"
     ],
-    "ac1": 1.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 1.0
+    "ac1": 0.0,
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_emailservice_delay_3",
@@ -779,13 +823,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "checkoutservice_latency-50",
-      "adservice_latency-50"
+      "redis_diskio",
+      "currencyservice_mem",
+      "recommendationservice_mem"
     ],
     "top_services": [
-      "checkoutservice",
-      "adservice"
+      "redis-cart",
+      "currencyservice",
+      "recommendationservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -798,18 +843,19 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "emailservice_latency-50",
-      "shippingservice_latency-50"
+      "redis_diskio",
+      "productcatalogservice_latency",
+      "checkoutservice_latency"
     ],
     "top_services": [
-      "emailservice",
-      "shippingservice"
+      "redis-cart",
+      "productcatalogservice",
+      "checkoutservice"
     ],
-    "ac1": 1.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 1.0
+    "ac1": 0.0,
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_emailservice_disk_2",
@@ -817,12 +863,13 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-90",
-      "paymentservice_latency-90"
+      "redis_diskio",
+      "adservice_latency",
+      "paymentservice_mem"
     ],
     "top_services": [
-      "productcatalogservice",
+      "redis-cart",
+      "adservice",
       "paymentservice"
     ],
     "ac1": 0.0,
@@ -836,13 +883,14 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "recommendationservice_latency-50",
-      "shippingservice_workload"
+      "redis_diskio",
+      "adservice_cpu",
+      "productcatalogservice_diskio"
     ],
     "top_services": [
-      "recommendationservice",
-      "shippingservice"
+      "redis-cart",
+      "adservice",
+      "productcatalogservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -855,18 +903,19 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_socket",
-      "adservice_mem"
+      "redis_diskio",
+      "adservice_latency",
+      "emailservice_mem"
     ],
     "top_services": [
-      "frontend",
-      "adservice"
+      "redis-cart",
+      "adservice",
+      "emailservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.6
   },
   {
     "case": "re2ob_emailservice_loss_2",
@@ -874,12 +923,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "currencyservice_latency-50",
-      "currencyservice_latency-90"
+      "redis_diskio",
+      "recommendationservice_latency",
+      "cartservice_cpu"
     ],
     "top_services": [
-      "currencyservice"
+      "redis-cart",
+      "recommendationservice",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -892,13 +943,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "paymentservice_cpu",
-      "cartservice_cpu"
+      "redis_diskio",
+      "recommendationservice_latency",
+      "frontend_mem"
     ],
     "top_services": [
-      "paymentservice",
-      "cartservice"
+      "redis-cart",
+      "recommendationservice",
+      "frontend"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -911,13 +963,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "recommendationservice_latency-50",
-      "paymentservice_latency-50"
+      "redis_diskio",
+      "currencyservice_latency",
+      "cartservice_latency"
     ],
     "top_services": [
-      "recommendationservice",
-      "paymentservice"
+      "redis-cart",
+      "currencyservice",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -930,13 +983,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "checkoutservice_latency-50",
-      "paymentservice_latency-90"
+      "redis_diskio",
+      "currencyservice_latency",
+      "frontend_cpu"
     ],
     "top_services": [
-      "checkoutservice",
-      "paymentservice"
+      "redis-cart",
+      "currencyservice",
+      "frontend"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -949,18 +1003,19 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_workload",
-      "recommendationservice_workload"
+      "redis_diskio",
+      "emailservice_workload",
+      "cartservice_latency"
     ],
     "top_services": [
-      "frontend",
-      "recommendationservice"
+      "redis-cart",
+      "emailservice",
+      "cartservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.8
   },
   {
     "case": "re2ob_emailservice_socket_1",
@@ -968,13 +1023,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "paymentservice_mem",
-      "recommendationservice_mem"
+      "recommendationservice_mem",
+      "redis_diskio"
     ],
     "top_services": [
       "paymentservice",
-      "recommendationservice"
+      "recommendationservice",
+      "redis-cart"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -987,18 +1043,19 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "adservice_mem",
-      "frontend_latency-50"
+      "redis_diskio",
+      "paymentservice_latency",
+      "emailservice_latency"
     ],
     "top_services": [
-      "adservice",
-      "frontend"
+      "redis-cart",
+      "paymentservice",
+      "emailservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.6
   },
   {
     "case": "re2ob_emailservice_socket_3",
@@ -1006,13 +1063,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_socket",
-      "paymentservice_mem"
+      "paymentservice_mem",
+      "redis_diskio",
+      "recommendationservice_mem"
     ],
     "top_services": [
-      "frontend",
-      "paymentservice"
+      "paymentservice",
+      "redis-cart",
+      "recommendationservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1025,18 +1083,19 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "emailservice_mem"
+      "redis_diskio",
+      "emailservice_mem",
+      "frontend_latency"
     ],
     "top_services": [
-      "productcatalogservice",
-      "emailservice"
+      "redis-cart",
+      "emailservice",
+      "frontend"
     ],
-    "ac1": 1.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 1.0
+    "ac1": 0.0,
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_productcatalogservice_cpu_2",
@@ -1044,13 +1103,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "recommendationservice_mem",
-      "shippingservice_mem"
+      "adservice_latency"
     ],
     "top_services": [
+      "redis-cart",
       "recommendationservice",
-      "shippingservice"
+      "adservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1063,11 +1123,12 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "emailservice_mem",
-      "paymentservice_latency-90"
+      "paymentservice_latency"
     ],
     "top_services": [
+      "redis-cart",
       "emailservice",
       "paymentservice"
     ],
@@ -1082,13 +1143,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "adservice_mem",
-      "shippingservice_latency-50"
+      "checkoutservice_cpu"
     ],
     "top_services": [
+      "redis-cart",
       "adservice",
-      "shippingservice"
+      "checkoutservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1101,13 +1163,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "recommendationservice_latency-50",
-      "paymentservice_mem"
+      "redis_diskio",
+      "paymentservice_mem",
+      "cartservice_mem"
     ],
     "top_services": [
-      "recommendationservice",
-      "paymentservice"
+      "redis-cart",
+      "paymentservice",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1120,13 +1183,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "checkoutservice_latency-90",
-      "recommendationservice_latency-50"
+      "redis_diskio",
+      "shippingservice_latency",
+      "checkoutservice_latency"
     ],
     "top_services": [
-      "checkoutservice",
-      "recommendationservice"
+      "redis-cart",
+      "shippingservice",
+      "checkoutservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1139,17 +1203,19 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-90",
-      "productcatalogservice_latency-50"
+      "redis_diskio",
+      "adservice_mem",
+      "shippingservice_latency"
     ],
     "top_services": [
-      "productcatalogservice"
+      "redis-cart",
+      "adservice",
+      "shippingservice"
     ],
-    "ac1": 1.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 1.0
+    "ac1": 0.0,
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_productcatalogservice_disk_2",
@@ -1157,13 +1223,14 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "cartservice_mem",
-      "adservice_latency-50"
+      "redis_diskio",
+      "adservice_mem",
+      "paymentservice_latency"
     ],
     "top_services": [
-      "cartservice",
-      "adservice"
+      "redis-cart",
+      "adservice",
+      "paymentservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1176,18 +1243,18 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "recommendationservice_mem",
-      "adservice_mem"
+      "productcatalogservice_socket",
+      "adservice_cpu",
+      "productcatalogservice_mem"
     ],
     "top_services": [
-      "recommendationservice",
+      "productcatalogservice",
       "adservice"
     ],
-    "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac1": 1.0,
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 1.0
   },
   {
     "case": "re2ob_productcatalogservice_loss_1",
@@ -1195,12 +1262,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "paymentservice_latency-90",
-      "paymentservice_mem"
+      "redis_diskio",
+      "paymentservice_mem",
+      "emailservice_mem"
     ],
     "top_services": [
-      "paymentservice"
+      "redis-cart",
+      "paymentservice",
+      "emailservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1213,13 +1282,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "adservice_mem",
-      "paymentservice_mem"
+      "redis_diskio",
+      "frontend_latency",
+      "shippingservice_latency"
     ],
     "top_services": [
-      "adservice",
-      "paymentservice"
+      "redis-cart",
+      "frontend",
+      "shippingservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1232,12 +1302,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "shippingservice_cpu",
-      "shippingservice_mem"
+      "redis_diskio",
+      "frontend_socket",
+      "recommendationservice_latency"
     ],
     "top_services": [
-      "shippingservice"
+      "redis-cart",
+      "frontend",
+      "recommendationservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1250,13 +1322,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "emailservice_mem",
-      "checkoutservice_mem"
+      "adservice_mem"
     ],
     "top_services": [
+      "redis-cart",
       "emailservice",
-      "checkoutservice"
+      "adservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1269,13 +1342,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_latency-50",
-      "recommendationservice_latency-50"
+      "redis_diskio",
+      "adservice_mem",
+      "currencyservice_latency"
     ],
     "top_services": [
-      "frontend",
-      "recommendationservice"
+      "redis-cart",
+      "adservice",
+      "currencyservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1288,13 +1362,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "cartservice_mem",
-      "productcatalogservice_latency-90"
+      "redis_diskio",
+      "productcatalogservice_latency",
+      "checkoutservice_cpu"
     ],
     "top_services": [
-      "cartservice",
-      "productcatalogservice"
+      "redis-cart",
+      "productcatalogservice",
+      "checkoutservice"
     ],
     "ac1": 0.0,
     "ac3": 1.0,
@@ -1307,13 +1382,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "emailservice_mem",
-      "frontend_socket"
+      "paymentservice_mem",
+      "redis_diskio"
     ],
     "top_services": [
       "emailservice",
-      "frontend"
+      "paymentservice",
+      "redis-cart"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1326,13 +1402,14 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "paymentservice_mem",
-      "recommendationservice_mem"
+      "recommendationservice_mem",
+      "checkoutservice_mem"
     ],
     "top_services": [
       "paymentservice",
-      "recommendationservice"
+      "recommendationservice",
+      "checkoutservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1345,12 +1422,13 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "emailservice_mem",
+      "redis_diskio",
       "adservice_mem"
     ],
     "top_services": [
       "emailservice",
+      "redis-cart",
       "adservice"
     ],
     "ac1": 0.0,
@@ -1364,12 +1442,13 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "adservice_mem",
+      "redis_diskio",
       "emailservice_mem"
     ],
     "top_services": [
       "adservice",
+      "redis-cart",
       "emailservice"
     ],
     "ac1": 0.0,
@@ -1383,13 +1462,14 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "paymentservice_mem",
-      "shippingservice_mem"
+      "redis_diskio",
+      "paymentservice_cpu",
+      "checkoutservice_cpu"
     ],
     "top_services": [
+      "redis-cart",
       "paymentservice",
-      "shippingservice"
+      "checkoutservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1402,18 +1482,19 @@
     "fault": "cpu",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "cartservice_mem",
-      "productcatalogservice_latency-50"
+      "redis_diskio",
+      "cartservice_cpu",
+      "recommendationservice_latency"
     ],
     "top_services": [
+      "redis-cart",
       "cartservice",
-      "productcatalogservice"
+      "recommendationservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.6
   },
   {
     "case": "re2ob_recommendationservice_delay_1",
@@ -1421,18 +1502,19 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "recommendationservice_latency-50",
-      "productcatalogservice_latency-90"
+      "redis_diskio",
+      "recommendationservice_latency",
+      "cartservice_cpu"
     ],
     "top_services": [
+      "redis-cart",
       "recommendationservice",
-      "productcatalogservice"
+      "cartservice"
     ],
-    "ac1": 1.0,
+    "ac1": 0.0,
     "ac3": 1.0,
     "ac5": 1.0,
-    "avg5": 1.0
+    "avg5": 0.8
   },
   {
     "case": "re2ob_recommendationservice_delay_2",
@@ -1440,13 +1522,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_latency-50",
-      "productcatalogservice_latency-90"
+      "redis_diskio",
+      "paymentservice_mem",
+      "adservice_mem"
     ],
     "top_services": [
-      "frontend",
-      "productcatalogservice"
+      "redis-cart",
+      "paymentservice",
+      "adservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1459,13 +1542,14 @@
     "fault": "delay",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-90",
-      "emailservice_latency-90"
+      "redis_diskio",
+      "adservice_diskio",
+      "currencyservice_latency"
     ],
     "top_services": [
-      "productcatalogservice",
-      "emailservice"
+      "redis-cart",
+      "adservice",
+      "currencyservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1478,18 +1562,19 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_latency-90",
-      "recommendationservice_latency-90"
+      "redis_diskio",
+      "productcatalogservice_latency",
+      "cartservice_cpu"
     ],
     "top_services": [
-      "frontend",
-      "recommendationservice"
+      "redis-cart",
+      "productcatalogservice",
+      "cartservice"
     ],
     "ac1": 0.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 0.8
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_recommendationservice_disk_2",
@@ -1497,12 +1582,13 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "currencyservice_latency-90",
-      "adservice_mem"
+      "redis_diskio",
+      "checkoutservice_mem",
+      "adservice_diskio"
     ],
     "top_services": [
-      "currencyservice",
+      "redis-cart",
+      "checkoutservice",
       "adservice"
     ],
     "ac1": 0.0,
@@ -1516,13 +1602,13 @@
     "fault": "disk",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "cartservice_latency-90",
-      "frontend_latency-90"
+      "redis_diskio",
+      "checkoutservice_latency",
+      "checkoutservice_mem"
     ],
     "top_services": [
-      "cartservice",
-      "frontend"
+      "redis-cart",
+      "checkoutservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1535,13 +1621,14 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "emailservice_mem",
-      "shippingservice_mem"
+      "shippingservice_mem",
+      "redis_diskio",
+      "adservice_mem"
     ],
     "top_services": [
-      "emailservice",
-      "shippingservice"
+      "shippingservice",
+      "redis-cart",
+      "adservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1554,18 +1641,19 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "paymentservice_mem",
-      "adservice_mem"
+      "adservice_mem",
+      "recommendationservice_mem"
     ],
     "top_services": [
       "paymentservice",
-      "adservice"
+      "adservice",
+      "recommendationservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.6
   },
   {
     "case": "re2ob_recommendationservice_loss_3",
@@ -1573,18 +1661,19 @@
     "fault": "loss",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
       "paymentservice_mem",
-      "recommendationservice_mem"
+      "redis_diskio",
+      "shippingservice_mem"
     ],
     "top_services": [
       "paymentservice",
-      "recommendationservice"
+      "redis-cart",
+      "shippingservice"
     ],
     "ac1": 0.0,
-    "ac3": 1.0,
-    "ac5": 1.0,
-    "avg5": 0.8
+    "ac3": 0.0,
+    "ac5": 0.0,
+    "avg5": 0.0
   },
   {
     "case": "re2ob_recommendationservice_mem_1",
@@ -1592,13 +1681,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_socket",
-      "shippingservice_mem"
+      "paymentservice_mem",
+      "redis_diskio",
+      "cartservice_latency"
     ],
     "top_services": [
-      "frontend",
-      "shippingservice"
+      "paymentservice",
+      "redis-cart",
+      "cartservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1611,13 +1701,14 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
+      "redis_diskio",
       "frontend_socket",
-      "adservice_latency-50"
+      "checkoutservice_mem"
     ],
     "top_services": [
+      "redis-cart",
       "frontend",
-      "adservice"
+      "checkoutservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1630,11 +1721,13 @@
     "fault": "mem",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "paymentservice_latency-50",
-      "paymentservice_latency-90"
+      "redis_diskio",
+      "cartservice_cpu",
+      "paymentservice_workload"
     ],
     "top_services": [
+      "redis-cart",
+      "cartservice",
       "paymentservice"
     ],
     "ac1": 0.0,
@@ -1648,12 +1741,13 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "productcatalogservice_latency-50",
-      "productcatalogservice_latency-90"
+      "redis_diskio",
+      "adservice_latency",
+      "adservice_mem"
     ],
     "top_services": [
-      "productcatalogservice"
+      "redis-cart",
+      "adservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,
@@ -1666,18 +1760,19 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "frontend_latency-90",
-      "emailservice_latency-90"
+      "redis_diskio",
+      "recommendationservice_latency",
+      "checkoutservice_mem"
     ],
     "top_services": [
-      "frontend",
-      "emailservice"
+      "redis-cart",
+      "recommendationservice",
+      "checkoutservice"
     ],
     "ac1": 0.0,
-    "ac3": 0.0,
-    "ac5": 0.0,
-    "avg5": 0.0
+    "ac3": 1.0,
+    "ac5": 1.0,
+    "avg5": 0.8
   },
   {
     "case": "re2ob_recommendationservice_socket_3",
@@ -1685,13 +1780,13 @@
     "fault": "socket",
     "method": "e_diagnosis",
     "top_metrics": [
-      "time",
-      "shippingservice_latency-90",
-      "paymentservice_workload"
+      "redis_diskio",
+      "shippingservice_latency",
+      "shippingservice_workload"
     ],
     "top_services": [
-      "shippingservice",
-      "paymentservice"
+      "redis-cart",
+      "shippingservice"
     ],
     "ac1": 0.0,
     "ac3": 0.0,

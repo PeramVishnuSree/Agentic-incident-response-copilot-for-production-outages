@@ -1,0 +1,13 @@
+{
+  "0": [
+    "emailservice_latency",
+    "frontend_mem",
+    "paymentservice_mem",
+    "redis_mem",
+    "checkoutservice_mem",
+    "emailservice_mem",
+    "recommendationservice_mem",
+    "shippingservice_cpu",
+    "emailservice_cpu"
+  ]
+}

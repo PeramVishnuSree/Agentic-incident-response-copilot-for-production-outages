@@ -25,13 +25,15 @@ Early diagnosis pipeline is implemented in-repo: collectors, dependency-graph co
 | RCAEval RE2-OB deep EDA + data card | `make rcaeval-all` → `eval/artifacts/rcaeval/` |
 | Window sweep (RE2-OB chose **120s**) | `re2ob_window_sweep.json` |
 | Learned GBT ranker (RE2-OB AC@1≈0.89) | `re2ob_ranker_summary.json` |
-| BARO baseline on 90 OB cases | `re2ob_baro_summary.json` (AC@1=0.30, AC@3=0.92) |
+| Official RCAEval baselines on 90 OB cases (N1) | `make n1-report` → `n1/n1_table.md`, `docs/baselines.md` (the earlier BARO AC@1=0.30 is superseded: official BARO = 0.14) |
+| Telemetry Access Layer + replay + leakage tests (N2) | `libs/telemetry_access/` |
+| Real local-LLM agent trajectories (N3) | `make n3-smoke` → `experiments/n3/` |
 | Full RCAEval all 9 suites (735 cases) | `make rcaeval-everything` → `ALL_SUITES_RESULTS.md` |
 | Metrics validation (baselines + bootstrap CIs + revised targets + study size) | `make rcaeval-metrics-validation` → `METRICS_VALIDATION.md` |
 | Baseline plan (BARO / N-Sigma / HolmesGPT) | `docs/baselines.md` |
 | Architecture notes | `docs/architecture.md` |
 
-**Tests:** `uv run pytest` → 16 passing.  
+**Tests:** `uv run pytest` → 70 passing.  
 **RCAEval report:** `eval/artifacts/rcaeval/ALL_SUITES_RESULTS.md`  
 **Professor item #3 (metrics validated):** `eval/artifacts/rcaeval/METRICS_VALIDATION.md`  
 **Full plain-English explainer (architecture + RCAEval + methods):** `docs/COMPLETE_EXPLAINER.md`

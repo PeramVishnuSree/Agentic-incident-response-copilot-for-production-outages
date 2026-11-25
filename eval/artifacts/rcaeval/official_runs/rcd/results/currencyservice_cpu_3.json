@@ -1,0 +1,11 @@
+{
+  "0": [
+    "currencyservice_mem",
+    "frontend_mem",
+    "productcatalogservice_cpu",
+    "shippingservice_cpu",
+    "productcatalogservice_mem",
+    "frontend_cpu",
+    "paymentservice_mem"
+  ]
+}

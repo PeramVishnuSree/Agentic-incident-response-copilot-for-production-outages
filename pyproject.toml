@@ -14,6 +14,10 @@ dependencies = [
     "telemetry-gateway",
     "correlation-engine",
     "rca-agent",
+    "telemetry-access",
+    "remediation-planner",
+    "approval-service",
+    "copilot-executor",
 ]
 
 [tool.uv]
@@ -25,6 +29,10 @@ members = [
     "services/telemetry-gateway",
     "services/correlation-engine",
     "services/rca-agent",
+    "libs/telemetry_access",
+    "services/remediation-planner",
+    "services/approval-service",
+    "services/executor",
 ]
 
 [tool.uv.sources]
@@ -32,6 +40,10 @@ copilot-common = { workspace = true }
 telemetry-gateway = { workspace = true }
 correlation-engine = { workspace = true }
 rca-agent = { workspace = true }
+telemetry-access = { workspace = true }
+remediation-planner = { workspace = true }
+approval-service = { workspace = true }
+copilot-executor = { workspace = true }
 
 [dependency-groups]
 dev = [
@@ -46,6 +58,9 @@ dev = [
     "numpy>=2.4.6",
     "tqdm>=4.66",
     "RCAEval>=1.12",
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "streamlit>=1.40",
 ]
 
 [tool.ruff]

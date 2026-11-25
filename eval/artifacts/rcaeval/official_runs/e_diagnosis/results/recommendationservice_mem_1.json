@@ -1,0 +1,7 @@
+{
+  "0": [
+    "paymentservice_mem",
+    "redis_diskio",
+    "cartservice_latency"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "0": [
+    "redis_diskio",
+    "frontend_socket",
+    "checkoutservice_mem"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "method": "pdiagnose",
+  "dataset": "re2-ob",
+  "command": "scripts/run_pdiagnose.py (port of RCAEval/e2e/pdiagnose.py main())",
+  "upstream_wired_into_main_py": false,
+  "returncode": 0,
+  "n_case_results": 90
+}

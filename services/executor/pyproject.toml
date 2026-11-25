@@ -1,0 +1,16 @@
+[project]
+name = "copilot-executor"
+version = "0.0.1"
+description = "Allowlisted remediation executor — only write path (E9)"
+requires-python = ">=3.11"
+dependencies = ["copilot-common"]
+
+[tool.uv.sources]
+copilot-common = { workspace = true }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["executor"]

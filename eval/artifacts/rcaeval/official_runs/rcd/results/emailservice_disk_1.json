@@ -1,0 +1,14 @@
+{
+  "0": [
+    "emailservice_mem",
+    "adservice_mem",
+    "frontend-external_workload",
+    "frontend_latency",
+    "currencyservice_workload",
+    "adservice_cpu",
+    "checkoutservice_latency",
+    "shippingservice_latency",
+    "frontend_workload",
+    "checkoutservice_workload"
+  ]
+}

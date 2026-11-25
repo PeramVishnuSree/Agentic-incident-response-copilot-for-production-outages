@@ -1,0 +1,10 @@
+{
+  "0": [
+    "adservice_mem",
+    "frontend_socket",
+    "frontend_mem",
+    "adservice_cpu",
+    "checkoutservice_cpu",
+    "shippingservice_mem"
+  ]
+}

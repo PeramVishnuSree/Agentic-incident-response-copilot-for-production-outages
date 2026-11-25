@@ -30,6 +30,7 @@ console/web/.vite/
 
 # ---- Evaluation data (large / regenerated) ----
 eval/runs/
+/datasets
 *.sqlite
 *.db
 

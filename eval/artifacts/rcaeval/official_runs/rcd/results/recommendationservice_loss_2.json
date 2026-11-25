@@ -1,0 +1,17 @@
+{
+  "0": [
+    "frontend_socket",
+    "emailservice_mem",
+    "productcatalogservice_mem",
+    "redis_mem",
+    "checkoutservice_mem",
+    "emailservice_cpu",
+    "productcatalogservice_cpu",
+    "checkoutservice_cpu",
+    "checkoutservice_workload",
+    "emailservice_latency",
+    "adservice_workload",
+    "cartservice_workload",
+    "frontend_mem"
+  ]
+}

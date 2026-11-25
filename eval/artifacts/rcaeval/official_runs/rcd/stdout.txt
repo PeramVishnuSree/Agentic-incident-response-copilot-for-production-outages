@@ -1,0 +1,21 @@
+--- Evaluation results ---
+Avg@5-CPU:   1.0
+Chance@5-CPU: 0.25
+Lift@5-CPU:  0.75
+Avg@5-MEM:   0.67
+Chance@5-MEM: 0.25
+Lift@5-MEM:  0.42
+Avg@5-DISK:  0.89
+Chance@5-DISK: 0.25
+Lift@5-DISK: 0.64
+Avg@5-SOCKET: 0.87
+Chance@5-SOCKET: 0.25
+Lift@5-SOCKET: 0.62
+Avg@5-DELAY: 0.81
+Chance@5-DELAY: 0.25
+Lift@5-DELAY: 0.56
+Avg@5-LOSS:  0.24
+Chance@5-LOSS: 0.25
+Lift@5-LOSS: -0.01
+---
+Avg speed: 28.13

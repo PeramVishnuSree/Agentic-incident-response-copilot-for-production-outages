@@ -1,0 +1,12 @@
+{
+  "0": [
+    "adservice_workload",
+    "paymentservice_mem",
+    "checkoutservice_workload",
+    "frontend_workload",
+    "shippingservice_mem",
+    "productcatalogservice_cpu",
+    "shippingservice_workload",
+    "cartservice_workload"
+  ]
+}

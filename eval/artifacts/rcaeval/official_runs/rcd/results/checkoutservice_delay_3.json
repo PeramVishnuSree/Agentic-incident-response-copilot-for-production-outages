@@ -1,0 +1,17 @@
+{
+  "0": [
+    "paymentservice_latency",
+    "productcatalogservice_latency",
+    "paymentservice_mem",
+    "currencyservice_workload",
+    "cartservice_mem",
+    "adservice_latency",
+    "productcatalogservice_cpu",
+    "recommendationservice_mem",
+    "checkoutservice_cpu",
+    "checkoutservice_mem",
+    "frontend-external_workload",
+    "adservice_workload",
+    "productcatalogservice_mem"
+  ]
+}

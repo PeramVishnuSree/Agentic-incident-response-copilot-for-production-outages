@@ -1,0 +1,9 @@
+{
+  "0": [
+    "frontend_mem",
+    "emailservice_latency",
+    "productcatalogservice_mem",
+    "paymentservice_mem",
+    "frontend_socket"
+  ]
+}

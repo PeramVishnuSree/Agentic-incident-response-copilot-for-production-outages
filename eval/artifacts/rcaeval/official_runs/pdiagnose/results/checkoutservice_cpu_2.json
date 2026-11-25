@@ -1,0 +1,1 @@
+{"0": ["checkoutservice", "frontend", "emailservice", "recommendationservice", "productcatalogservice", "currencyservice", "redis", "adservice", "shippingservice", "frontend-external", "cartservice", "paymentservice", "InboundPassthroughClusterIpv4", "PassthroughCluster"]}

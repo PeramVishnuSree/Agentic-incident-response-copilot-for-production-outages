@@ -1,0 +1,1 @@
+{"0": ["frontend", "checkoutservice", "paymentservice", "productcatalogservice", "emailservice", "currencyservice", "recommendationservice", "redis", "adservice", "cartservice", "shippingservice", "istio-init", "frontend-external"]}

@@ -1,0 +1,10 @@
+{
+  "0": [
+    "currencyservice_mem",
+    "frontend-external_workload",
+    "paymentservice_workload",
+    "productcatalogservice_mem",
+    "emailservice_workload",
+    "emailservice_cpu"
+  ]
+}

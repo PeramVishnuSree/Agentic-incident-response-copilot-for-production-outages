@@ -35,6 +35,7 @@ ALL_SUITES = [
 _METRIC_SUFFIXES = [
     "_latency-90",
     "_latency-50",
+    "_latency",
     "_diskio",
     "_workload",
     "_socket",
@@ -61,7 +62,17 @@ class Case:
 
 def find_data_root() -> Path:
     for root in DEFAULT_DATA_ROOTS:
-        if root and root.is_dir() and any(root.glob("re*_*")):
+        if (
+            root
+            and root.is_dir()
+            and (
+                any(root.glob("re*_*"))
+                or (root / "RE2-OB").is_dir()
+                or (root / "RE2" / "RE2-OB").is_dir()
+            )
+        ):
+            if (root / "RE2" / "RE2-OB").is_dir():
+                return root / "RE2"
             return root
     raise FileNotFoundError(
         "RCAEval data not found. Set RCAEVAL_DIR or place data under ../datasets/RCAEval"
@@ -70,35 +81,79 @@ def find_data_root() -> Path:
 
 def parse_case(path: Path) -> Case | None:
     m = _CASE_RE.match(path.name)
-    if not m:
-        return None
-    return Case(path=path, suite=m.group(1), service=m.group(2), fault=m.group(3), rep=m.group(4))
+    if m:
+        return Case(
+            path=path, suite=m.group(1), service=m.group(2), fault=m.group(3), rep=m.group(4)
+        )
+    if path.parent.parent.name.startswith("RE"):
+        suite = path.parent.parent.name.lower().replace("-", "")
+        if suite not in ALL_SUITES:
+            return None
+        try:
+            service, fault = path.parent.name.rsplit("_", 1)
+        except ValueError:
+            return None
+        return Case(path=path, suite=suite, service=service, fault=fault, rep=path.name)
+    return None
 
 
 def list_cases(root: Path | None = None, suite: str = "re2ob") -> list[Case]:
     root = root or find_data_root()
     cases = []
-    for p in sorted(root.iterdir()):
+    candidates = list(root.iterdir())
+    dataset_dir = root / suite.upper().replace("OB", "-OB").replace("SS", "-SS").replace(
+        "TT", "-TT"
+    )
+    if dataset_dir.is_dir():
+        for child in dataset_dir.iterdir():
+            if not child.is_dir():
+                continue
+            if _CASE_RE.match(child.name):
+                candidates.append(child)
+            else:
+                candidates.extend(case for case in child.iterdir() if case.is_dir())
+    for p in sorted(candidates):
         if not p.is_dir():
             continue
         c = parse_case(p)
-        if c and c.suite == suite:
+        if (
+            c
+            and c.suite == suite
+            and (p.name.isdigit() or _CASE_RE.match(p.name))
+            and any(
+                (p / filename).exists()
+                for filename in ("metrics.parquet", "metrics.csv", "simple_metrics.csv")
+            )
+        ):
             cases.append(c)
-    return cases
+    unique: dict[tuple[str, str, str], Case] = {}
+    for c in cases:
+        unique.setdefault((c.service, c.fault, c.rep), c)
+    return list(unique.values())
 
 
 def load_metrics(case: Case) -> pd.DataFrame:
-    return pd.read_parquet(case.path / "metrics.parquet")
+    for filename in ("metrics.parquet", "metrics.csv", "simple_metrics.csv"):
+        path = case.path / filename
+        if path.exists():
+            return pd.read_parquet(path) if path.suffix == ".parquet" else pd.read_csv(path)
+    raise FileNotFoundError(f"No metrics file in {case.path}")
 
 
 def load_logs(case: Case) -> pd.DataFrame:
-    path = case.path / "logs.parquet"
-    return pd.read_parquet(path) if path.exists() else pd.DataFrame()
+    for filename in ("logs.parquet", "logs.csv", "logts.csv"):
+        path = case.path / filename
+        if path.exists():
+            return pd.read_parquet(path) if path.suffix == ".parquet" else pd.read_csv(path)
+    return pd.DataFrame()
 
 
 def load_traces(case: Case) -> pd.DataFrame:
-    path = case.path / "traces.parquet"
-    return pd.read_parquet(path) if path.exists() else pd.DataFrame()
+    for filename in ("traces.parquet", "traces.csv", "tracets_lat.csv"):
+        path = case.path / filename
+        if path.exists():
+            return pd.read_parquet(path) if path.suffix == ".parquet" else pd.read_csv(path)
+    return pd.DataFrame()
 
 
 def inject_time(case: Case) -> int:
@@ -112,6 +167,9 @@ def metric_to_service(metric: str) -> str | None:
         if metric.endswith(suf):
             svc = metric[: -len(suf)]
             return "redis-cart" if svc == "redis" else svc
+    if "_" in metric:
+        svc = metric.split("_", 1)[0]
+        return "redis-cart" if svc == "redis" else svc
     return None
 
 

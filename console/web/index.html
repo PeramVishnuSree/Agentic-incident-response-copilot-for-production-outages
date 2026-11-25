@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Incident Copilot · CMPE 295A prototype</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">IC</span>Incident Copilot <span class="tag">295A prototype</span></div>
+    <nav>
+      <button data-view="console" class="active">Incident console</button>
+      <button data-view="eval">Evaluation</button>
+      <button data-view="arch">Architecture &amp; flow</button>
+      <button data-view="about">Team &amp; safety</button>
+    </nav>
+    <div class="right">
+      <span id="llm-pill" class="pill"><span class="dot"></span>checking LLM…</span>
+      <label class="operator">Operator <input id="operator" value="advisor-demo" /></label>
+    </div>
+  </header>
+
+  <section id="view-console" class="view">
+    <aside class="queue">
+      <h3>Incident queue · RE2-OB replay</h3>
+      <div id="queue"></div>
+    </aside>
+    <main id="incident" class="incident">
+      <div class="empty">
+        <div>
+          <div class="glyph">🛟</div>
+          <h2>Pick an incident from the queue</h2>
+          <p>Each one is a real fault from the RCAEval RE2-OB benchmark, replayed as if it were live.<br />
+            The copilot only sees anonymous telemetry up to <i>now</i>; you approve every change.</p>
+          <div class="flowline">
+            <span>Alert</span><i>→</i><span>LLM investigation</span><i>→</i><span>Root-cause report</span><i>→</i>
+            <span>Playbook remedy</span><i>→</i><span>Human approval</span><i>→</i><span>Dry-run execution</span><i>→</i>
+            <span>Verify · feedback loop</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <section id="view-eval" class="view hidden"><main class="page" id="eval"></main></section>
+  <section id="view-arch" class="view hidden"><main class="page" id="arch"></main></section>
+  <section id="view-about" class="view hidden"><main class="page" id="about"></main></section>
+
+  <aside id="drawer" class="drawer hidden">
+    <header><b id="drawer-title">Evidence</b><button class="btn sm ghost" id="drawer-close">Close ✕</button></header>
+    <pre id="drawer-body"></pre>
+  </aside>
+
+  <div id="modal" class="modal hidden">
+    <div class="box">
+      <h3 id="modal-title">Approve remediation</h3>
+      <p class="muted small" id="modal-sub"></p>
+      <label class="field">Operator id<input id="modal-operator" /></label>
+      <label class="field">Reason / note (stored in the audit log)<textarea id="modal-note"></textarea></label>
+      <label class="confirm" id="modal-confirm-row"><input type="checkbox" id="modal-confirm" />
+        I reviewed the cited evidence and accept the risk and undo plan shown.</label>
+      <div class="row"><span class="spacer"></span>
+        <button class="btn ghost" id="modal-cancel">Cancel</button>
+        <button class="btn primary" id="modal-ok">Confirm</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

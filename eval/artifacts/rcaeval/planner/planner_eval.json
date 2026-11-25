@@ -1,0 +1,1622 @@
+{
+  "fault_classification_90": {
+    "n_cases": 90,
+    "note": "true service given; window = 10 min before the clock vs the 10 min before that",
+    "max": {
+      "accuracy": 0.37777777777777777,
+      "by_fault": {
+        "cpu": 0.26666666666666666,
+        "delay": 0.9333333333333333,
+        "disk": 0.6666666666666666,
+        "loss": 0.0,
+        "mem": 0.2,
+        "socket": 0.2
+      }
+    },
+    "resource_first": {
+      "accuracy": 0.5222222222222223,
+      "by_fault": {
+        "cpu": 0.5333333333333333,
+        "delay": 0.7333333333333333,
+        "disk": 0.6666666666666666,
+        "loss": 0.0,
+        "mem": 0.6,
+        "socket": 0.6
+      }
+    }
+  },
+  "planner_30_max": {
+    "summary": {
+      "n_cases": 30,
+      "rule": "max",
+      "source_run": "extended30_Qwen3-4B-4bit_prompt-v2",
+      "first_plan_target_correct": 0.9333333333333333,
+      "fault_hint_correct": 0.4,
+      "playbook_matches_true_fault": 0.4,
+      "fully_correct_first_plan": 0.36666666666666664,
+      "escalated_first_plan": 0.0,
+      "resolved_within_k_approvals": {
+        "1": 0.9333333333333333,
+        "2": 0.9666666666666667,
+        "3": 1.0
+      },
+      "mean_approvals_when_resolved": 1.1,
+      "wrong_target_write_proposals_per_incident": 0.1,
+      "by_fault": {
+        "cpu": {
+          "n": 5,
+          "fault_hint_correct": 0.4,
+          "hints": {
+            "cpu": 2,
+            "disk": 1,
+            "delay": 2
+          },
+          "first_plan_target_correct": 1.0
+        },
+        "delay": {
+          "n": 5,
+          "fault_hint_correct": 1.0,
+          "hints": {
+            "delay": 5
+          },
+          "first_plan_target_correct": 0.8
+        },
+        "disk": {
+          "n": 5,
+          "fault_hint_correct": 0.4,
+          "hints": {
+            "mem": 1,
+            "delay": 2,
+            "disk": 2
+          },
+          "first_plan_target_correct": 1.0
+        },
+        "loss": {
+          "n": 5,
+          "fault_hint_correct": 0.0,
+          "hints": {
+            "delay": 5
+          },
+          "first_plan_target_correct": 0.8
+        },
+        "mem": {
+          "n": 5,
+          "fault_hint_correct": 0.2,
+          "hints": {
+            "mem": 1,
+            "delay": 4
+          },
+          "first_plan_target_correct": 1.0
+        },
+        "socket": {
+          "n": 5,
+          "fault_hint_correct": 0.4,
+          "hints": {
+            "socket": 2,
+            "delay": 3
+          },
+          "first_plan_target_correct": 1.0
+        }
+      }
+    },
+    "cases": [
+      {
+        "case": "re2ob_checkoutservice_cpu_1",
+        "true_service": "checkoutservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "checkoutservice",
+          "redis-cart",
+          "currencyservice"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "checkoutservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_delay_1",
+        "true_service": "checkoutservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "emailservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "checkoutservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_disk_1",
+        "true_service": "checkoutservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "productcatalogservice"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "checkoutservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_loss_1",
+        "true_service": "checkoutservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "checkoutservice_latency-50",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_mem_1",
+        "true_service": "checkoutservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "paymentservice"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "checkoutservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_socket_1",
+        "true_service": "checkoutservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "checkoutservice",
+          "redis-cart",
+          "currencyservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "checkoutservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_cpu_1",
+        "true_service": "currencyservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "currencyservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "disk",
+        "fault_hint_metric": "currencyservice_diskio",
+        "first_plan": {
+          "playbook_id": "PB-06",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_delay_1",
+        "true_service": "currencyservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "currencyservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "currencyservice_latency-50",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_disk_1",
+        "true_service": "currencyservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "currencyservice",
+          "frontend",
+          "checkoutservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "currencyservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_loss_1",
+        "true_service": "currencyservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "currencyservice",
+          "frontend",
+          "recommendationservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "currencyservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_mem_1",
+        "true_service": "currencyservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "currencyservice",
+          "frontend",
+          "checkoutservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "currencyservice_latency-50",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_socket_1",
+        "true_service": "currencyservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "currencyservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "currencyservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_cpu_1",
+        "true_service": "emailservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "emailservice",
+          "currencyservice",
+          "checkoutservice"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "emailservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_delay_1",
+        "true_service": "emailservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "emailservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "emailservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_disk_1",
+        "true_service": "emailservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "emailservice",
+          "cartservice",
+          "checkoutservice"
+        ],
+        "fault_hint": "disk",
+        "fault_hint_metric": "emailservice_diskio",
+        "first_plan": {
+          "playbook_id": "PB-06",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_loss_1",
+        "true_service": "emailservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "emailservice",
+          "frontend",
+          "checkoutservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "emailservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_mem_1",
+        "true_service": "emailservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "emailservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "emailservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_socket_1",
+        "true_service": "emailservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "emailservice",
+          "paymentservice",
+          "currencyservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "emailservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_cpu_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "currencyservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "productcatalogservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_delay_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "recommendationservice",
+          "productcatalogservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": false,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 2,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 1
+      },
+      {
+        "case": "re2ob_productcatalogservice_disk_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "productcatalogservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_loss_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": false,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 3,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 2
+      },
+      {
+        "case": "re2ob_productcatalogservice_mem_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "productcatalogservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_socket_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "productcatalogservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_cpu_1",
+        "true_service": "recommendationservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "currencyservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_delay_1",
+        "true_service": "recommendationservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_disk_1",
+        "true_service": "recommendationservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "recommendationservice",
+          "currencyservice",
+          "frontend"
+        ],
+        "fault_hint": "disk",
+        "fault_hint_metric": "recommendationservice_diskio",
+        "first_plan": {
+          "playbook_id": "PB-06",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_loss_1",
+        "true_service": "recommendationservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_mem_1",
+        "true_service": "recommendationservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "currencyservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_socket_1",
+        "true_service": "recommendationservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      }
+    ]
+  },
+  "planner_30_resource_first": {
+    "summary": {
+      "n_cases": 30,
+      "rule": "resource_first",
+      "source_run": "extended30_Qwen3-4B-4bit_prompt-v2",
+      "first_plan_target_correct": 0.9333333333333333,
+      "fault_hint_correct": 0.5666666666666667,
+      "playbook_matches_true_fault": 0.5666666666666667,
+      "fully_correct_first_plan": 0.5333333333333333,
+      "escalated_first_plan": 0.0,
+      "resolved_within_k_approvals": {
+        "1": 0.9333333333333333,
+        "2": 0.9666666666666667,
+        "3": 1.0
+      },
+      "mean_approvals_when_resolved": 1.1,
+      "wrong_target_write_proposals_per_incident": 0.1,
+      "by_fault": {
+        "cpu": {
+          "n": 5,
+          "fault_hint_correct": 0.6,
+          "hints": {
+            "cpu": 3,
+            "disk": 1,
+            "socket": 1
+          },
+          "first_plan_target_correct": 1.0
+        },
+        "delay": {
+          "n": 5,
+          "fault_hint_correct": 1.0,
+          "hints": {
+            "delay": 5
+          },
+          "first_plan_target_correct": 0.8
+        },
+        "disk": {
+          "n": 5,
+          "fault_hint_correct": 0.4,
+          "hints": {
+            "mem": 3,
+            "disk": 2
+          },
+          "first_plan_target_correct": 1.0
+        },
+        "loss": {
+          "n": 5,
+          "fault_hint_correct": 0.0,
+          "hints": {
+            "delay": 1,
+            "socket": 4
+          },
+          "first_plan_target_correct": 0.8
+        },
+        "mem": {
+          "n": 5,
+          "fault_hint_correct": 0.6,
+          "hints": {
+            "mem": 3,
+            "cpu": 2
+          },
+          "first_plan_target_correct": 1.0
+        },
+        "socket": {
+          "n": 5,
+          "fault_hint_correct": 0.8,
+          "hints": {
+            "socket": 4,
+            "cpu": 1
+          },
+          "first_plan_target_correct": 1.0
+        }
+      }
+    },
+    "cases": [
+      {
+        "case": "re2ob_checkoutservice_cpu_1",
+        "true_service": "checkoutservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "checkoutservice",
+          "redis-cart",
+          "currencyservice"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "checkoutservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_delay_1",
+        "true_service": "checkoutservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "emailservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "checkoutservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_disk_1",
+        "true_service": "checkoutservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "productcatalogservice"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "checkoutservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_loss_1",
+        "true_service": "checkoutservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "checkoutservice_latency-50",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_mem_1",
+        "true_service": "checkoutservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "checkoutservice",
+          "currencyservice",
+          "paymentservice"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "checkoutservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_checkoutservice_socket_1",
+        "true_service": "checkoutservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "checkoutservice",
+          "redis-cart",
+          "currencyservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "checkoutservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "checkoutservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_cpu_1",
+        "true_service": "currencyservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "currencyservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "disk",
+        "fault_hint_metric": "currencyservice_diskio",
+        "first_plan": {
+          "playbook_id": "PB-06",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_delay_1",
+        "true_service": "currencyservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "currencyservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "currencyservice_latency-50",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_disk_1",
+        "true_service": "currencyservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "currencyservice",
+          "frontend",
+          "checkoutservice"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "currencyservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_loss_1",
+        "true_service": "currencyservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "currencyservice",
+          "frontend",
+          "recommendationservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "currencyservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_mem_1",
+        "true_service": "currencyservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "currencyservice",
+          "frontend",
+          "checkoutservice"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "currencyservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_currencyservice_socket_1",
+        "true_service": "currencyservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "currencyservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "currencyservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "currencyservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_cpu_1",
+        "true_service": "emailservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "emailservice",
+          "currencyservice",
+          "checkoutservice"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "emailservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_delay_1",
+        "true_service": "emailservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "emailservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "emailservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_disk_1",
+        "true_service": "emailservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "emailservice",
+          "cartservice",
+          "checkoutservice"
+        ],
+        "fault_hint": "disk",
+        "fault_hint_metric": "emailservice_diskio",
+        "first_plan": {
+          "playbook_id": "PB-06",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_loss_1",
+        "true_service": "emailservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "emailservice",
+          "frontend",
+          "checkoutservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "emailservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_mem_1",
+        "true_service": "emailservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "emailservice",
+          "checkoutservice",
+          "frontend"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "emailservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_emailservice_socket_1",
+        "true_service": "emailservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "emailservice",
+          "paymentservice",
+          "currencyservice"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "emailservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "emailservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_cpu_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "currencyservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "productcatalogservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_delay_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "recommendationservice",
+          "productcatalogservice",
+          "frontend"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": false,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 2,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 1
+      },
+      {
+        "case": "re2ob_productcatalogservice_disk_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "productcatalogservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_loss_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "recommendationservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": false,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 3,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 2
+      },
+      {
+        "case": "re2ob_productcatalogservice_mem_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "mem",
+        "fault_hint_metric": "productcatalogservice_mem",
+        "first_plan": {
+          "playbook_id": "PB-03",
+          "action": "set_memory_limit",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_productcatalogservice_socket_1",
+        "true_service": "productcatalogservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "productcatalogservice",
+          "recommendationservice",
+          "frontend"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "productcatalogservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "productcatalogservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_cpu_1",
+        "true_service": "recommendationservice",
+        "true_fault": "cpu",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "currencyservice"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "recommendationservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_delay_1",
+        "true_service": "recommendationservice",
+        "true_fault": "delay",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "delay",
+        "fault_hint_metric": "recommendationservice_latency-90",
+        "first_plan": {
+          "playbook_id": "PB-04",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_disk_1",
+        "true_service": "recommendationservice",
+        "true_fault": "disk",
+        "agent_top3": [
+          "recommendationservice",
+          "currencyservice",
+          "frontend"
+        ],
+        "fault_hint": "disk",
+        "fault_hint_metric": "recommendationservice_diskio",
+        "first_plan": {
+          "playbook_id": "PB-06",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_loss_1",
+        "true_service": "recommendationservice",
+        "true_fault": "loss",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "recommendationservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_mem_1",
+        "true_service": "recommendationservice",
+        "true_fault": "mem",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "currencyservice"
+        ],
+        "fault_hint": "cpu",
+        "fault_hint_metric": "recommendationservice_cpu",
+        "first_plan": {
+          "playbook_id": "PB-02",
+          "action": "set_cpu_limit",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": false,
+        "fully_correct_first_plan": false,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      },
+      {
+        "case": "re2ob_recommendationservice_socket_1",
+        "true_service": "recommendationservice",
+        "true_fault": "socket",
+        "agent_top3": [
+          "recommendationservice",
+          "frontend",
+          "productcatalogservice"
+        ],
+        "fault_hint": "socket",
+        "fault_hint_metric": "recommendationservice_socket",
+        "first_plan": {
+          "playbook_id": "PB-07",
+          "action": "restart_pod",
+          "target": "recommendationservice"
+        },
+        "target_correct": true,
+        "playbook_matches_true_fault": true,
+        "fully_correct_first_plan": true,
+        "escalated_first": false,
+        "approvals_needed": 1,
+        "resolved_by_loop": true,
+        "wrong_target_writes_proposed": 0
+      }
+    ]
+  }
+}

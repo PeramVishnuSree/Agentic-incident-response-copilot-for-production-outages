@@ -1,0 +1,162 @@
+{
+  "generated_utc": "2026-11-25T03:33:29.833485+00:00",
+  "model": "mlx-community/Qwen3-4B-4bit",
+  "served_models": [
+    "mlx-community/Qwen3-4B-4bit"
+  ],
+  "base_url": "http://127.0.0.1:8080/v1",
+  "host": "Darwin arm64",
+  "max_tool_calls": 12,
+  "thinking": false,
+  "prompt": "v2",
+  "n_cases": 5,
+  "completed": 5,
+  "ac1": 0.8,
+  "ac3": 1.0,
+  "tool_calls": 25,
+  "invalid_tool_calls": 0,
+  "valid_tool_call_rate": 1.0,
+  "mean_seconds_per_case": 8.2,
+  "cases": [
+    {
+      "file": "case_001.json",
+      "case": "re2ob_checkoutservice_cpu_1",
+      "true_service": "checkoutservice",
+      "fault": "cpu",
+      "rank_of_truth": 1,
+      "seconds": 8.1,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "checkoutservice",
+        "redis-cart",
+        "productcatalogservice"
+      ],
+      "tool_calls": 5,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_002.json",
+      "case": "re2ob_currencyservice_delay_1",
+      "true_service": "currencyservice",
+      "fault": "delay",
+      "rank_of_truth": 1,
+      "seconds": 9.4,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "currencyservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "get_metrics",
+        "get_topology",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_003.json",
+      "case": "re2ob_emailservice_mem_1",
+      "true_service": "emailservice",
+      "fault": "mem",
+      "rank_of_truth": 1,
+      "seconds": 6.7,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "emailservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    },
+    {
+      "file": "case_004.json",
+      "case": "re2ob_productcatalogservice_loss_1",
+      "true_service": "productcatalogservice",
+      "fault": "loss",
+      "rank_of_truth": 2,
+      "seconds": 9.9,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "productcatalogservice",
+        "frontend"
+      ],
+      "tool_calls": 6,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs",
+        "get_metrics",
+        "get_metrics"
+      ]
+    },
+    {
+      "file": "case_005.json",
+      "case": "re2ob_recommendationservice_disk_1",
+      "true_service": "recommendationservice",
+      "fault": "disk",
+      "rank_of_truth": 1,
+      "seconds": 6.7,
+      "clock_source": "oracle_inject_time_plus_300s",
+      "status": "completed",
+      "top_services": [
+        "recommendationservice",
+        "currencyservice",
+        "frontend"
+      ],
+      "tool_calls": 4,
+      "invalid_tool_calls": 0,
+      "unknown_services": [],
+      "unsupported_claims": 0,
+      "n_claims": 3,
+      "parse_repairs": 0,
+      "tools_used": [
+        "get_metrics",
+        "get_topology",
+        "get_metrics",
+        "search_logs"
+      ]
+    }
+  ]
+}

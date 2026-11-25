@@ -7,6 +7,7 @@ dependencies = [
     "copilot-common",
     "correlation-engine",
     "langgraph>=0.2",
+    "httpx>=0.27",
 ]
 
 [tool.uv.sources]

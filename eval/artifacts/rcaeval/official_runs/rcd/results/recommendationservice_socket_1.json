@@ -1,0 +1,11 @@
+{
+  "0": [
+    "adservice_mem",
+    "recommendationservice_workload",
+    "productcatalogservice_cpu",
+    "shippingservice_latency",
+    "paymentservice_workload",
+    "adservice_diskio",
+    "frontend_mem"
+  ]
+}

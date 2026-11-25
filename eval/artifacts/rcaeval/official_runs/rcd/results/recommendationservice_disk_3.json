@@ -1,0 +1,10 @@
+{
+  "0": [
+    "recommendationservice_mem",
+    "redis_mem",
+    "currencyservice_cpu",
+    "redis_cpu",
+    "checkoutservice_workload",
+    "adservice_latency"
+  ]
+}
