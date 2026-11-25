@@ -94,3 +94,13 @@ def test_evaluation_endpoint(client):
     data = client.get("/api/evaluation").json()
     assert "nsigma" in data["n1"]["methods"]
     assert data["runs"] and "failure" in data["failure_modes"].lower()
+
+
+def test_visitors_get_separate_sessions(client):
+    alice = client.post("/api/incidents/0/open", headers={"X-Visitor": "alice"}).json()
+    bob = client.post("/api/incidents/0/open", headers={"X-Visitor": "bob"}).json()
+    assert alice["id"] != bob["id"]
+    again = client.post("/api/incidents/0/open", headers={"X-Visitor": "alice"}).json()
+    assert again["id"] == alice["id"]
+    queue = client.get("/api/incidents", headers={"X-Visitor": "carol"}).json()
+    assert queue[0]["status"] == "new"

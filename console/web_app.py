@@ -24,7 +24,7 @@ from typing import Any
 from approval_service import ApprovalGate
 from common.schema import ApprovalDecision, Candidate, RemediationPlan
 from executor import AllowlistedExecutor
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, Header, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
@@ -39,6 +39,7 @@ FIGURES = ri.REPO_ROOT / "docs" / "figures"
 FAILURE_MODES = ri.REPO_ROOT / "experiments" / "n3" / "FAILURE_MODES.md"
 PLANNER_EVAL = ri.REPO_ROOT / "eval" / "artifacts" / "rcaeval" / "planner" / "planner_eval.json"
 LLM_URL = os.environ.get("COPILOT_LLM_URL", "http://127.0.0.1:8080/v1")
+HOSTED = os.environ.get("COPILOT_HOSTED") == "1"
 LOG_PATTERN = "error|fail|timeout|exception"
 CHART_SECONDS = 1200
 SAVED_STEP_DELAY = 0.9
@@ -66,6 +67,8 @@ class Session:
     case: str
     source: Any
     opened: dict
+    visitor: str = "local"
+    created: float = field(default_factory=time.time)
     status: str = "detected"
     agent: dict = field(
         default_factory=lambda: {
@@ -99,6 +102,21 @@ class Session:
 
 
 SESSIONS: dict[str, Session] = {}
+MAX_SESSIONS = 300
+SESSION_TTL_SECONDS = 6 * 3600
+
+
+def _prune_sessions() -> None:
+    now = time.time()
+    for sid in [s.id for s in SESSIONS.values() if now - s.created > SESSION_TTL_SECONDS]:
+        del SESSIONS[sid]
+    excess = len(SESSIONS) - MAX_SESSIONS + 1
+    for s in sorted(SESSIONS.values(), key=lambda s: s.created)[: max(excess, 0)]:
+        del SESSIONS[s.id]
+
+
+def _mine(visitor: str) -> dict[int, Session]:
+    return {s.index: s for s in SESSIONS.values() if s.visitor == visitor}
 
 
 class InvestigateRequest(BaseModel):
@@ -347,12 +365,13 @@ def health() -> dict:
         "llm_model": ri.server_model(LLM_URL),
         "llm_url": LLM_URL,
         "cases": len(ri.demo_cases()),
+        "hosted": HOSTED,
     }
 
 
 @app.get("/api/incidents")
-def incidents() -> list[dict]:
-    opened = {s.index: s for s in SESSIONS.values()}
+def incidents(x_visitor: str = Header("local")) -> list[dict]:
+    opened = _mine(x_visitor)
     return [
         {
             "index": i,
@@ -365,23 +384,26 @@ def incidents() -> list[dict]:
 
 
 @app.post("/api/incidents/{index}/open")
-def open_incident(index: int) -> dict:
+def open_incident(index: int, x_visitor: str = Header("local")) -> dict:
     cases = ri.demo_cases()
     if not 0 <= index < len(cases):
         raise HTTPException(404, "unknown incident")
-    for session in SESSIONS.values():
-        if session.index == index:
-            return _view(session)
+    existing = _mine(x_visitor).get(index)
+    if existing:
+        return _view(existing)
+    _prune_sessions()
     session = _open(index, cases[index])
+    session.visitor = x_visitor
     SESSIONS[session.id] = session
     return _view(session)
 
 
 @app.post("/api/incidents/{index}/reset")
-def reset_incident(index: int) -> dict:
-    for sid in [s.id for s in SESSIONS.values() if s.index == index]:
-        del SESSIONS[sid]
-    return open_incident(index)
+def reset_incident(index: int, x_visitor: str = Header("local")) -> dict:
+    existing = _mine(x_visitor).get(index)
+    if existing:
+        del SESSIONS[existing.id]
+    return open_incident(index, x_visitor)
 
 
 @app.get("/api/sessions/{sid}")

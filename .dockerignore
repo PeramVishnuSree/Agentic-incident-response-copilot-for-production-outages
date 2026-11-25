@@ -1,0 +1,9 @@
+.git
+.venv
+**/__pycache__
+.pytest_cache
+.ruff_cache
+datasets
+docs/*.docx
+eval/artifacts/rcaeval/official_runs/*/results/*.log
+experiments/n3/archive_tool_v1

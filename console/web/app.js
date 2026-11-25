@@ -17,8 +17,18 @@ const clock = (ts) => new Date(ts * 1000).toISOString().slice(11, 19) + " UTC";
 const zClass = (z) => (Math.abs(z) >= 20 ? "hot" : Math.abs(z) >= 4 ? "warm" : "cool");
 const operator = () => $("#operator").value.trim() || "operator";
 
+const VISITOR = (() => {
+  let id = localStorage.getItem("copilot-visitor");
+  if (!id) {
+    id = Math.random().toString(16).slice(2) + Date.now().toString(16);
+    localStorage.setItem("copilot-visitor", id);
+  }
+  return id;
+})();
+
 async function api(path, body) {
-  const opts = body === undefined ? {} : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) };
+  const headers = { "X-Visitor": VISITOR };
+  const opts = body === undefined ? { headers } : { method: "POST", headers: { ...headers, "Content-Type": "application/json" }, body: JSON.stringify(body) };
   const res = await fetch(path, opts);
   const data = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(data.detail || res.statusText);
@@ -55,6 +65,9 @@ async function refreshHealth() {
   if (S.health.llm_model) {
     pill.className = "pill ok";
     pill.innerHTML = `<span class="dot"></span>LLM online · ${esc(S.health.llm_model.split("/").pop())}`;
+  } else if (S.health.hosted) {
+    pill.className = "pill ok";
+    pill.innerHTML = `<span class="dot"></span>Hosted demo · recorded Qwen3-4B runs`;
   } else {
     pill.className = "pill off";
     pill.innerHTML = `<span class="dot"></span>LLM offline · recorded runs only`;
@@ -360,8 +373,8 @@ function renderAgent(s) {
   $("#sec-agent").innerHTML = `<h3><span class="num">4</span>LLM investigation</h3>
     <p class="sub">Bounded ReAct loop · local open-weight model · 3 read-only tools · max 12 calls. It cannot change the system.</p>
     <div class="agentbar">
-      <button class="btn primary" id="run-live" ${!llm || running ? "disabled" : ""} title="${llm ? "" : "Start mlx_lm.server on :8080"}">▶ Run live agent${llm ? ` · ${esc(llm.split("/").pop())}` : ""}</button>
-      <button class="btn" id="run-saved" ${running ? "disabled" : ""}>⟲ Replay recorded run</button>
+      ${S.health?.hosted && !llm ? "" : `<button class="btn primary" id="run-live" ${!llm || running ? "disabled" : ""} title="${llm ? "" : "Start mlx_lm.server on :8080"}">▶ Run live agent${llm ? ` · ${esc(llm.split("/").pop())}` : ""}</button>`}
+      <button class="btn ${S.health?.hosted && !llm ? "primary" : ""}" id="run-saved" ${running ? "disabled" : ""}>⟲ ${S.health?.hosted && !llm ? "Run investigation (recorded Qwen3-4B run)" : "Replay recorded run"}</button>
       <span class="spacer"></span>
       <div class="budget"><span>${calls}/12 tool calls</span><span class="cells">${Array.from({ length: 12 }, (_, i) => `<i class="${i < calls ? "on" : ""}"></i>`).join("")}</span></div>
     </div>
@@ -369,7 +382,7 @@ function renderAgent(s) {
     ${a.error ? `<div class="banner bad">Agent error: ${esc(a.error)}</div>` : ""}
     <div class="steps">${steps}${running ? `<div class="thinking"><span class="dots"><i></i><i></i><i></i></span>Agent is reasoning and choosing the next tool…</div>` : ""}</div>
     ${!started ? `<div class="banner info">Start the investigation. The agent will query metrics, logs and topology through the Telemetry Access Layer and cite every result as evidence (E1, E2, …).</div>` : ""}`;
-  $("#run-live").onclick = () => act("investigate", { mode: "live" });
+  if ($("#run-live")) $("#run-live").onclick = () => act("investigate", { mode: "live" });
   $("#run-saved").onclick = () => act("investigate", { mode: "saved" });
   bindEvidence("#sec-agent");
 }
