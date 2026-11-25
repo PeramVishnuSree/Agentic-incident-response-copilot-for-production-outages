@@ -79,6 +79,12 @@ web: ## Incident Copilot website: real incident -> LLM RCA -> plan -> approval -
 
 demo: web ## Alias for `make web`
 
+site: ## Server-free replay build of the website into dist/site (open with any static file server)
+	PYTHONPATH=. uv run python scripts/build_static_site.py
+
+publish: ## Build dist/site and publish it as a free static Hugging Face Space (needs HF_TOKEN or `hf auth login`)
+	uv run --with huggingface_hub python scripts/deploy_hf_space.py
+
 prototype: ## Early prototype CLI: cpu fault -> correlate -> RCA -> plan -> approve -> dry-run
 	uv run python -m console.cli.prototype --scenario cpu-stress --pretty
 

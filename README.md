@@ -6,6 +6,8 @@ A human-supervised copilot for Kubernetes microservice outages. When something b
 **Team:** Charan Sai Gandham · Venkata Satya Charan Naga Deep Patrini · Vishnu Sree Peram
 **Advisor:** Dr. Bertin Cordova-Diba
 
+**Live demo (no install):** https://charan0512-incident-copilot.static.hf.space
+
 ![LLM investigation and root-cause report in the incident console](docs/figures/web_investigation.png)
 
 ---
@@ -94,6 +96,17 @@ make web
 ```
 
 Open **http://127.0.0.1:8090**. The top-right pill shows whether the LLM is online.
+
+### 6. (Optional) Publish a public link
+
+The replay mode needs no server, so it can be hosted for free as static files:
+
+```bash
+make site       # builds dist/site from the 30 cases (about 8 MB)
+HF_TOKEN=<your Hugging Face write token> make publish
+```
+
+`make publish` uploads `dist/site` to a static Hugging Face Space and prints the link (ours: **https://charan0512-incident-copilot.static.hf.space**). Visitors' incidents and approvals are kept in their own browser, so many people can use it at once; the live-LLM button is hidden there. Re-run `make publish` after changing the website. `deploy/container/Dockerfile` runs the full server in replay mode on any Docker host instead.
 
 ---
 

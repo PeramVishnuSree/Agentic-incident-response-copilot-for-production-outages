@@ -27,6 +27,7 @@ const VISITOR = (() => {
 })();
 
 async function api(path, body) {
+  if (window.staticApi) return window.staticApi(path, body);
   const headers = { "X-Visitor": VISITOR };
   const opts = body === undefined ? { headers } : { method: "POST", headers: { ...headers, "Content-Type": "application/json" }, body: JSON.stringify(body) };
   const res = await fetch(path, opts);
@@ -698,8 +699,8 @@ function renderArch() {
     <h1>Architecture and processing flow</h1>
     <p class="lede">Two separate artifacts: the <b>system architecture</b> is what exists (components, interfaces, owners); the <b>processing flow</b> is what happens over time, including the failure and feedback paths.</p>
     <div class="grid g2">
-      <div class="card"><h3>System architecture</h3><p class="sub">Static components and boundaries.</p><div class="figure"><img src="/figures/system_architecture.png" alt="System architecture" onerror="this.parentElement.innerHTML='<p style=color:#333>Figure not found</p>'"/></div></div>
-      <div class="card"><h3>Processing flow</h3><p class="sub">Runtime sequence with the feedback loop.</p><div class="figure"><img src="/figures/processing_flow.png" alt="Processing flow" onerror="this.parentElement.innerHTML='<p style=color:#333>Figure not found</p>'"/></div></div>
+      <div class="card"><h3>System architecture</h3><p class="sub">Static components and boundaries.</p><div class="figure"><img src="figures/system_architecture.png" alt="System architecture" onerror="this.parentElement.innerHTML='<p style=color:#333>Figure not found</p>'"/></div></div>
+      <div class="card"><h3>Processing flow</h3><p class="sub">Runtime sequence with the feedback loop.</p><div class="figure"><img src="figures/processing_flow.png" alt="Processing flow" onerror="this.parentElement.innerHTML='<p style=color:#333>Figure not found</p>'"/></div></div>
     </div>
     <h2>Runtime pipeline in this prototype</h2>
     <div class="pipeline">
